@@ -1,12 +1,188 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
   </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
-
+  <body class="page__body">
+    <header class="header">
+      <div class="header__wrapper">
+        <a class="header__logo" href="#" aria-label="Логотип: Погнали">
+          <img src="" width="" height="" alt="Сервис поиска попутчиково погнали">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </nav>
+        <h1 class="header__heading">В путешествие с крутыми попутчиками</h1>
+        <a class="header__phone" href="tel:88005558628" aria-label="Позвоните нам">88005558628</a>
+        <a class="header__write-us" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам">Напишите нам</a>
+        <a class="header__authorization" href="authorization.html">Авторизация</a>
+        <blockquote class="header__review">
+          <p>&laquo;Лучшее приложение, что я видел в жизни!&raquo;</p>
+          <cite>Мурат Эльтазин главный редактор газеты &laquo;гаджетлайф&raquo;</cite>
+        </blockquote>
+      </div>
+    </header>
+    <main class="main">
+      <section class="search-companion">
+        <div class="search-companion__wrapper">
+          <ul class="search-companion__list">
+            <li class="search-companion__item">
+              <p class="search-companion__advice">Выберите направление</p>
+              <span class="search-companion__number">1</span>
+            </li>
+            <li class="search-companion__item">
+              <p class="search-companion__advice">Изучите идеи путешественников</p>
+              <span class="search-companion__number">2</span>
+            </li>
+            <li class="search-companion__item">
+              <p class="search-companion__advice">Находите тех кто похож на вас</p>
+              <span class="search-companion__number">3</span>
+            </li>
+            <li class="search-companion__item">
+              <p class="search-companion__advice">Путешествуйте вместе!</p>
+              <span class="search-companion__number">4</span>
+            </li>
+          </ul>
+          <div class="search-companion__service">
+            <h2 class="search-companion__heading">О сервисе</h2>
+            <p class="saerch-companion__about-service">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+            <p class="search-companion__call-for">А если найдете кого-то близкого по духу - скорее зовите в совместный трип!</p>
+          </div>
+        </div>
+      </section>
+      <section class="directions">
+        <div class="directions__wrapper">
+          <h2 class="directions__heading">Направления</h2>
+          <ul class="directions__list">
+            <li class="directions__item">
+              <img class="directions__img" src="" width="" height="" alt="Фото островка в Тайланде">
+              <h2 class="directions__heading">Тайланд</h2>
+              <p class="directions__tagline">Джунгли зовут!</p>
+              <span class="directions__views">18321</span>
+            </li>
+            <li class="directions__item">
+              <img class="directions__img" src="" width="" height="" alt="Фото улицы во Франции">
+              <h2 class="directions__heading">Франция</h2>
+              <p class="directions__tagline">Трэ бьен, манифик!</p>
+              <span class="directions__views">12518</span>
+            </li>
+            <li class="directions__item">
+              <img class="directions__img" src="" width="" height="" alt="Фото вида города в Чехии">
+              <h2 class="directions__heading">Чехия</h2>
+              <p class="directions__tagline">Закоулки старой Европы</p>
+              <span class="directions__views">5326</span>
+            </li>
+          </ul>
+          <button class="rectangular-button directions__show-all" type="button">Показать все</button>
+        </div>
+      </section>
+      <section class="fellow-travelers">
+        <div class="fellow-travelers__wrapper">
+          <div class="fellow-travelers__outlook">
+            <h2 class="fellow-travelers__heading">Попутчики</h2>
+            <p class="fellow-travelers__individual">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+            <p class="fellow-travelers__like-minded">Теперь можно легко найти единомышленников</p>
+          </div>
+          <article class="traveler-card">
+            <img class="traveler-card__image" src="" width="" height="" alt="Фото пользователя">
+            <span class="traveler-card__level">99 level</span>
+            <ul class="traveler-card__countries-list">
+              <li class="traveler-card__countrie-item">Шри ланка</li>
+              <li class="traveler-card__countrie-item">Тайланд</li>
+              <li class="traveler-card__countrie-item">Сейшелы</li>
+            </ul>
+            <h2 class="traveler-card__user-name">Таня Фирсова</h2>
+            <p class="traveler-card__hobbies">&#35;ЗОЖ &#35;ПП &#35;Фитнес &#35;пляж &#35;авокадо &#35;смузи</p>
+            <ul class="traveler-card__transport-list">
+              <li class="traveler-card__transport-item">
+                <span class="visually-hidden">Самолет</span>
+              </li>
+              <li class="traveler-card__transport-item">
+                <span class="visually-hidden">Автотранспорт</span>
+              </li>
+              <li class="traveler-card__transport-item">
+                <span class="visually-hidden">Велосипед</span>
+              </li>
+              <li class="traveler-card__transport-item">
+                <span class="visually-hidden">Пешком</span>
+              </li>
+            </ul>
+          </article>
+          <article class="traveler-card">
+            <img class="traveler-card__image" src="" width="" height="" alt="Фото пользователя">
+            <span class="traveler-card__level">80 level</span>
+            <ul class="traveler-card__countries-list">
+              <li class="traveler-card__countrie-item">Бельгия</li>
+              <li class="traveler-card__countrie-item">Чехия</li>
+            </ul>
+            <h2 class="traveler-card__user-name">Петя Демин</h2>
+            <p class="traveler-card__hobbies">&#35;бургер &#35;бар &#35;футбол &#35;концерт &#35;крафт</p>
+            <ul class="traveler-card__transport-list">
+              <li class="traveler-card__transport-list">
+                <span class="visually-hidden">Самолет</span>
+              </li>
+              <li class="traveler-card__transport-list">
+                <span class="visually-hidden">Автотранспорт</span>
+              </li>
+              <li class="traveler-card__transport-list">
+                <span class="visually-hidden">Велосипед</span>
+              </li>
+              <li class="traveler-card__transport-list">
+                <span class="visually-hidden">Пешком</span>
+              </li>
+            </ul>
+          </article>
+          <button class="rectangular-button traveler-card__shaw-all" type="button">Показать всех</button>
+        </div>
+      </section>
+      <section class="add-profile">
+        <div class="add-profile__wrapper">
+          <h2 class="add-profile__heading">Добавьте свой профиль</h2>
+          <ul class="add-profile__list">
+            <li class="add-profile__item">
+              <h3 class="add-profile__heading">Базовое размещение</h3>
+              <p class="add-profile__price">Бесплатно</p>
+              <span class="add-profile__number">1</span>
+            </li>
+            <li class="add-profile__item">
+              <h3 class="add-profile__heading">Вывод на первых позициях</h3>
+              <p class="add-profile__price">99 руб./мес</p>
+              <span class="add-profile__number">2</span>
+            </li>
+            <li class="add-profile__item">
+              <h3 class="add-profile__heading">Кастомный цвет карточки</h3>
+              <p class="add-profile__price">59 руб./мес</p>
+              <span class="add-profile__number">3</span>
+            </li>
+          </ul>
+          <button class="add-profile__button" type="button">Показать тарифы для бизнеса</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <a class="footer__logo" href="#" aria-label="Логотип: Погнали">
+          <img src="" width="" height="" alt="Сервис поиска попутчиково погнали">
+        </a>
+        <ul class="footer__social-list socials-list">
+          <li class="socials-list__item">
+            <a class="socials-list__link" href="https://www.facebook.com/htmlacademy" target="_blank" aria-label="Социальная сеть Фейсбук">Фейсбук</a>
+          </li>
+          <li class="socials-list__item">
+            <a class="socials-list__link" href="https://vk.com/htmlacademy" target="_blank" aria-label="Социальная сеть ВКонтакте">ВКонтакте</a>
+          </li>
+          <li class="socials-list__item">
+            <a class="socials-list__link" href="https://www.instagram.com/htmlacademy" target="_blank" aria-label="Социальная сеть Инстаграм">Инстаграм</a>
+          </li>
+        </ul>
+        <div class="footer__copyright copyright">
+          <h2 class="copyright__heading">Разработано</h2>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Сайт разработчика"><span class="visually-hidden">HTML Academy</span></a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
