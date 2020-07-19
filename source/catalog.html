@@ -20,6 +20,83 @@
     </header>
     <main class="main">
       <div class="main__wrapper">
+        <section class="filtering-by-country">
+          <h2 class="filtering-by-country__heading">Фильтрация по странам</h2>
+          <button class="filtering-by-country__expand" type="button"><span class="visually-hidden">Открыть фильтр</span></button>
+        </section>
+        <section class="companion-selection">
+          <h2 class="companion-selection__heding"></h2>
+          <form class="companion-selection__form" action="https://echo.htmlacademy.ru" method="get">
+            <fieldset class="companion-selection__fieldset">
+              <legend class="companion-selection__legend">Хобби</legend>
+              <button class="triangular--button companion-selection__button" type="button"><span class="visually-hidden">Развернуть-свернуть список</span></button>
+            </fieldset>
+            <fieldset class="companion-selection__fieldset">
+              <legend class="companion-selection__legend">Музыка</legend>
+              <button class="triangular--button companion-selection__button" type="button"><span class="visually-hidden">Развернуть-свернуть список</span></button>
+              <ul class="companion-selection__music-list">
+                <li class="companion-selection__music-item">
+                  <input class="companion-selection__checkbox" type="checkbox" name="hard-rock" id="hard-rock-id" checked>
+                  <label for="hard-rock-id">Тяжелый рок</label>
+                </li>
+                <li class="companion-selection__music-item">
+                  <input class="companion-selection__checkbox" type="checkbox" name="russian-rap" id="russian-rap-id">
+                  <label for="russian-rap-id">Русский рэп</label>
+                </li>
+                <li class="companion-selection__music-item">
+                  <input class="companion-selection__checkbox" type="checkbox" name="eurodance" id="eurodance-id">
+                  <label for="eurodance-id">Евродэнс</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="companion-selection__fieldset">
+              <legend class="companion-selection__legend">Еда</legend>
+              <button class="triangular--button companion-selection__button" type="button"><span class="visually-hidden">Развернуть-свернуть список</span></button>
+            </fieldset>
+            <fieldset class="companion-selection__fieldset">
+              <legend class="companion-selection__legend">Транспорт</legend>
+              <button class="triangular--button companion-selection__button" type="button"><span class="visually-hidden">Развернуть-свернуть список</span></button>
+              <ul class="companion-selection__transport-list">
+                <li class="companion-selection__transport-item">
+                  <input class="companion-selection__checkbox" type="checkbox" name="plane" id="plane-id" checked>
+                  <label for="plane-id">Самолет</label>
+                </li>
+                <li class="companion-selection__transport-item">
+                  <input class="companion-selection__checkbox" type="checkbox" name="vehicles" id="vehicles-id">
+                  <label for="vehicles-id">Автотранспорт</label>
+                </li>
+                <li class="companion-selection__transport-item">
+                  <input class="companion-selection__checkbox" type="checkbox" name="bicycle" id="bicycle-id">
+                  <label for="bicycle-id">Велосипед</label>
+                </li>
+                <li class="companion-selection__transport-item">
+                  <input class="companion-selection__checkbox" type="checkbox" name="on-foot" id="on-foot-id">
+                  <label for="on-foot-id">Пешком</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="level">
+              <legend class="level__name">Левел</legend>
+              <button class="triangular--button companion-selection__button" type="button"><span class="visually-hidden">Развернуть-свернуть список</span></button>
+              <div class="level__price-controls">
+                <label class="visually-hidden">
+                  <input class="level__input" type="text" name="min-price" value="30">
+                </label>
+                <label class="visually-hidden">
+                  <input class="level__input" type="text" name="max-price" value="100">
+                </label>
+              </div>
+              <div class="level__range-controls">
+                <div class="level__scale">
+                  <div class="level__bar">
+                </div>
+                <div class="level__toggle-min"></div>
+                <div class="level__toggle-max"></div>
+              </div>
+            </fieldset>
+            <button class="companion-selection__button" type="button">Показать</button>
+          </form>
+        </section>
         <article class="catalog-traveler-card">
           <img class="catalog-traveler-card__image" src="" width="" height="" alt="Фото пользователя">
           <h2 class="catalog-traveler-card__traveler-name">Таня Фирсова</h2>
