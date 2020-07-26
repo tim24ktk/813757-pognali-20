@@ -1,0 +1,202 @@
+.header {
+  color: @basic-white;
+}
+
+.header__top {
+  background-image: url("../img/traveller-illustration-mobile@1x.png"), url("../img/globe-back-mobile@1x.jpg");
+  /*background-position: center 224px, center 0;*/
+  background-repeat: no-repeat, no-repeat;
+  background-color: @basic_blue;
+}
+
+.main-nav__toggle {
+  margin-top: 28px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.main-nav__toggle-image {
+  fill: @basic-white;
+}
+
+.header__heading {
+  width: 238px;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 40px;
+  color: @basic-white;
+  text-align: center;
+}
+
+.header__feedback {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 245px;
+}
+
+.header__phone {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 11px;
+  background-color: @special_orange;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.header__write-us {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 11px;
+  background-color: @special_yellow_dark;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.header__authorization {
+  display: block;
+  width: 190px;
+  height: 40px;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @basic_blue;
+  background-color: @basic_yellow;
+  border-radius: 25px;
+}
+
+.header__review {
+  margin: 0;
+  padding: 0;
+  margin-top: -20px;
+  padding-top: 48px;
+  padding-bottom: 109px;
+  background-color: @basic_blue;
+}
+
+.header__comment {
+  width: 161px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.header__commentator {
+  display: block;
+  width: 161px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.search-companion {
+  position: relative;
+  padding-bottom: 82px;
+  background-color: @special_background_light;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  z-index:1;
+  &::before {
+    position: absolute;
+    bottom: 219px;
+    content: "";
+    width: 113px;
+    height: 132px;
+    background-color: @special_blue;
+    border-radius: 20px;
+    z-index: -1;
+  }
+  &::after {
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    content: "";
+    width: 292px;
+    height: 352px;
+    background-image: url("../img/about-mobile@1x.png");
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
+
+
+.search-companion__list {
+  position: absolute;
+  top: -50px;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: @basic_blue;
+  list-style: none;
+}
+
+.search-companion__item {
+  position: relative;
+  display: flex;
+  width: 270px;
+  margin-top: -15px;
+  padding: 22px 19px;
+  background-color: @special_orange;
+  border-radius: 10px;
+}
+
+.search-companion__advice {
+  margin: 0;
+  padding: 0;
+  width: 150px;
+}
+
+.search-companion__number {
+  position: absolute;
+  top: 22px;
+  right: 21px;
+  color: @basic-white;
+}
+
+.search-companion__item-ideas {
+  background-color: @special-yellow;
+}
+
+.search-companion__item-like-you {
+  background-color: @special_yellow_dark;
+}
+
+.search-companion__item-together {
+  background-color: @basic_yellow;
+}
+
+.search-companion__service {
+  width: 211px;
+  padding-top: 312px;
+}
+
+.search-companion__heading {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: @special_orange;
+}
+
+.search-companion__about-service {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.search-companion__call-for {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+}
+
