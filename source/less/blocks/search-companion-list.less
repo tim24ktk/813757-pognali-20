@@ -1,0 +1,45 @@
+.search-companion-list {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: @basic_blue;
+  list-style: none;
+}
+
+.search-companion-list__item {
+  position: relative;
+  display: flex;
+  .reset();
+  margin-top: -20px;
+  width: 270px;
+  padding: 22px 19px;
+  border-radius: 10px;
+
+  &--advice-direction {
+    background-color: @special_orange;
+  }
+
+  &--ideas {
+    background-color: @special-yellow;
+  }
+
+  &--like-you {
+    background-color: @special_yellow_dark;
+  }
+
+  &--together {
+    background-color: @basic_yellow;
+  }
+}
+
+.search-companion-list__advice {
+  .reset();
+  width: 150px;
+}
+
+.search-companion-list__number {
+  position: absolute;
+  top: 22px;
+  right: 21px;
+  color: @basic-white;
+}

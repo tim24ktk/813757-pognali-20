@@ -1,0 +1,29 @@
+.rectangular-button {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 270px;
+  margin-top: 27px;
+  padding: 23px;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: @basic_blue_light_special;
+  border-radius: 10px;
+  background-color: @basic_yellow;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+
+  &::before {
+    position: absolute;
+    right: 23px;
+    content: "";
+    width: 11px;
+    height: 14px;
+    background-image: url("../img/triangle.svg");
+    background-repeat: no-repeat;
+  }
+}

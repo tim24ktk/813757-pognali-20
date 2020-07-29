@@ -3,19 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="header">
-      <div class="header__wrapper">
-        <a class="header__logo" href="index.html" aria-label="Логотип: Погнали">
-          <img src="" width="" height="" alt="Сервис поиска попутчиково погнали">
-        </a>
+      <div class="header__background header__background--color">
         <nav class="main-nav">
+          <picture class="main-nav__logo">
+            <img src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Сервис поиска попутчиков погнали">
+          </picture>
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
+          <h1 class="main-nav__heading">Попутчики</h1>
         </nav>
-        <h2 class="header__heading">Попутчики</h2>
       </div>
     </header>
     <main class="main">
@@ -84,7 +85,7 @@
           <button class="filtering-by-country__roll-up-button" type="button">Свернуть</button>
         </section>
         <section class="companion-selection">
-          <h2 class="companion-selection__heading"></h2>
+          <h2 class="companion-selection__heading">Подберите идеального попутчика</h2>
           <form class="companion-selection__form" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="companion-selection__fieldset">
               <legend class="companion-selection__legend">Хобби</legend>
@@ -156,140 +157,195 @@
             <button class="companion-selection__button" type="button">Показать</button>
           </form>
         </section>
-        <article class="catalog-traveler-card">
-          <img class="catalog-traveler-card__image" src="" width="" height="" alt="Фото пользователя">
+        <article class="catalog-traveler-card catalog-traveler-card--heart-active">
+          <img class="catalog-traveler-card__image" src="../img/firsova-mobile@1x.jpg" width="70" height="70" alt="Фото пользователя">
           <h3 class="catalog-traveler-card__traveler-name">Таня Фирсова</h3>
           <span class="catalog-traveler-card__likes">1,5 м</span>
           <p class="catalog-traveler-card__hobbies">&#35;ЗОЖ &#35;ПП &#35;Фитнес &#35;пляж &#35;авокадо &#35;смузи</p>
           <p class="catalog-traveler-card__wants">Хочет посетить</p>
           <ul class="catalog-traveler-card__countries-list">
-            <li class="catalog-traveler-card__countrie-item">Шри ланка</li>
-            <li class="catalog-traveler-card__countrie-item">Тайланд</li>
-            <li class="catalog-traveler-card__countrie-item">Сейшелы</li>
+            <li class="catalog-traveler-card__countrie-item">
+              <img class="catalog-traveler-card__country" src="img/Sri-Lanka@1px.png" width="35" height="25" alt="Флаг Шри Ланка">
+              <span class="catalog-traveler-card__country-name">Шри ланка</span>
+            </li>
+            <li class="catalog-traveler-card__countrie-item">
+              <img class="catalog-traveler-card__country" src="img/Thailand@1px.png" width="35" height="25" alt="Флаг Тайланда">
+              <span class="catalog-traveler-card__country-name">Тайланд</span>
+            </li>
+            <li class="catalog-traveler-card__countrie-item">
+              <img class="catalog-traveler-card__country" src="img/Seychelles @1px.png" width="35" height="25" alt="Флаг Сейшел">
+              <span class="catalog-traveler-card__country-name">Сейшелы</span>
+            </li>
           </ul>
-          <ul class="catalog-traveler-card__transport-list">
-            <li class="catalog-traveler-card__transport-item">
+          <p class="catalog-traveler-card__list-heading">транспорт:</p>
+          <ul class="catalog-traveler-card__transport-list transport-list">
+            <li class="transport-list__item transport-list__item--plane transport-list__item--background">
               <span class="visually-hidden">Самолет</span>
             </li>
-            <li class="catalog-traveler-card__transport-item">
+            <li class="transport-list__item transport-list__item--bus-inactive transport-list__item--background">
               <span class="visually-hidden">Автотранспорт</span>
             </li>
-            <li class="catalog-traveler-card__transport-item">
+            <li class="transport-list__item transport-list__item--bicycle-inactive transport-list__item--background">
               <span class="visually-hidden">Велосипед</span>
             </li>
-            <li class="catalog-traveler-card__transport-item">
+            <li class="transport-list__item transport-list__item--on-foot-inactive transport-list__item--background">
               <span class="visually-hidden">Пешком</span>
             </li>
           </ul>
-          <span class="catalog-traveler-card__level">99 level</span>
-          <a class="catalog-traveler-card__button" href="authorization.html">Позвать</a>
+          <p class="catalog-traveler-card__level-heading">левел:</p>
+          <p class="catalog-traveler-card__level">99</p>
+          <a class="catalog-traveler-card__button card-button" href="authorization.html">Позвать!</a>
         </article>
-        <article class="catalog-traveler-card">
-          <img class="catalog-traveler-card__image" src="" width="" height="" alt="Фото пользователя">
+        <article class="catalog-traveler-card catalog-traveler-card--heart">
+          <img class="catalog-traveler-card__image" src="img/demin-mobile@1x.jpg" width="70" height="70" alt="Фото пользователя">
           <h3 class="catalog-traveler-card__traveler-name">Петя Демин</h3>
-          <span class="catalog-traveler-card__likes">150</span>
+          <span class="catalog-traveler-card__likes">1500</span>
           <p class="catalog-traveler-card__hobbies">&#35;бургер &#35;бар &#35;футбол &#35;концерт &#35;крафт</p>
           <p class="catalog-traveler-card__wants">Хочет посетить</p>
           <ul class="catalog-traveler-card__countries-list want-visit">
-            <li class="catalog-traveler-card__countrie-item">Бельгия</li>
-            <li class="catalog-traveler-card__countrie-item">Чехия</li>
+            <li class="catalog-traveler-card__countrie-item">
+              <img class="catalog-traveler-card__country" src="img/Belgium@1px.png" width="35" height="24" alt="Бельгия">
+              <span class="catalog-traveler-card__country-name">Бельгия</span>
+            </li>
+            <li class="catalog-traveler-card__countrie-item">
+              <img class="catalog-traveler-card__country" src="img/Czech@1px.png" width="35" height="25" alt="Чехия">
+              <span class="catalog-traveler-card__country-name">Чехия</span>
+            </li>
           </ul>
-          <ul class="catalog-traveler-card__transport-list">
-            <li class="catalog-traveler-card__transport-item">
+          <p class="transport-list-heading">транспорт:</p>
+          <ul class="catalog-traveler-card__transport-list transport-list">
+            <li class="transport-list__item transport-list__item--plane transport-list__item--background">
               <span class="visually-hidden">Самолет</span>
             </li>
-            <li class="catalog-traveler-card__transport-item">
+            <li class="transport-list__item transport-list__item--bus transport-list__item--background">
               <span class="visually-hidden">Автотранспорт</span>
             </li>
-            <li class="catalog-traveler-card__transport-item">
+            <li class="transport-list__item transport-list__item--bicycle-inactive transport-list__item--background">
               <span class="visually-hidden">Велосипед</span>
             </li>
-            <li class="catalog-traveler-card__transport-item">
+            <li class="transport-list__item transport-list__item--on-foot transport-list__item--background">
               <span class="visually-hidden">Пешком</span>
             </li>
           </ul>
-          <span class="catalog-traveler-card__level">80 level</span>
-          <a class="catalog-traveler-card__button" href="authorization.html">Позвать</a>
+          <p class="catalog-traveler-card__level-heading">левел:</p>
+          <p class="catalog-traveler-card__level">80</p>
+          <a class="catalog-traveler-card__button card-button" href="authorization.html">Позвать!</a>
         </article>
-        <article class="catalog-traveler-card">
-          <img class="catalog-traveler-card__image" src="" width="" height="" alt="Фото пользователя">
+        <article class="catalog-traveler-card catalog-traveler-card--heart">
+          <img class="catalog-traveler-card__image" src="img/smolov-mobile@1x.jpg" width="70" height="70" alt="Фото пользователя">
           <h3 class="catalog-traveler-card__traveler-name">Марк Смолов</h3>
           <span class="catalog-traveler-card__likes">1700</span>
           <p class="catalog-traveler-card__hobbies">&#35;рэп &#35;тату &#35;хайпбист &#35;кроссовки &#35;суприм</p>
           <p class="catalog-traveler-card__wants">Хочет посетить</p>
           <ul class="catalog-traveler-card__countries-list">
-            <li class="catalog-traveler-card__countrie-item">США</li>
-            <li class="catalog-traveler-card__countrie-item">Астралия</li>
-            <li class="catalog-traveler-card__countrie-item">Доминикана</li>
+            <li class="catalog-traveler-card__countrie-item">
+              <img class="catalog-traveler-card__country" src="img/United-States-of-America.png" width="26" height="18" alt="США">
+              <span class="catalog-traveler-card__country-name">США</span>
+            </li>
+            <li class="catalog-traveler-card__countrie-item">
+              <img class="catalog-traveler-card__country" src="img/Australia.png" width="26" height="18" alt="Астралия">
+              <span class="catalog-traveler-card__country-name">Астралия</span>
+            </li>
+            <li class="catalog-traveler-card__countrie-item">
+              <img class="catalog-traveler-card__country" src="img/Dominica.png" width="26" height="18" alt="Доминикана">
+              <span class="catalog-traveler-card__country-name">Доминикана</span>
+            </li>
           </ul>
-          <ul class="catalog-traveler-card__transport-list">
-            <li class="catalog-traveler-card__transport-item">
+          <p class="transport-list-heading">транспорт:</p>
+          <ul class="catalog-traveler-card__transport-list transport-list">
+            <li class="transport-list__item transport-list__item--plane transport-list__item--background">
               <span class="visually-hidden">Самолет</span>
             </li>
-            <li class="catalog-traveler-card__transport-item">
+            <li class="transport-list__item transport-list__item--bus-inactive transport-list__item--background">
               <span class="visually-hidden">Автотранспорт</span>
             </li>
-            <li class="catalog-traveler-card__transport-item">
+            <li class="transport-list__item transport-list__item--bicycle transport-list__item--background">
               <span class="visually-hidden">Велосипед</span>
             </li>
-            <li class="catalog-traveler-card__transport-item">
+            <li class="transport-list__item transport-list__item--on-foot-inactive transport-list__item--background">
               <span class="visually-hidden">Пешком</span>
             </li>
           </ul>
-          <span class="catalog-traveler-card__level">25 level</span>
-          <a class="catalog-traveler-card__button" href="authorization.html">Позвать</a>
+          <p class="catalog-traveler-card__level-heading">левел:</p>
+          <p class="catalog-traveler-card__level catalog-traveler-card__level--fourth">25</p>
+          <a class="catalog-traveler-card__button card-button" href="authorization.html">Позвать!</a>
         </article>
-        <article class="catalog-traveler-card">
-          <img class="catalog-traveler-card__image" src="" width="" height="" alt="Фото пользователя">
+        <article class="catalog-traveler-card catalog-traveler-card--heart">
+          <img class="catalog-traveler-card__image" src="img/rogovaya-mobile@1x.jpg" width="70" height="70" alt="Фото пользователя">
           <h3 class="catalog-traveler-card__traveler-name">Лариса Роговая</h3>
           <span class="catalog-traveler-card__likes">23</span>
           <p class="catalog-traveler-card__hobbies">&#35;образование &#35;карьера &#35;учеба &#35;линкедин</p>
           <p class="catalog-traveler-card__wants">Хочет посетить</p>
           <ul class="catalog-traveler-card__countries-list">
-            <li class="catalog-traveler-card__countrie-item">Великобритания</li>
-            <li class="catalog-traveler-card__countrie-item">Германия</li>
+            <li class="catalog-traveler-card__countrie-item">
+              <img class="catalog-traveler-card__country" src="img/United-Kingdom1.png" width="26" height="18" alt="Великобритания">
+              <span class="catalog-traveler-card__country-name">Великобритания</span>
+            </li>
+            <li class="catalog-traveler-card__countrie-item">
+              <img class="catalog-traveler-card__country" src="img/Germany.png" width="26" height="19" alt="Германия">
+              <span class="catalog-traveler-card__country-name">Германия</span>
+            </li>
           </ul>
-          <ul class="catalog-traveler-card__transport-list">
-            <li class="catalog-traveler-card__transport-item">
+          <p class="transport-list-heading">транспорт:</p>
+          <ul class="catalog-traveler-card__transport-list transport-list">
+            <li class="transport-list__item transport-list__item--plane transport-list__item--background">
               <span class="visually-hidden">Самолет</span>
             </li>
-            <li class="catalog-traveler-card__transport-item">
+            <li class="transport-list__item transport-list__item--bus transport-list__item--background">
               <span class="visually-hidden">Автотранспорт</span>
             </li>
-            <li class="catalog-traveler-card__transport-item">
+            <li class="transport-list__item transport-list__item--bicycle-inactive transport-list__item--background">
               <span class="visually-hidden">Велосипед</span>
             </li>
-            <li class="catalog-traveler-card__transport-item">
+            <li class="transport-list__item transport-list__item--on-foot-inactive transport-list__item--background">
               <span class="visually-hidden">Пешком</span>
             </li>
           </ul>
-          <span class="catalog-traveler-card__level">50 level</span>
-          <a class="catalog-traveler-card__button" href="authorization.html">Позвать</a>
+          <p class="catalog-traveler-card__level catalog-traveler-card__level--fifty">50</p>
+          <a class="catalog-traveler-card__button card-button" href="authorization.html">Позвать!</a>
         </article>
-        <a class="catalog-traveler-card__more-users" href="users.html">Показать еще</a>
-        <button  class="catalog-traveler-card__slider-button" type="button" aria-label="Предыдущий слайд"><span class="visually-hidden">Стрелка влево</span></button>
-        <button  class="catalog-traveler-card__slider-button" type="button" aria-label="Следующий слайд"><span class="visually-hidden">Стрелка вправо</span></button>
+        <a class="main__more-users " href="users.html">Показать еще</a>
+        <button class="main__slider-button-left" type="button" aria-label="Предыдущий слайд">
+          <span class="visually-hidden">Стрелка влево</span>
+          <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 9L9.75 0.339745L9.75 17.6603L0 9Z" fill="#1D2E5B"/>
+          </svg>
+        </button>
+        <button  class="main__slider-button-right" type="button" aria-label="Следующий слайд">
+          <span class="visually-hidden">Стрелка вправо</span>
+          <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 8.89478L0.25 17.555L0.25 0.234521L10 8.89478Z" fill="#1D2E5B"/>
+          </svg>
+        </button>
       </div>
     </main>
     <footer class="footer">
       <div class="footer__wrapper">
         <a class="footer__logo" href="#" aria-label="Логотип: Погнали">
-          <img src="" width="" height="" alt="Сервис поиска попутчиково погнали">
+          <img src="../img/logo-mobile-blue@1x.png" width="100" height="19" alt="Сервис поиска попутчиков погнали">
         </a>
         <ul class="footer__social-list socials-list">
           <li class="socials-list__item">
-            <a class="socials-list__link" href="https://www.facebook.com/htmlacademy" target="_blank" aria-label="Социальная сеть Фейсбук">Фейсбук</a>
+            <a class="socials-list__link socials-list__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank" aria-label="Социальная сеть Фейсбук">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
           </li>
           <li class="socials-list__item">
-            <a class="socials-list__link" href="https://vk.com/htmlacademy" target="_blank" aria-label="Социальная сеть ВКонтакте">ВКонтакте</a>
+            <a class="socials-list__link socials-list__link--vk" href="https://vk.com/htmlacademy" target="_blank" aria-label="Социальная сеть ВКонтакте">
+              <span class="visually-hidden">ВКонтакте</span>
+            </a>
           </li>
           <li class="socials-list__item">
-            <a class="socials-list__link" href="https://www.instagram.com/htmlacademy" target="_blank" aria-label="Социальная сеть Инстаграм">Инстаграм</a>
+            <a class="socials-list__link socials-list__link--instagram" href="https://www.instagram.com/htmlacademy" target="_blank" aria-label="Социальная сеть Инстаграм">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
           </li>
         </ul>
         <div class="footer__copyright copyright">
           <h2 class="copyright__heading">Разработано</h2>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Сайт разработчика"><span class="visually-hidden">HTML Academy</span></a>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Сайт разработчика">
+            <span class="visually-hidden">HTML Academy</span>
+          </a>
         </div>
       </div>
     </footer>

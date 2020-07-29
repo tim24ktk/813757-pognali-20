@@ -3,19 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="header">
-      <div class="header__wrapper">
-        <a class="header__logo" href="index.html" aria-label="Логотип: Погнали">
-          <img src="" width="" height="" alt="Сервис поиска попутчиково погнали">
-        </a>
+      <div class="header__background header__background--color">
         <nav class="main-nav">
+          <picture class="main-nav__logo">
+            <img src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Сервис поиска попутчиков погнали">
+          </picture>
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
+          <h1 class="main-nav__heading">Направления</h1>
         </nav>
-        <h2 class="header__heading">Направления</h2>
       </div>
     </header>
     <main class="main">
@@ -210,22 +211,30 @@
     <footer class="footer">
       <div class="footer__wrapper">
         <a class="footer__logo" href="#" aria-label="Логотип: Погнали">
-          <img src="" width="" height="" alt="Сервис поиска попутчиково погнали">
+          <img src="../img/logo-mobile-blue@1x.png" width="100" height="19" alt="Сервис поиска попутчиков погнали">
         </a>
         <ul class="footer__social-list socials-list">
           <li class="socials-list__item">
-            <a class="socials-list__link" href="https://www.facebook.com/htmlacademy" target="_blank" aria-label="Социальная сеть Фейсбук">Фейсбук</a>
+            <a class="socials-list__link socials-list__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank" aria-label="Социальная сеть Фейсбук">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
           </li>
           <li class="socials-list__item">
-            <a class="socials-list__link" href="https://vk.com/htmlacademy" target="_blank" aria-label="Социальная сеть ВКонтакте">ВКонтакте</a>
+            <a class="socials-list__link socials-list__link--vk" href="https://vk.com/htmlacademy" target="_blank" aria-label="Социальная сеть ВКонтакте">
+              <span class="visually-hidden">ВКонтакте</span>
+            </a>
           </li>
           <li class="socials-list__item">
-            <a class="socials-list__link" href="https://www.instagram.com/htmlacademy" target="_blank" aria-label="Социальная сеть Инстаграм">Инстаграм</a>
+            <a class="socials-list__link socials-list__link--instagram" href="https://www.instagram.com/htmlacademy" target="_blank" aria-label="Социальная сеть Инстаграм">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
           </li>
         </ul>
         <div class="footer__copyright copyright">
           <h2 class="copyright__heading">Разработано</h2>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Сайт разработчика"><span class="visually-hidden">HTML Academy</span></a>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Сайт разработчика">
+            <span class="visually-hidden">HTML Academy</span>
+          </a>
         </div>
       </div>
     </footer>

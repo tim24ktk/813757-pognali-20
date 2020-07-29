@@ -1,0 +1,31 @@
+.main-nav {
+  position: relative;
+  z-index: 1;
+}
+
+.main-nav__toggle {
+  position: relative;
+  margin-top: 28px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 11px;
+    background-image: url("../img/icon_menu_mobile.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.main-nav__heading {
+  width: 238px;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 40px;
+  color: @basic-white;
+  text-align: center;
+}

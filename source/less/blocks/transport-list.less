@@ -1,0 +1,131 @@
+.transport-list {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 175px;
+  padding: 17px;
+  margin: auto;
+  margin-top: 14px;
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+.transport-list__item {
+  position: relative;
+
+  &--plane {
+    &::before {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      content: "";
+      width: 18px;
+      height: 20px;
+      background-image: url("../img/plane.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--bus {
+    &::before {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      content: "";
+      width: 18px;
+      height: 21px;
+      background-image: url("../img/bus.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--on-foot {
+    &::before {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      content: "";
+      width: 25px;
+      height: 24px;
+      background-image: url("../img/run.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--bicycle {
+    &::before {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      content: "";
+      width: 25px;
+      height: 24px;
+      background-image: url("../img/bike.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--plane-inactive {
+    &::before {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      content: "";
+      width: 18px;
+      height: 20px;
+      background-image: url("../img/plane.svg");
+      background-repeat: no-repeat;
+      opacity: 0.15;
+    }
+  }
+
+  &--bus-inactive {
+    &::before {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      content: "";
+      width: 18px;
+      height: 21px;
+      background-image: url("../img/bus.svg");
+      background-repeat: no-repeat;
+      opacity: 0.15;
+    }
+  }
+
+
+  &--bicycle-inactive {
+    &::before {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      content: "";
+      width: 25px;
+      height: 24px;
+      background-image: url("../img/bike.svg");
+      background-repeat: no-repeat;
+      opacity: 0.15;
+    }
+  }
+
+  &--on-foot-inactive {
+    &::before {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      content: "";
+      width: 25px;
+      height: 24px;
+      background-image: url("../img/run.svg");
+      background-repeat: no-repeat;
+      opacity: 0.15;
+    }
+  }
+
+  &--background {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: @basic_blue_light;
+  }
+}
