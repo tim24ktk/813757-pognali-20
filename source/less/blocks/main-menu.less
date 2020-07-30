@@ -1,0 +1,47 @@
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -51px;
+  padding-top: 27px;
+  padding-bottom: 41px;
+  background-color: @basic-white;
+  z-index: 3;
+}
+
+.main-menu__contacts {
+  margin: auto;
+}
+
+.main-menu__buttons-list {
+  display: block;
+  .reset_for_list();
+  margin: auto;
+}
+
+.main-menu__buttons-item {
+  .reset();
+}
+
+.main-menu__buttons-link {
+  .reset();
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @special_background_light;
+}
+
+.main-menu .main-menu__autorisation {
+  margin: auto;
+  margin-top: 51px;
+
+  &--size {
+    width: 270px;
+    line-height: 30px;
+  }
+}
+
+.main-menu__social {
+  margin: auto;
+}
