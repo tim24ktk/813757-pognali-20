@@ -46,3 +46,21 @@
   margin: auto;
   margin-top: 41px;
 }
+
+.main-menu__close {
+  position: relative;
+  border: none;
+  background-color: transparent;
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 26px;
+    right: 29px;
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/small-cross.svg");
+    background-repeat: no-repeat;
+  }
+}
