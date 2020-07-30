@@ -1,24 +1,10 @@
 .main-menu-feedback {
   width: 270px;
   margin-top: 51px;
-}
-
-.main-menu__close {
-  position: relative;
-  border: none;
-  background-color: transparent;
-
-  &::before {
-    display: block;
-    position: absolute;
-    top: 26px;
-    right: 29px;
-    content: "";
-    width: 24px;
-    height: 24px;
-    background-image: url("../img/small-cross.svg");
-    background-repeat: no-repeat;
-  }
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
 }
 
 .main-menu-feedback__phone {
@@ -43,10 +29,11 @@
     display: block;
     width: 180px;
     padding-left: 61px;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 18px;
     color: @special_background_light;
+
+    &--color {
+      color: @basic_yellow;
+    }
   }
 }
 
@@ -76,5 +63,9 @@
     font-size: 16px;
     line-height: 18px;
     color: @special_background_light;
+
+    &--color {
+      color: @basic_yellow;
+    }
   }
 }
