@@ -1,0 +1,163 @@
+.companion-selection {
+  padding: 20px 22px;
+  background-color: @basic_yellow;
+  border-radius: 20px;
+}
+
+.companion-selection__heading {
+  .reset();
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: @basic_blue_light_color;
+}
+
+.companion-selection__fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.companion-selection__legend {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: @basic_blue_light_color;
+}
+
+.companion-selection__button {
+  position: relative;
+  border: none;
+  background-color: transparent;
+
+  &::before {
+    position: absolute;
+    right: 0;
+    content: "";
+    width: 10px;
+    height: 5px;
+    background-image: url("../img/dropdown.svg");
+  }
+
+  &--close {
+    &::before {
+      width: 10px;
+      height: 5px;
+      background-image: url("../img/dropdown.svg");
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.companion-selection__music-list,
+.companion-selection__transport-list {
+  .reset_for_list();
+}
+
+.companion-selection__music-item {
+  .reset();
+  margin-bottom: 15px;
+}
+
+.companion-selection__checkbox-music-label {
+  position: relative;
+  display: block;
+  padding-left: 45px;
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    content: "";
+    padding: 5px;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background-color: @basic-white;
+  }
+}
+
+.companion-selection__music-checkbox:checked + .companion-selection__checkbox-music-label {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 10px;
+    width: 9px;
+    height: 9px;
+    background-image: url("../img/tick.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.companion-selection__transport-list {
+  display: flex;
+}
+
+.companion-selection__tansport-checkbox-label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  margin-left: 45px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: @basic-white;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
+    opacity: 0.15;
+  }
+
+  &--plane {
+    &::after {
+      top: 7px;
+      left: 8px;
+      .size(15px; 15px);
+      background-image: url("../img/plane.svg");
+      background-size: 15px 15px;
+    }
+  }
+
+  &--vehicles {
+    &::after {
+      top: 7px;
+      left: 8px;
+      .size(17px; 16px);
+      background-image: url("../img/bus.svg");
+      background-size: 17px 16px;
+    }
+  }
+
+  &--bicycle {
+    &::after {
+      top: 7px;
+      left: 8px;
+      .size(17px; 16px);
+      background-image: url("../img/bike.svg");
+      background-size: 17px 16px;
+    }
+  }
+
+  &--on-foot {
+    &::after {
+      top: 7px;
+      left: 8px;
+      .size(17px; 16px);
+      background-image: url("../img/run.svg");
+      background-size: 17px 16px;
+    }
+  }
+}
