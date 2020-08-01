@@ -22,19 +22,21 @@
     <main class="main">
       <div class="main__wrapper">
         <section class="filtering-by-country">
-          <h2 class="filtering-by-country__heading">Фильтрация по странам</h2>
-          <button class="filtering-by-country__expand-button" type="button"><span class="visually-hidden">Открыть фильтр</span></button>
-          <button class="filtering-by-country__close-button" type="button"><span class="visually-hidden">Закрыть фильтр</span></button>
+          <div class="filtering-by-country__top">
+            <h2 class="filtering-by-country__heading">Фильтрация по странам</h2>
+            <button class="filtering-by-country__expand-button" type="button"><span class="visually-hidden">Открыть фильтр</span></button>
+            <button class="filtering-by-country__close-button" type="button"><span class="visually-hidden">Закрыть фильтр</span></button>
+          </div>
           <ul class="filtering-by-country__list-mainland">
-            <li class="filtering-by-country__item-mainland">Европа</li>
+            <li class="filtering-by-country__item-mainland filtering-by-country__item-mainland--selected">Европа</li>
             <li class="filtering-by-country__item-mainland">Азия</li>
             <li class="filtering-by-country__item-mainland">Америка</li>
             <li class="filtering-by-country__item-mainland">Острова</li>
           </ul>
-          <table class="filtering-by-country__alphabet">
+          <table class="filtering-by-country__alphabet filtering-by-country-table">
             <caption class="visually-hidden">Алфавит</caption>
             <tr class="filtering-by-country__letters">
-              <td class="filtering-by-country__letter">а</td>
+              <td class="filtering-by-country__letter filtering-by-country__letter--selected">а</td>
               <td class="filtering-by-country__letter">б</td>
               <td class="filtering-by-country__letter">в</td>
               <td class="filtering-by-country__letter">г</td>
