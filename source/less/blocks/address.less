@@ -1,0 +1,47 @@
+.address__top {
+  background-color: @basic_yellow;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: @basic_blue_light_color;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.address__text {
+  position: relative;
+  padding-left: 50px;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    content: "";
+    .size(45px; 45px);
+    background-color: @phone_background;
+    border-radius: 50%;
+    background-image: url("../img/contacts-location.svg");
+    background-repeat: no-repeat;
+    background-size: 21px 21px;
+    background-position: center;
+  }
+}
+
+.address__img-wrapper {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 156px;
+    left: 141px;
+    content: "";
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    background-color: @basic-white;
+    background-image: url("../img/map-marker.svg");
+    background-repeat: no-repeat;
+    background-size: 19px 19px;
+    background-position: center;
+  }
+}
