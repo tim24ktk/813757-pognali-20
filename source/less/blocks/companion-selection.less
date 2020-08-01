@@ -95,6 +95,8 @@
 }
 
 .companion-selection__transport-list {
+  position: relative;
+  left: -47px;
   display: flex;
 }
 
@@ -158,6 +160,32 @@
       .size(17px; 16px);
       background-image: url("../img/run.svg");
       background-size: 17px 16px;
+    }
+  }
+}
+
+.companion-selection__transport-checkbox:checked + .companion-selection__tansport-checkbox-label {
+  &--plane {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &--vehicles {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &--bicycle {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &--on-foot {
+    &::after {
+      opacity: 1;
     }
   }
 }
