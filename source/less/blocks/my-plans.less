@@ -1,0 +1,66 @@
+.my-plans {
+  background-color: @special_blue_light;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+.my-plans__heading {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: @basic_blue_light_color;
+}
+
+.my-plans__list {
+  .reset_for_list();
+  counter-reset: myCounter;
+}
+
+.my-plans__item-wrapper {
+  width: 270px;
+  margin-bottom: 10px;
+  padding: 23px;
+  background-color: @basic-white;
+  border-radius: 10px;
+}
+
+.my-plans__item {
+  position: relative;
+  padding-left: 15px;
+
+  &::before {
+    counter-increment: myCounter;
+    content: counter(myCounter) + ".";
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    color: @basic_blue_light_color;
+  }
+}
+
+.my-plans__countries {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  color: @basic_blue_light_color;
+}
+
+.my-plans__fellow-travelers,
+.my-plans__date {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: @basic_blue_light_color;
+}
+
+.my-plans__button {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: @basick_black_fade;
+}
