@@ -1,0 +1,272 @@
+.add-plane {
+  padding-bottom: 43px;
+  background-color: @add_plane_background;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+.add-plane__heading {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: @basic_blue_light_color;
+}
+
+.add-plane__button-one,
+.add-plane__button-two,
+.add-plane__button-three {
+  .reset();
+  .size(5px; 5px);
+  background-color: @basic_blue_light_30;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &--selected {
+    background-color: @basic_blue_light_color;
+  }
+}
+
+.add-plane__date {
+  margin-bottom: 10px;
+  padding: 24px 25px;
+  background-color: @basic-white;
+  border: none;
+  border-radius: 20px;
+}
+
+.add-plane__legend {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: @basic_blue_light_color;
+}
+
+.add-plane__preferences {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: @special_grey;
+}
+
+.add-plane__label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: @basic_blue_light_color;
+}
+
+.add-plane__measure {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: @basic_blue_light_30;
+}
+
+.add-plane__people,
+.add-plane__duration {
+  width: 220px;
+  padding: 13px;
+  text-align: center;
+  border: 1px solid @input_border_color;
+  border-radius: 4px;
+
+  &[value] {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: @basic_blue_light_color;
+  }
+}
+
+.add-plane__button-reduce {
+  position: relative;
+  top: -5px;
+  left: 45px;
+  .size(14px; 2px);
+  padding: 13px;
+  background-image: url("../img/qty-minus.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+
+.add-plane__button-add {
+  position: relative;
+  top: -5px;
+  right: 45px;
+  .size(14px; 14px);
+  padding: 13px;
+  background-image: url("../img/qty-plus.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+
+.add-plane__children-label {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    position: absolute;
+    top: -7px;
+    left: 0;
+    content: "";
+    width: 26px;
+    height: 26px;
+    background-color: @basic-white;
+    border: 1px solid @input_border_color;
+    border-radius: 5px;
+  }
+}
+
+.add-plane__children:checked + .add-plane__children-label {
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 7px;
+    content: "";
+    width: 14px;
+    height: 13px;
+    background-image: url("../img/icon_check-mark.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.add-plane__route {
+  margin-bottom: 10px;
+  background-color: @basic-white;
+  border-radius: 20px;
+  border: none;
+}
+
+.add-plane__selected-country {
+  padding: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: @basic_blue_light_color;
+  border: 1px solid @input_border_color;
+  border-radius: 4px;
+}
+
+.add-plane__open {
+  position: relative;
+  top: -6px;
+  left: -21px;
+  .size(12px; 16px);
+
+  background-image: url("../img/arrow-back.svg");
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.add-plane__country-flag {
+  position: relative;
+  top: 15px;
+  left: -27px;
+  display: inline-block;
+  width: 53px;
+  height: 42px;
+  background-image: url("../img/Bosnia-and-Herzegovina 1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid @input_border_color;
+  border-radius: 4px;
+}
+
+.add-plane__button-close {
+  position: relative;
+  top: -27px;
+  left: -42px;
+  .size(21px; 21px);
+  background-image: url("../img/icon_close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: @basic_blue_light;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.add-plane__country-input-field {
+  padding: 12px;
+  background-color: @basic_blue_light;
+  border: 1px solid @input_border_color;
+  border-radius: 4px;
+
+  &[value] {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: @basic_blue_light_color;
+  }
+}
+
+.add-plane__add-country {
+  position: relative;
+  top: -5px;
+  right: 45px;
+  .size(14px; 14px);
+  padding: 13px;
+  background-image: url("../img/qty-plus.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+
+.add-plane__entertainment {
+  margin-bottom: 43px;
+  background-color: @basic-white;
+  border-radius: 20px;
+  border: none;
+}
+
+.add-plane__entertainment-plane {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: @special_grey;
+}
+
+.add-plane__textarea-plane-label {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  color: @basic_blue_light_color;
+}
+
+.add-plane__textarea-plane {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: @special_grey;
+  border: 1px solid @input_border_color;
+  border-radius: 4px;
+
+  &::placeholder {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: @special_grey_light;
+  }
+}
