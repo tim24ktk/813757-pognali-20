@@ -1,0 +1,118 @@
+.filtering-by-country {
+  background-color: @heart_background;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.filtering-by-country__top {
+  display: flex;
+}
+
+.filtering-by-country__heading {
+  position: relative;
+  padding-left: 25px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @special_background_light;
+
+  &::before {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    content: "";
+    .size(15px; 10px);
+    background-image: url("../img/filter.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.filtering-by-country__expand-button {
+  position: relative;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    .size(17px; 3px);
+    background-image: url("../img/dots.svg");
+    background-size: 17px 3px;
+  }
+}
+
+.filtering-by-country__close-button {
+  position: relative;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    .size(16px; 16px);
+    background-image: url("../img/icon_close_blue.svg");
+    background-size: 16px 16px;
+  }
+}
+
+.filtering-by-country__list-mainland {
+  .reset_for_list();
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @special_background_light_opacity;
+}
+
+.filtering-by-country__item-mainland {
+  .reset();
+
+  &--selected {
+    color: @special_background_light;
+  }
+}
+
+.filtering-by-country__country-by-letter-list {
+  .reset_for_list();
+}
+
+.filtering-by-country__country-by-letter-item {
+  .reset();
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: @special_grey;
+}
+
+.filtering-by-country__roll-up-button {
+  position: relative;
+  width: 270px;
+  padding: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: @special_background_light;
+  background-color: @roll-up-button-background;
+  border-radius: 20px;
+  border: none;
+
+  &::before {
+    position: absolute;
+    top: 16px;
+    left: 65px;
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-image: url("../img/icon_close_blue.svg");
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+  }
+}

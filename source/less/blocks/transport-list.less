@@ -3,22 +3,30 @@
   display: flex;
   justify-content: space-between;
   width: 175px;
+  .reset_for_list();
   padding: 17px;
   margin: auto;
   margin-top: 14px;
   margin-bottom: 20px;
-  list-style: none;
 }
 
 .transport-list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  .reset();
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+
+  &::before {
+    position: absolute;
+    content: "";
+  }
 
   &--plane {
     &::before {
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      content: "";
       width: 18px;
       height: 20px;
       background-image: url("../img/plane.svg");
@@ -28,10 +36,6 @@
 
   &--bus {
     &::before {
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      content: "";
       width: 18px;
       height: 21px;
       background-image: url("../img/bus.svg");
@@ -41,10 +45,6 @@
 
   &--on-foot {
     &::before {
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      content: "";
       width: 25px;
       height: 24px;
       background-image: url("../img/run.svg");
@@ -54,10 +54,6 @@
 
   &--bicycle {
     &::before {
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      content: "";
       width: 25px;
       height: 24px;
       background-image: url("../img/bike.svg");
@@ -67,10 +63,6 @@
 
   &--plane-inactive {
     &::before {
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      content: "";
       width: 18px;
       height: 20px;
       background-image: url("../img/plane.svg");
@@ -81,10 +73,6 @@
 
   &--bus-inactive {
     &::before {
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      content: "";
       width: 18px;
       height: 21px;
       background-image: url("../img/bus.svg");
@@ -96,10 +84,6 @@
 
   &--bicycle-inactive {
     &::before {
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      content: "";
       width: 25px;
       height: 24px;
       background-image: url("../img/bike.svg");
@@ -110,10 +94,6 @@
 
   &--on-foot-inactive {
     &::before {
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      content: "";
       width: 25px;
       height: 24px;
       background-image: url("../img/run.svg");
@@ -123,9 +103,6 @@
   }
 
   &--background {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
     background-color: @basic_blue_light;
   }
 }

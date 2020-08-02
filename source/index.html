@@ -15,6 +15,50 @@
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
+          <section class="main-menu">
+            <picture class="main-nav__logo">
+              <img src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Сервис поиска попутчиков погнали">
+            </picture>
+            <button class="main-menu__close" type="button"><span class="visually-hidden">Закрыть меню</span></button>
+            <ul class="main-menu__buttons-list">
+              <li class="main-menu__buttons-item">
+                <a class="main-menu__buttons-link" href="#">О сервисе</a>
+              </li>
+              <li class="main-menu__buttons-item">
+                <a class="main-menu__buttons-link" href="form.html">Направления</a>
+              </li>
+              <li class="main-menu__buttons-item">
+                <a class="main-menu__buttons-link" href="catalog.html">Попутчики</a>
+              </li>
+            </ul>
+            <a class="main-menu__autorisation main-menu__autorisation--size card-button" href="autorisation.html">Авторизация</a>
+            <div class="main-menu__contacts main-menu-feedback">
+              <a class="main-menu-feedback__phone" href="tel:88005558628" aria-label="Позвоните нам">
+                <span class="main-menu-feedback__phone-number">8 800 555-86-28</span>
+              </a>
+              <a class="main-menu-feedback__write-us" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам">
+                <span class="visually-hidden">Напишите нам</span>
+                <p class="main-menu-feedback__write-us-mail">mail@htmlacademy.ru</p>
+              </a>
+            </div>
+            <ul class="main-menu__social socials-list">
+              <li class="socials-list__item socials-list__item--without-background">
+                <a class="socials-list__link socials-list__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank" aria-label="Социальная сеть Фейсбук">
+                  <span class="visually-hidden">Фейсбук</span>
+                </a>
+              </li>
+              <li class="socials-list__item socials-list__item--without-background">
+                <a class="socials-list__link socials-list__link--vk" href="https://vk.com/htmlacademy" target="_blank" aria-label="Социальная сеть ВКонтакте">
+                  <span class="visually-hidden">ВКонтакте</span>
+                </a>
+              </li>
+              <li class="socials-list__item socials-list__item--without-background">
+                <a class="socials-list__link socials-list__link--instagram" href="https://www.instagram.com/htmlacademy" target="_blank" aria-label="Социальная сеть Инстаграм">
+                  <span class="visually-hidden">Инстаграм</span>
+                </a>
+              </li>
+            </ul>
+          </section>
           <h1 class="main-nav__heading">В путешествие с крутыми попутчиками!</h1>
         </nav>
         <div class="header-feedback">
@@ -168,13 +212,7 @@
               </ul>
             </div>
           </article>
-          <a class="rectangular-button traveler-card__shaw-all" href="catalog.html">
-            Показать всех
-            <svg class="traveler__show-all-rectangular" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="13" height="13" viewBox="0 0 10 14" style="enable-background:new 0 0 10 14;" xml:space="preserve">
-            <polygon points="0,14 0,0.1 10,7.1 "/>
-            </svg>
-
-          </a>
+          <a class="rectangular-button traveler-card__shaw-all" href="catalog.html">Показать всех</a>
         </div>
       </section>
       <section class="add-profile">
@@ -199,30 +237,47 @@
           </ul>
           <button class="add-profile__button" type="button">Показать тарифы для бизнеса</button>
         </div>
+        <div class="business-rates">
+          <h2 class="business-rates__heading">Бизнес-тарифы</h2>
+          <ul class="business-rates__list">
+            <li class="business-rates__item">Реклама у блоггера 300 000 руб./пост</li>
+            <li class="business-rates__item">Накрутка подписчиков от 1 руб./шт.</li>
+            <li class="business-rates__item">Лайки от ботов от 20 коп./лайк</li>
+            <li class="business-rates__item">Ваш продакт-плейсмент Индивидуально</li>
+          </ul>
+          <button class="business-rates__close" type="button">Закрыть окно</button>
+        </div>
       </section>
       <section class="feedback">
         <div class="feedback__wrapper">
           <h2 class="feedback__heding">Заинтересовались?</h2>
-          <p class="fedback__sign-up-call">Зарегистрируйтесь, это быстро и бесплатно!</p>
-          <p class="feedback__log-in-call">Уже зарегистрированы? Тогда скорее <a class="feedback__link" href="autorisation.html">авторизуйтесь</a>.</p>
+          <p class="fedback__sign-up-call">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="feedback__link" href="autorisation.html">авторизуйтесь</a>.</p>
           <form class="feedback__registration-form" action="https://echo.htmlacademy.ru" method="get">
             <input type="text" name="register" id="register" placeholder="E-mail">
             <label class="visually-hidden" for="register">Зарегистрируйтесь</label>
-            <button type="submit" class="feedback__button" aria-label="Кнопка авторизации"><span class="visually-hidden">Войти</span></button>
+            <button class="feedback__registration-form-button feedback__button" type="submit" aria-label="Кнопка регистрации"><span class="visually-hidden">Войти</span></button>
           </form>
-          <p class="feedback__have-question">Остались вопросы? Мы с радостью на них ответим!</p>
-          <a class="feedback__phone" href="tel:88005558628">8 800 555-86-28</a>
-          <a class="feedback__write-us" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам">mail@htmlacademy.ru</a>
+          <div class="feedback__contacts main-menu-feedback">
+            <a class="main-menu-feedback__phone" href="tel:88005558628" aria-label="Позвоните нам">
+              <span class="main-menu-feedback__phone-number main-menu-feedback__phone-number--color">8 800 555-86-28</span>
+            </a>
+            <a class="main-menu-feedback__write-us" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам">
+              <span class="visually-hidden">Напишите нам</span>
+              <p class="main-menu-feedback__write-us-mail main-menu-feedback__write-us-mail--color">mail@htmlacademy.ru</p>
+            </a>
+          </div>
         </div>
       </section>
       <section class="address">
         <div class="address__top">
           <div class="address__wrapper">
             <p class="address__text">ул. Большая Конюшенная, 19/8</p>
-            <button class="rectangular-button address__button" type="button">Проложить маршрут</button>
+            <button class="rectangular-button rectangular-button--border address__button" type="button">Проложить маршрут</button>
           </div>
         </div>
-        <img class="address__map" src="" width="" height="" alt="Карта с маркером нашего местонахождения">
+        <div class="address__img-wrapper">
+          <img class="address__map" src="img/background_map.png" width="320" height="424" alt="Карта с маркером нашего местонахождения">
+        </div>
       </section>
     </main>
     <footer class="footer">

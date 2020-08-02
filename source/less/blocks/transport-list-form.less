@@ -1,0 +1,96 @@
+.transport-list-form {
+  position: relative;
+  left: -47px;
+  display: flex;
+  .reset_for_list();
+}
+
+.transport-list-form__tansport-checkbox-label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  margin-left: 45px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: @basic-white;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
+    opacity: 0.15;
+  }
+
+  &--plane {
+    &::after {
+      top: 7px;
+      left: 8px;
+      .size(15px; 15px);
+      background-image: url("../img/plane.svg");
+      background-size: 15px 15px;
+    }
+  }
+
+  &--vehicles {
+    &::after {
+      top: 7px;
+      left: 8px;
+      .size(17px; 16px);
+      background-image: url("../img/bus.svg");
+      background-size: 17px 16px;
+    }
+  }
+
+  &--bicycle {
+    &::after {
+      top: 7px;
+      left: 8px;
+      .size(17px; 16px);
+      background-image: url("../img/bike.svg");
+      background-size: 17px 16px;
+    }
+  }
+
+  &--on-foot {
+    &::after {
+      top: 7px;
+      left: 8px;
+      .size(17px; 16px);
+      background-image: url("../img/run.svg");
+      background-size: 17px 16px;
+    }
+  }
+}
+
+.transport-list-form__transport-checkbox:checked + .transport-list-form__tansport-checkbox-label {
+  &--plane {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &--vehicles {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &--bicycle {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &--on-foot {
+    &::after {
+      opacity: 1;
+    }
+  }
+}

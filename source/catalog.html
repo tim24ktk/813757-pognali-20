@@ -22,19 +22,21 @@
     <main class="main">
       <div class="main__wrapper">
         <section class="filtering-by-country">
-          <h2 class="filtering-by-country__heading">Фильтрация по странам</h2>
-          <button class="filtering-by-country__expand-button" type="button"><span class="visually-hidden">Открыть фильтр</span></button>
-          <button class="filtering-by-country__close-button" type="button"><span class="visually-hidden">Закрыть фильтр</span></button>
+          <div class="filtering-by-country__top">
+            <h2 class="filtering-by-country__heading">Фильтрация по странам</h2>
+            <button class="filtering-by-country__expand-button" type="button"><span class="visually-hidden">Открыть фильтр</span></button>
+            <button class="filtering-by-country__close-button" type="button"><span class="visually-hidden">Закрыть фильтр</span></button>
+          </div>
           <ul class="filtering-by-country__list-mainland">
-            <li class="filtering-by-country__item-mainland">Европа</li>
+            <li class="filtering-by-country__item-mainland filtering-by-country__item-mainland--selected">Европа</li>
             <li class="filtering-by-country__item-mainland">Азия</li>
             <li class="filtering-by-country__item-mainland">Америка</li>
             <li class="filtering-by-country__item-mainland">Острова</li>
           </ul>
-          <table class="filtering-by-country__alphabet">
+          <table class="filtering-by-country__alphabet filtering-by-country-table">
             <caption class="visually-hidden">Алфавит</caption>
             <tr class="filtering-by-country__letters">
-              <td class="filtering-by-country__letter">а</td>
+              <td class="filtering-by-country__letter filtering-by-country__letter--selected">а</td>
               <td class="filtering-by-country__letter">б</td>
               <td class="filtering-by-country__letter">в</td>
               <td class="filtering-by-country__letter">г</td>
@@ -93,19 +95,19 @@
             </fieldset>
             <fieldset class="companion-selection__fieldset">
               <legend class="companion-selection__legend">Музыка</legend>
-              <button class="companion-selection__button" type="button"><span class="visually-hidden">Развернуть-свернуть список</span></button>
+              <button class="companion-selection__button companion-selection__button--close" type="button"><span class="visually-hidden">Развернуть-свернуть список</span></button>
               <ul class="companion-selection__music-list">
                 <li class="companion-selection__music-item">
-                  <input class="companion-selection__checkbox" type="checkbox" name="hard-rock" id="hard-rock" checked>
-                  <label class="companion-selection__checkbox-label" for="hard-rock">Тяжелый рок</label>
+                  <input class="companion-selection__music-checkbox visually-hidden" type="checkbox" name="hard-rock" id="hard-rock" checked>
+                  <label class="companion-selection__checkbox-music-label companion-selection__checkbox-label--checked" for="hard-rock">Тяжелый рок</label>
                 </li>
                 <li class="companion-selection__music-item">
-                  <input class="companion-selection__checkbox" type="checkbox" name="russian-rap" id="russian-rap">
-                  <label class="companion-selection__checkbox-label" for="russian-rap">Русский рэп</label>
+                  <input class="companion-selection__music-checkbox visually-hidden" type="checkbox" name="russian-rap" id="russian-rap" checked>
+                  <label class="companion-selection__checkbox-music-label companion-selection__checkbox-label--checked" for="russian-rap">Русский рэп</label>
                 </li>
                 <li class="companion-selection__music-item">
-                  <input class="companion-selection__checkbox" type="checkbox" name="eurodance" id="eurodance">
-                  <label class="companion-selection__checkbox-label" for="eurodance">Евродэнс</label>
+                  <input class="companion-selection__music-checkbox visually-hidden" type="checkbox" name="eurodance" id="eurodance">
+                  <label class="companion-selection__checkbox-music-label" for="eurodance">Евродэнс</label>
                 </li>
               </ul>
             </fieldset>
@@ -115,46 +117,44 @@
             </fieldset>
             <fieldset class="companion-selection__fieldset">
               <legend class="companion-selection__legend">Транспорт</legend>
-              <button class="button companion-selection__button" type="button"><span class="visually-hidden">Развернуть-свернуть список</span></button>
-              <ul class="companion-selection__transport-list">
-                <li class="companion-selection__transport-item">
-                  <input class="companion-selection__checkbox" type="checkbox" name="plane" id="plane" checked>
-                  <label class="companion-selection__checkbox-label" for="plane">Самолет</label>
+              <button class="button companion-selection__button companion-selection__button--close" type="button"><span class="visually-hidden">Развернуть-свернуть список</span></button>
+              <ul class="companion-selection__transport-list transport-list-form">
+                <li class="transport-list-form__transport-item">
+                  <input class="transport-list-form__transport-checkbox visually-hidden" type="checkbox" name="plane" id="plane" checked>
+                  <label class="transport-list-form__tansport-checkbox-label transport-list-form__tansport-checkbox-label--plane" for="plane"><span class="visually-hidden">Самолет</span></label>
                 </li>
-                <li class="companion-selection__transport-item">
-                  <input class="companion-selection__checkbox" type="checkbox" name="vehicles" id="vehicles">
-                  <label class="companion-selection__checkbox-label" for="vehicles">Автотранспорт</label>
+                <li class="transport-list-form__transport-item">
+                  <input class="transport-list-form__transport-checkbox visually-hidden" type="checkbox" name="vehicles" id="vehicles" checked>
+                  <label class="transport-list-form__tansport-checkbox-label transport-list-form__tansport-checkbox-label--vehicles" for="vehicles"><span class="visually-hidden">Автотранспорт</span></label>
                 </li>
-                <li class="companion-selection__transport-item">
-                  <input class="companion-selection__checkbox" type="checkbox" name="bicycle" id="bicycle">
-                  <label class="companion-selection__checkbox-label" for="bicycle">Велосипед</label>
+                <li class="transport-list-form__transport-item">
+                  <input class="transport-list-form__transport-checkbox visually-hidden" type="checkbox" name="bicycle" id="bicycle">
+                  <label class="transport-list-form__tansport-checkbox-label transport-list-form__tansport-checkbox-label--bicycle" for="bicycle"><span class="visually-hidden">Велосипед</span></label>
                 </li>
-                <li class="companion-selection__transport-item">
-                  <input class="companion-selection__checkbox" type="checkbox" name="on-foot" id="on-foot">
-                  <label class="companion-selection__checkbox-label" for="on-foot">Пешком</label>
+                <li class="transport-list-form__transport-item">
+                  <input class="transport-list-form__transport-checkbox visually-hidden" type="checkbox" name="on-foot" id="on-foot" checked>
+                  <label class="transport-list-form__tansport-checkbox-label transport-list-form__tansport-checkbox-label--on-foot" for="on-foot"><span class="visually-hidden">Пешком</span></label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="level">
               <legend class="level__name">Левел</legend>
-              <button class="button companion-selection__button" type="button"><span class="visually-hidden">Развернуть-свернуть список</span></button>
+              <button class="button level__button button level__button--close" type="button"><span class="visually-hidden">Развернуть-свернуть список</span></button>
               <div class="level__price-controls">
-                <label class="visually-hidden">
-                  <input class="level__input" type="text" name="min-price" value="30">
-                </label>
-                <label class="visually-hidden">
-                  <input class="level__input" type="text" name="max-price" value="100">
-                </label>
+                <label class="visually-hidden">Минимальная цена</label>
+                <input class="level__input-min" type="text" name="min-price" value="30">
+                <label class="visually-hidden">Максимальная цена</label>
+                <input class="level__input-max" type="text" name="max-price" value="100">
               </div>
               <div class="level__range-controls">
                 <div class="level__scale">
-                  <div class="level__bar">
+                  <div class="level__bar"></div>
                 </div>
                 <div class="level__toggle-min"></div>
                 <div class="level__toggle-max"></div>
               </div>
             </fieldset>
-            <button class="companion-selection__button" type="button">Показать</button>
+            <button class="level-submit__button" type="submit">Показать</button>
           </form>
         </section>
         <article class="catalog-traveler-card catalog-traveler-card--heart-active">
