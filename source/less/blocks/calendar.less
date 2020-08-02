@@ -1,0 +1,68 @@
+.calendar__previous-month {
+  position: relative;
+  .size(15px; 21px);
+  background-image: url("../img/month-arrow-left.svg");
+  background-color: transparent;
+  border: none;
+}
+
+.calendar__next-month {
+  position: relative;
+  .size(15px; 21px);
+  background-image: url("../img/month-arrow-right.svg");
+  background-color: transparent;
+  border: none;
+}
+
+.calendar__calendar-table {
+  border-collapse: collapse;
+}
+
+.calendar__months-list {
+  .reset_for_list();
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: @basic_blue_light_special;
+}
+
+.calendar__day-of-week-item-letter {
+  .size(32px; 32px);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: @special_grey;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid @calendar_border_color;
+
+  &--holiday {
+    color: @holiday_color;
+  }
+}
+
+.calendar__day-of-week-item {
+  .size(32px; 32px);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: @special_grey_light;
+  text-align: center;
+  border: 1px solid @calendar_border_color;
+
+  &--selected {
+    font-weight: 500;
+    color: @basic-white;
+    background-color: @basic_blue_light_color;
+  }
+
+  &--possible {
+    font-weight: 500;
+    color: @basic_blue_light_color;
+    background-color: @basic_blue_light;
+  }
+
+  &--current-day {
+    border: 2px solid @holiday_color;
+  }
+}
