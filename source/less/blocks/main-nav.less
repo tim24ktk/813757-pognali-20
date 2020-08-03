@@ -1,14 +1,26 @@
 .main-nav {
   position: relative;
   z-index: 1;
+
+  @media (max-width: @mobile-width-only) {
+    .main-nav__logo {
+      display: block;
+      margin-top: 26px;
+      width: 100px;
+    }
+  }
 }
 
 .main-nav__toggle {
-  position: relative;
-  margin-top: 28px;
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    top: 5px;
+    right: 17px;
+  }
 
   &::before {
     position: absolute;
@@ -21,11 +33,16 @@
 }
 
 .main-nav__heading {
-  width: 238px;
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 36px;
   line-height: 40px;
   color: @basic-white;
   text-align: center;
+
+  @media (max-width: @mobile-width-only) {
+    margin-top: 42px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
 }

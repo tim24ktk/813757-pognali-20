@@ -1,14 +1,40 @@
 .header-top-review {
-  width: 161px;
+  .reset();
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
+  color: @basic-white;
+  background-color: @basic_blue;
+
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+    top: -20px;
+    padding-bottom: 85px;
+  }
+}
+
+.header-top-review__wrapper {
+  width: 270px;
+  margin: auto;
+  padding: 0 25px;
+}
+
+.header-top-review__comment {
+  @media (max-width: @mobile-width-only) {
+    width: 151px;
+    margin-top: 48px;
+  }
 }
 
 .header-top-review__commentator {
   display: block;
   width: 161px;
+  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 22px;
+
+  @media (max-width: @mobile-width-only) {
+    margin-top: 19px;
+  }
 }

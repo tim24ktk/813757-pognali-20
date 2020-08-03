@@ -1,9 +1,11 @@
 .search-companion {
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
   background-color: @special_background_light;
   z-index: 1;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 
   &::before {
     position: absolute;
@@ -18,6 +20,7 @@
 
   &::after {
     position: absolute;
+    margin: auto;
     bottom: 0;
     left: 20px;
     content: "";
@@ -25,6 +28,17 @@
     height: 352px;
     background-image: url("../img/about-mobile@1x.png");
     background-repeat: no-repeat;
+    background-position: center;
     z-index: -1;
+  }
+}
+
+.search-companion__wrapper {
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+    top: -10px;
+    margin: auto;
+    width: 320px;
+    padding: 0 25px;
   }
 }

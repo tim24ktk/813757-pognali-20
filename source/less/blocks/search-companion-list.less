@@ -1,17 +1,22 @@
 .search-companion-list {
+  position: relative;
+  .reset_for_list();
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
   color: @basic_blue;
   list-style: none;
+
+  @media (max-width: @mobile-width-only) {
+    top: -67px;
+  }
 }
 
 .search-companion-list__item {
   position: relative;
-  display: flex;
   .reset();
-  margin-top: -20px;
   width: 270px;
+  min-height: 80px;
   padding: 22px 19px;
   border-radius: 10px;
 
@@ -30,11 +35,24 @@
   &--together {
     background-color: @basic_yellow;
   }
+
+  @media (max-width: @mobile-width-only) {
+    &:first-child {
+      margin-top: 0;
+    }
+    margin-top: -80px;
+    min-height: 160px;
+
+    &--together {
+      min-height: 80px;
+    }
+  }
 }
 
 .search-companion-list__advice {
   .reset();
-  width: 150px;
+  margin-left: 5px;
+  width: 138px;
 }
 
 .search-companion-list__number {

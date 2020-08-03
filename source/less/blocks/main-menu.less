@@ -1,12 +1,22 @@
 .main-menu {
+  position: fixed;
   display: flex;
   flex-direction: column;
-  position: relative;
-  top: -51px;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 568px;
   padding-top: 27px;
-  padding-bottom: 41px;
+  padding-bottom: 29px;
   background-color: @basic-white;
   z-index: 3;
+}
+
+.main-menu__wrapper {
+  @media (max-width: @mobile-width-only) {
+    margin: auto;
+    width: 320px;
+    padding: 0 25px;
+  }
 }
 
 .main-menu__contacts {
@@ -15,8 +25,11 @@
 
 .main-menu__buttons-list {
   display: block;
+  width: 193px;
   .reset_for_list();
   margin: auto;
+  margin-top: 65px;
+  text-align: center;
 }
 
 .main-menu__buttons-item {
@@ -43,8 +56,9 @@
 }
 
 .main-menu .main-menu__social {
+  width: 136px;
   margin: auto;
-  margin-top: 41px;
+  margin-top: 29px;
 }
 
 .main-menu__close {
@@ -55,8 +69,8 @@
   &::before {
     display: block;
     position: absolute;
-    top: 26px;
-    right: 29px;
+    top: -24px;
+    right: -150px;
     content: "";
     width: 24px;
     height: 24px;

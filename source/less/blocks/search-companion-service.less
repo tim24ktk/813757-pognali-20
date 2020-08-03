@@ -1,5 +1,12 @@
 .search-companion-service {
   width: 211px;
+
+  @media (max-width: @mobile-width-only) {
+    .reset();
+    margin-top: 5px;
+    margin-left: 25px;
+    margin-bottom: 72px;
+  }
 }
 
 .search-companion-service__heading {
@@ -12,12 +19,15 @@
 }
 
 .search-companion-service__about-service {
+  .reset();
+  margin-top: 19px;
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
 }
 
 .search-companion-service__call-for {
+  margin-top: 19px;
   font-weight: 700;
   font-size: 16px;
   line-height: 22px;
