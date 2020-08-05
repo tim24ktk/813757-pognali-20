@@ -1,0 +1,44 @@
+.header-middle {
+  background-color: @basic_blue;
+  @media (max-width: @mobile-width-only) {
+    background-image: url("../img/globe-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center -145px;
+    background-size: 320px 569px;
+  }
+}
+
+.header-middle__wrapper {
+  @media (max-width: @mobile-width-only) {
+    width: 320px;
+    padding: 0 25px;
+    margin: auto;
+    background-image: url("../img/traveller-illustration-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: 80px 139px;
+  }
+}
+
+.header-middle__heading {
+  width: 238px;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 40px;
+  color: @basic-white;
+  text-align: center;
+
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+    top: 12px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+.header-middle__feedback {
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+    margin-top: 256px;
+  }
+}

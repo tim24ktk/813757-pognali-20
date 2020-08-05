@@ -18,18 +18,11 @@
     z-index: -1;
   }
 
-  &::after {
-    position: absolute;
-    margin: auto;
-    bottom: 0;
-    left: 20px;
-    content: "";
-    width: 292px;
-    height: 352px;
+  @media (max-width: @mobile-width-only) {
+    margin-top: 106px;
     background-image: url("../img/about-mobile@1x.png");
     background-repeat: no-repeat;
-    background-position: center;
-    z-index: -1;
+    background-position: center 280px;
   }
 }
 
