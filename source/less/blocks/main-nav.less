@@ -15,13 +15,28 @@
   @media (max-width: @mobile-width-only) {
     display: none;
   }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav__wrapper {
   @media (max-width: @mobile-width-only) {
+    position: relative;
     width: 320px;
     margin: auto;
     padding: 0 25px;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 768px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 0 40px;
   }
 }
 

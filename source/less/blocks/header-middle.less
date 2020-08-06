@@ -1,10 +1,18 @@
 .header-middle {
   background-color: @basic_blue;
+
   @media (max-width: @mobile-width-only) {
     background-image: url("../img/globe-back-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position: center -145px;
     background-size: 320px 569px;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/globe-back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center 291px;
+    background-color: @special_blue_background;
   }
 }
 
@@ -16,6 +24,16 @@
     background-image: url("../img/traveller-illustration-mobile@1x.png");
     background-repeat: no-repeat;
     background-position: 80px 139px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    min-height: 836px;
+    padding: 0 40px;
+    margin: auto;
+    background-image: url("../img/traveller-illustration-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: 285px 243px;
   }
 }
 
@@ -34,11 +52,31 @@
     margin-left: 16px;
     margin-right: 16px;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 399px;
+    margin: auto;
+    margin-top: 72px;
+    font-size: 60px;
+    line-height: 70px;
+  }
 }
 
 .header-middle__feedback {
   @media (max-width: @mobile-width-only) {
     display: flex;
     margin-top: 256px;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.header-middle__review {
+
+  @media (min-width: @tablet-width) {
+    margin-top: 90px;
+    margin-left: 32px;
   }
 }

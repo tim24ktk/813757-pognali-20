@@ -7,22 +7,26 @@
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 
-  &::before {
-    position: absolute;
-    bottom: 219px;
-    content: "";
-    width: 113px;
-    height: 132px;
-    background-color: @special_blue;
-    border-radius: 20px;
-    z-index: -1;
-  }
-
   @media (max-width: @mobile-width-only) {
-    margin-top: 106px;
+    margin-top: 115px;
     background-image: url("../img/about-mobile@1x.png");
     background-repeat: no-repeat;
     background-position: center 280px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 113px;
+      height: 132px;
+      background-color: @special_blue;
+      border-radius: 20px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 89px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
   }
 }
 
@@ -33,5 +37,50 @@
     margin: auto;
     width: 320px;
     padding: 0 25px;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    margin: auto;
+    width: 768px;
+    padding: 0 40px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+
+    &::before {
+      position: absolute;
+      top: 237px;
+      content: "";
+      width: 688px;
+      height: 212px;
+      background-color: @special_blue;
+      border-radius: 20px;
+      z-index: -1;
+    }
+
+     &::after {
+      position: absolute;
+      top: 281px;
+      right: 10px;
+      content: "";
+      width: 376px;
+      height: 548px;
+      background-image: url("../img/about-tablet@1x.png");
+      background-repeat: no-repeat;
+      background-size: 376px 548px;
+    }
+  }
+}
+
+.search-companion__position {
+  @media (min-width: @tablet-width) {
+    top: -143px;
+  }
+}
+
+.search-companion__details {
+  @media (min-width: @tablet-width) {
+    margin-top: 54px;
+    margin-left: 32px;
   }
 }

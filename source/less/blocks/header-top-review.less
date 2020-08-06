@@ -4,6 +4,11 @@
   font-size: 16px;
   line-height: 22px;
   color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 76px;
+    margin-left: 32px;
+  }
 }
 
 .header-top-review__comment {
@@ -11,6 +16,13 @@
     width: 151px;
     margin-top: 27px;
     margin-left: 26px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 264px;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 33px;
   }
 }
 
@@ -25,5 +37,13 @@
   @media (max-width: @mobile-width-only) {
     margin-top: 19px;
     margin-left: 26px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 41px;
+    width: 251px;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25px;
   }
 }
