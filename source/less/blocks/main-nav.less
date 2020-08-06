@@ -9,6 +9,15 @@
       margin-top: 26px;
     }
   }
+
+  @media (min-width: @tablet-width) {
+    background-color: @special_blue_background;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 11px;
+    background-color: @basic_blue;
+  }
 }
 
 .main-nav__list {
@@ -18,6 +27,10 @@
 
   @media (min-width: @tablet-width) {
     display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }
 
@@ -37,6 +50,16 @@
     margin: auto;
     margin-top: 40px;
     padding: 0 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1440px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 0 60px;
   }
 }
 
@@ -58,6 +81,10 @@
     height: 11px;
     background-image: url("../img/icon_menu_mobile.svg");
     background-repeat: no-repeat;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }
 

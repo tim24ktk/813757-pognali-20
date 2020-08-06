@@ -28,6 +28,12 @@
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 153px;
+    border-bottom-left-radius: 58px;
+    border-bottom-right-radius: 58px;
+  }
 }
 
 .search-companion__wrapper {
@@ -70,6 +76,38 @@
       background-size: 376px 548px;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    top: -10px;
+    margin: auto;
+    width: 1440px;
+    padding: 0 60px;
+
+    &::before {
+      position: absolute;
+      top: 128px;
+      content: "";
+      width: 212px;
+      height: 212px;
+      background-color: @special_blue;
+      border-radius: 20px;
+      z-index: -1;
+    }
+
+     &::after {
+      position: absolute;
+      top: 281px;
+      right: 10px;
+      content: "";
+      width: 630px;
+      height: 665px;
+      background-image: url("../img/about-desktop@1x.png"); /*какой-то блок накладывается сверху надо разобраться*/
+      background-repeat: no-repeat;
+      background-size: 630px 665px;
+      background-position: -50px -177px;
+    }
+  }
 }
 
 .search-companion__position {
@@ -82,5 +120,10 @@
   @media (min-width: @tablet-width) {
     margin-top: 54px;
     margin-left: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 160px;
+    margin-left: 63px;
   }
 }

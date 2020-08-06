@@ -6,6 +6,8 @@
   line-height: 18px;
   color: @basic_blue;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 
   @media (max-width: @mobile-width-only) {
     top: -67px;
@@ -16,12 +18,20 @@
     flex-wrap: wrap;
     margin-left: 20px;
   }
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 20px;
+  }
 }
 
 .search-companion-list__item {
   position: relative;
-  .reset();
+  display: flex;
+  flex-wrap: wrap;
   width: 270px;
+  .reset();
   padding: 22px 19px;
 
   &--advice-direction {
@@ -44,8 +54,6 @@
     &:first-child {
       margin-top: 0;
     }
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: -80px;
     min-height: 160px;
@@ -57,9 +65,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
+    margin-left: -21px;
     height: 140px;
     &--advice-direction {
       width: 365px;
@@ -79,18 +86,44 @@
       border-bottom-right-radius: 20px;
       border-bottom-left-radius: 20px;
     }
-    &:not(:first-child),
-    &:not(:nth-child(3n)) {
-      margin-left: -21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -39px; /*наследует от tablet что не так???*/
+    height: 107px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    &--advice-direction {
+      width: 345px;
+    }
+    &--ideas {
+      width: 375px;
+    }
+    &--like-you {
+      width: 375px;
+    }
+    &--together {
+      width: 315px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
     }
   }
 }
+
+
 
 .search-companion-list__advice {
   .reset();
   margin-left: 5px;
   width: 138px;
   @media (min-width: @tablet-width) {
+    min-width: 190px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
     min-width: 190px;
     font-size: 24px;
     line-height: 24px;
@@ -103,5 +136,10 @@
   @media (min-width: @tablet-width) {
     font-size: 30px;
     line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+    line-height: 24px;
   }
 }
