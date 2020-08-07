@@ -7,9 +7,20 @@
   background-repeat: no-repeat, no-repeat;
   background-position: right 0, left 224px;
   color: @basic-white;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
   z-index: 1;
+
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+
+  @media (min-width: @tablet-width) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
 
   &::before {
     position: absolute;
@@ -22,6 +33,33 @@
   }
 }
 
+.fellow-travelers__wrapper {
+  @media (max-width: @mobile-width-only) {
+    width: 320px;
+    margin: auto;
+    padding: 0 25px;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 768px;
+    margin: auto;
+    padding: 0 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1440px;
+    margin: auto;
+    padding: 0 60px;
+  }
+}
+
 .fellow-travelers__heading {
   margin: 0;
   padding: 0;
@@ -29,6 +67,12 @@
   font-size: 24px;
   line-height: 24px;
   color: @special_orange;
+
+  @media (min-width: @tablet-width) {
+    width: 216px;
+    font-size: 45px;
+    line-height: 45px;
+  }
 }
 
 .fellow-travelers__individual {
@@ -36,6 +80,12 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: 427px;
+    font-size: 28px;
+    line-height: 34px;
+  }
 }
 
 .fellow-travelers__like-minded {
@@ -43,4 +93,23 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: 260px;
+    font-size: 21px;
+    line-height: 24px;
+  }
+}
+
+.fellow-travelers__card-information {
+  @media (min-width: @desktop-width) {
+    width: 40%;
+  }
+}
+
+.fellow-travelers__cards-wrapper {
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
