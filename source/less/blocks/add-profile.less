@@ -5,6 +5,23 @@
   border-bottom-right-radius: 40px;
 }
 
+.add-profile__wrapper {
+  @media (max-width: @mobile-width-only) {
+    width: 320px;
+    margin: auto;
+    padding: 0 25px;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 768px;
+    margin: auto;
+    padding: 0 40px;
+  }
+}
+
 .add-profile__heading {
   position: relative;
   width: 265px;
@@ -27,71 +44,98 @@
     background-repeat: no-repeat;
     background-size: contain;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    margin: auto;
+    font-size: 45px;
+    line-height: 45px;
+    text-align: center;
+  }
 }
 
 .add-profile__list {
+  .reset_for_list();
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 }
 
 .add-profile__item {
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .add-profile__heading-item {
-  margin: 0;
-  padding: 0;
+  .reset();
   width: 183px;
   font-weight: 300;
   font-size: 16px;
   line-height: 16px;
   color: @special_grey;
+
+  @media (min-width: @tablet-width) {
+    width: 245px;
+    display: flex;
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
-.add-profile__number-first {
+.add-profile__number {
   width: 34px;
   height: 34px;
   padding: 10px;
   font-size: 16px;
   line-height: 16px;
   color: @basic-white;
-  background-color: @special_orange;
   border-radius: 50%;
   text-align: center;
-}
 
-.add-profile__number-second {
-  width: 34px;
-  height: 34px;
-  padding: 10px;
-  font-size: 16px;
-  line-height: 16px;
-  color: @basic-white;
-  background-color: @special_yellow_dark;
-  border-radius: 50%;
-  text-align: center;
-}
+  &--first {
+    background-color: @special_orange;
+  }
 
-.add-profile__number-third {
-  width: 34px;
-  height: 34px;
-  padding: 10px;
-  font-size: 16px;
-  line-height: 16px;
-  color: @basic-white;
-  background-color: @basic_yellow;
-  border-radius: 50%;
-  text-align: center;
+  &--second {
+    background-color: @special_yellow_dark;
+  }
+
+  &--third {
+    background-color: @basic_yellow;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 68px;
+    height: 68px;
+    padding: 23px;
+    font-size: 28px;
+    line-height: 28px;
+    order: -1;
+  }
 }
 
 .add-profile__price {
+  .reset();
+  margin-top: -15px;
   font-weight: 300;
   font-size: 16px;
   line-height: 16px;
   color: @special_grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
 .add-profile__button {
+  margin-top: 15px;
+  padding: 15px;
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
@@ -99,4 +143,24 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: 274px;
+    margin-left: 50px;
+
+    &::before {
+      position: absolute;
+      top: -6px;
+      left: -55px;
+      content: "";
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background-image: url("../img/icon_businessman.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: @heart_background;
+    }
+  }
 }

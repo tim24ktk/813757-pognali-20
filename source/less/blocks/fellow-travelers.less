@@ -102,14 +102,32 @@
 }
 
 .fellow-travelers__card-information {
+  @media (max-width: @mobile-width-only) {
+    margin: auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: auto;
+  }
+
   @media (min-width: @desktop-width) {
     width: 40%;
   }
 }
 
 .fellow-travelers__cards-wrapper {
-  width: 45%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  @media (max-width: @mobile-width-only) {
+    margin: auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
