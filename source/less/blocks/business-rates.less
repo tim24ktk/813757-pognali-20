@@ -44,11 +44,14 @@
 
 .business-rates__list {
   .reset_for_list();
-  padding: 0 80px;
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
   color: @special_grey;
+
+  @media (max-width: @mobile-width-only) {
+    margin-left: 40px;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 22px;
