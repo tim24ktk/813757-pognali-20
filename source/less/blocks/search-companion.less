@@ -24,13 +24,11 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 89px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 153px;
     border-bottom-left-radius: 58px;
     border-bottom-right-radius: 58px;
   }
@@ -49,9 +47,12 @@
     position: relative;
     margin: auto;
     width: 768px;
+    min-height: 808px;
     padding: 0 40px;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
+    background-image: url("../img/about-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-size: 376px 548px;
+    background-position: 389px 285px;
 
     &::before {
       position: absolute;
@@ -63,26 +64,16 @@
       border-radius: 20px;
       z-index: -1;
     }
-
-    &::after {
-      position: absolute;
-      top: 281px;
-      right: 10px;
-      content: "";
-      width: 376px;
-      height: 548px;
-      background-image: url("../img/about-tablet@1x.png");
-      background-repeat: no-repeat;
-      background-size: 376px 548px;
-    }
   }
 
   @media (min-width: @desktop-width) {
-    position: relative;
-    top: -10px;
     margin: auto;
     width: 1440px;
     padding: 0 60px;
+    background-image: url("../img/about-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-size: 630px 665px;
+    background-position: right 143px;
 
     &::before {
       position: absolute;
@@ -93,19 +84,6 @@
       background-color: @special_blue;
       border-radius: 20px;
       z-index: -1;
-    }
-
-    &::after {
-      position: absolute;
-      top: 281px;
-      right: 10px;
-      content: "";
-      width: 630px;
-      height: 665px;
-      background-image: url("../img/about-desktop@1x.png"); /*какой-то блок накладывается сверху надо разобраться*/
-      background-repeat: no-repeat;
-      background-size: 630px 665px;
-      background-position: -50px -177px;
     }
   }
 }
