@@ -1,7 +1,30 @@
 .feedback {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   background-color: @special_background_light;
   border-bottom-right-radius: 40px;
   border-bottom-left-radius: 40px;
+}
+
+.feedback__wrapper {
+  @media (max-width: @mobile-width-only) {
+    width: 320px;
+    margin: auto;
+    padding: 0 25px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    margin: auto;
+    padding: 0 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    margin: auto;
+    padding: 0 60px;
+  }
 }
 
 .feedback__heading {
@@ -9,6 +32,11 @@
   font-size: 24px;
   line-height: 24px;
   color: @special_orange;
+  text-align: center;
+
+  @media (max-width: @mobile-width-only) {
+    min-width: 211px;
+  }
 }
 
 .fedback__sign-up-call {
@@ -17,6 +45,15 @@
   line-height: 22px;
   text-align: center;
   color: @basic-white;
+
+  @media (max-width: @mobile-width-only) {
+    text-align: center;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 32px;
+  }
 }
 
 .feedback__link {
@@ -26,15 +63,22 @@
   text-align: center;
   text-decoration: underline;
   color: @basic_yellow;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 32px;
+  }
 }
 
 .feedback__registration-form {
-  width: 262px;
+  position: relative;
+  width: 270px;
   background-color: @basic-white;
   border-radius: 10px;
 
   & input {
     border: none;
+    border-radius: 10px;
     padding: 15px;
   }
 
@@ -44,11 +88,16 @@
     line-height: 18px;
     color: @special_grey_light;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    margin: auto;
+  }
 }
 
 .feedback__registration-form-button {
-  position: relative;
-  right: -53px;
+  position: absolute;
+  right: -6px;
   padding: 24px 24px;
   width: 60px;
   height: 62px;
@@ -65,5 +114,19 @@
     background-image: url("../img/triangle.svg");
     background-repeat: no-repeat;
     transform: translate(-50%, -50%);
+  }
+}
+
+.feedback__question {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 30px;
   }
 }
