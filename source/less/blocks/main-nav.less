@@ -8,6 +8,10 @@
       display: block;
       margin-top: 26px;
     }
+
+    &--column {
+      flex-direction: column;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -36,6 +40,9 @@
 
 .main-nav__wrapper {
   @media (max-width: @mobile-width-only) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     position: relative;
     width: 320px;
     margin: auto;
@@ -84,6 +91,18 @@
   }
 
   @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav__toggle-link {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: @basic-white;
+
+  @media (max-width: @mobile-width-only) {
     display: none;
   }
 }

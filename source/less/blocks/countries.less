@@ -1,0 +1,91 @@
+.countries {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.countries__country-by-letter-list {
+  .reset_for_list();
+  display: none;
+
+  @media (max-width: @mobile-width-only) {
+    &--active {
+      display: block;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &--active {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 260px;
+  }
+}
+
+.countries__heading-letter {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 60px;
+    text-transform: uppercase;
+  }
+}
+
+.countries__country-by-letter-item {
+  .reset();
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: @special_grey;
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.countries__roll-up-button {
+  position: relative;
+  width: 270px;
+  padding: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: @special_background_light;
+  background-color: @roll-up-button-background;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 16px;
+    left: 65px;
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-image: url("../img/icon_close_blue.svg");
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    min-height: 100px;
+
+    &::before {
+      top: 0;
+    }
+  }
+}
