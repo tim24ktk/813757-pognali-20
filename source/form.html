@@ -41,27 +41,29 @@
         </div>
         <div class="main-nav__wrapper--style main-nav__wrapper">
           <h1 class="main-nav__heading">Направления</h1>
-          <a class="main-nav__toggle-link" href="index.html" type="button"><!--на этой странице это не надо, надо убрать и подумать, что делать с лишней оберткой!!!-->
-            <span class="main-nav__toggle-value visually-hidden">На главную</span>
-          </a>
+          <p class="main-nav__level">80<br><span class="main-nav__level-word">level</p>
+          <img class="main-nav__image" src="img/demin-desktop@1x.jpg" width="285" height="285" alt="Фото пользователя">
         </div>
       </nav>
     </header>
     <main class="main">
       <section class="user-profile">
         <div class="user-profile__wrapper">
-          <p class="user-profile__level user-profile__level--best">80<br><span class="user-profile__level-word">level</p>
+          <p class="user-profile__level">80<br><span class="user-profile__level-word">level</p>
           <img class="user-profile__image" src="img/demin-desktop@1x.jpg" width="285" height="285" alt="Фото пользователя">
           <button class="user-profile__button" type="button">Сменить фото</button>
-          <form class="user-profile__form" action="https://echo.htmlacademy.ru" method="get">
+          <form class="user-profile__form-hash-tags" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="user-profile__fieldset">
               <legend class="user-profile__legend">Тэги</legend>
               <label class="visually-hidden" for="preference">Введите свои увлечения</label>
               <textarea class="user-profile__preference" id="preference" name="preference" rows="" cols="" placeholder="&#35;бургер &#35;бар &#35;футбол &#35;концерт &#35;крафт"></textarea>
             </fieldset>
+            <button class="user-profile__button visually-hidden" type="submit">Отправить</button>
+          </form>
+          <form class="user-profile__form-transport" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="user-profile__choice-transport">
               <legend class="user-profile__legend">Транспорт</legend>
-              <ul class="companion-selection__transport-list transport-list-form">
+              <ul class="user-profile__transport-list transport-list-form transport-list-form--position">
                 <li class="transport-list-form__transport-item">
                   <input class="transport-list-form__transport-checkbox visually-hidden" type="checkbox" name="plane" id="plane" checked>
                   <label class="transport-list-form__tansport-checkbox-label transport-list-form__tansport-checkbox-label--plane" for="plane"><span class="visually-hidden">Самолет</span></label>
@@ -94,14 +96,6 @@
                 <p class="my-plans__fellow-travelers">3 попутчика</p>
                 <p class="my-plans__date">26 мар - 29 мар</p>
                 <a class="my-plans__button" href="change.html">Изменить</a>
-              </li>
-            </div>
-            <div class="my-plans__item-wrapper">
-              <li class="my-plans__item">
-                <p class="my-plans__countries">Франция, Италия</p>
-                <p class="my-plans__fellow-travelers">3 попутчика</p>
-                <p class="my-plans__date">26 мар - 29 мар</p>
-                <a class="my-plans__button" href="">Изменить</a>
               </li>
             </div>
             <div class="my-plans__item-wrapper">

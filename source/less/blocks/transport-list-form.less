@@ -3,6 +3,20 @@
   left: -47px;
   display: flex;
   .reset_for_list();
+
+  @media (max-width: @mobile-width-only) {
+    &--position {
+      top: -28px;
+      left: 0;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &--position {
+      top: -28px;
+      left: 0;
+    }
+  }
 }
 
 .transport-list-form__tansport-checkbox-label {

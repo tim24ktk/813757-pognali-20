@@ -2,6 +2,19 @@
   background-color: @special_blue_light;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 40px;
+  }
+}
+
+.my-plans__wrapper {
+  width: 100%;
+  margin: auto;
+  padding: 0 35px;
 }
 
 .my-plans__heading {
@@ -22,6 +35,10 @@
   padding: 23px;
   background-color: @basic-white;
   border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
 }
 
 .my-plans__item {
@@ -37,6 +54,16 @@
     font-size: 16px;
     line-height: 16px;
     color: @basic_blue_light_color;
+
+    @media (min-width: @tablet-width) {
+      right: 0; /*не срабатывает!!!*/
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -45,6 +72,10 @@
   font-size: 16px;
   line-height: 16px;
   color: @basic_blue_light_color;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
 }
 
 .my-plans__fellow-travelers,
