@@ -1,0 +1,65 @@
+.travelers-catalog {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (max-width: @mobile-width-only) {
+    width: 320px;
+    margin: auto;
+    padding: 0 25px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    margin: auto;
+    padding: 0 40px;
+  }
+}
+
+.travelers-catalog__page-list {
+  display: flex;
+  flex-wrap: wrap;
+  .reset_for_list();
+
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
+.travelers-catalog__more-users {
+  position: relative;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 33px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: @basic_blue_light_color;
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 3px;
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/show_plus_more.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.travelers-catalog__buttons-wrapper {
+  display: flex;
+  padding: 14px;
+  background-color: @basic-white;
+  border-radius: 20px;
+}
+
+.travelers-catalog__slider-button-left,
+.travelers-catalog__slider-button-right {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
