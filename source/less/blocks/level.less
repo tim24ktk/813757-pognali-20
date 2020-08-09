@@ -1,11 +1,18 @@
 .level {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   flex-direction: column;
   margin-top: 62px;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
 }
 
 .level__name {
+  .reset();
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
@@ -20,6 +27,7 @@
 
   &::before {
     position: absolute;
+    top: -15px;
     right: 0;
     content: "";
     width: 10px;
@@ -34,6 +42,10 @@
       background-image: url("../img/dropdown.svg");
       transform: rotate(180deg);
     }
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 

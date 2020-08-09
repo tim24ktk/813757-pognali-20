@@ -2,6 +2,21 @@
   padding: 20px 22px;
   background-color: @basic_yellow;
   border-radius: 20px;
+
+  @media (max-width: @mobile-width-only) {
+    width: 270px;
+    margin: auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 688px;
+    margin: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 285px;
+    margin: auto;
+  }
 }
 
 .companion-selection__heading {
@@ -16,10 +31,23 @@
 .companion-selection__fieldset {
   display: flex;
   flex-direction: column;
-  border: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 25px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .companion-selection__legend {
+  .reset();
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
@@ -34,6 +62,7 @@
 
   &::before {
     position: absolute;
+    top: -17px;
     right: 0;
     content: "";
     width: 10px;
@@ -49,46 +78,12 @@
       transform: rotate(180deg);
     }
   }
-}
 
-.companion-selection__music-list {
-  .reset_for_list();
-}
-
-.companion-selection__music-item {
-  .reset();
-  margin-bottom: 15px;
-}
-
-.companion-selection__checkbox-music-label {
-  position: relative;
-  display: block;
-  padding-left: 45px;
-  cursor: pointer;
-  user-select: none;
-
-  &::before {
-    position: absolute;
-    top: -4px;
-    left: 0;
-    content: "";
-    padding: 5px;
-    width: 18px;
-    height: 18px;
-    border-radius: 4px;
-    background-color: @basic-white;
+  @media (min-width: @tablet-width) {
+    display: none;
   }
-}
 
-.companion-selection__music-checkbox:checked + .companion-selection__checkbox-music-label {
-  &::after {
-    position: absolute;
-    content: "";
-    top: 5px;
-    left: 10px;
-    width: 9px;
-    height: 9px;
-    background-image: url("../img/tick.svg");
-    background-repeat: no-repeat;
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }
