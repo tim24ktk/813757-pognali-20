@@ -2,6 +2,9 @@
   position: relative;
   padding-top: 102px;
   padding-bottom: 31px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   background-color: @special_background_light;
   background-image: url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-mobile@1x.png");
   background-repeat: no-repeat, no-repeat;
@@ -10,17 +13,11 @@
   z-index: 1;
 
   @media (max-width: @mobile-width-only) {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
   }
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
   }
@@ -34,31 +31,24 @@
     border-radius: 20px;
     z-index: -1;
   }
-
-  @media (min-width: @desktop-width) {
-    width: 100%;
-    margin: auto;
-  }
 }
 
 .fellow-travelers__wrapper {
-  @media (max-width: @mobile-width-only) {
-    width: 320px;
-    margin: auto;
-    padding: 0 25px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 320px;
+  margin: auto;
+  padding: 0 25px;
 
   @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
     width: 768px;
-    margin: auto;
     padding: 0 40px;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
     width: 1440px;
     margin: auto;
     padding: 0 60px;
@@ -110,14 +100,6 @@
   @media (max-width: @mobile-width-only) {
     margin: auto;
   }
-
-  @media (min-width: @tablet-width) {
-    margin: auto;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 40%;
-  }
 }
 
 .fellow-travelers__cards-wrapper {
@@ -127,14 +109,9 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-    justify-content: space-between;
-    margin: auto;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 45%;
-    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: auto;
+    width: 768px;
   }
 }

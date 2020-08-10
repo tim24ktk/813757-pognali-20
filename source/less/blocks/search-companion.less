@@ -36,18 +36,15 @@
 
 .search-companion__wrapper {
   @media (max-width: @mobile-width-only) {
-    position: relative;
-    top: -10px;
     margin: auto;
+    margin-top: -10px;
     width: 320px;
     padding: 0 25px;
   }
 
   @media (min-width: @tablet-width) {
-    position: relative;
     margin: auto;
     width: 768px;
-    min-height: 808px;
     padding: 0 40px;
     background-image: url("../img/about-tablet@1x.png");
     background-repeat: no-repeat;
@@ -88,9 +85,9 @@
   }
 }
 
-.search-companion__position {
+.search-companion__wrapper .search-companion__position {
   @media (min-width: @tablet-width) {
-    top: -143px;
+    margin-top: -143px;
   }
 }
 

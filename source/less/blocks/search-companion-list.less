@@ -1,5 +1,4 @@
 .search-companion-list {
-  position: relative;
   .reset_for_list();
   font-weight: 700;
   font-size: 18px;
@@ -10,7 +9,7 @@
   flex-wrap: wrap;
 
   @media (max-width: @mobile-width-only) {
-    top: -67px;
+    margin-top: -67px;
   }
 
   @media (min-width: @tablet-width) {
@@ -94,8 +93,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: -39px; /*наследует от tablet что не так???*/
-    height: 107px;
+    margin-left: -39px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 

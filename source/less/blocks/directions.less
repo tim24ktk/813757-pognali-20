@@ -9,58 +9,43 @@
 
 .directions__wrapper {
   position: relative;
+  margin: auto;
 
   @media (max-width: @mobile-width-only) {
-    margin: auto;
     width: 320px;
     padding: 0 25px;
   }
 
   @media (min-width: @tablet-width) {
-    margin: auto;
     width: 768px;
     padding: 0 40px;
-
-    &::before {
-      position: absolute;
-      right: 60px;
-      content: "";
-      width: 289px;
-      height: 575px;
-      background-image: url("../img/flags-back@1x.png");
-      background-repeat: no-repeat;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    &::before {
-      top: 70px;
-      right: 100px;
-      content: "";
-    }
+    background-image: url("../img/flags-back@1x.png");
+    background-repeat: no-repeat;
+    background-size: 289px 575px;
+    background-position: right 40px top 30px;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 1440px;
-    margin: auto;
     padding: 0 60px;
+
+    &::before {
+      top: 70px;
+      right: 100px;
+      content: "";
+    }
   }
 }
 
 .directions__heading {
-  posion: relative;
   .reset();
+  margin-left: 25px;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
   color: @special_orange;
-  z-index: 1;
-
-  @media (max-width: @mobile-width-only) {
-    margin-left: 25px;
-  }
 
   @media (min-width: @tablet-width) {
     margin-left: 23px;
@@ -80,14 +65,11 @@
 .directions__explanations {
   .reset();
   width: 216px;
+  margin-top: 19px;
+  margin-left: 25px;
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
-
-  @media (max-width: @mobile-width-only) {
-    margin-top: 19px;
-    margin-left: 25px;
-  }
 
   @media (min-width: @tablet-width) {
     width: 350px;
@@ -98,20 +80,16 @@
   }
 
   @media (min-width: @desktop-width) {
-    position: relative;
     grid-column-start: 2;
     grid-row-start: 1;
     grid-row-end: 1;
     margin-top: 220px;
     margin-left: 73px;
-    z-index: 1;
   }
 }
 
 .directions__show-all {
-  @media (max-width: @mobile-width-only) {
-    margin-top: 25px;
-  }
+  margin-top: 25px;
 
   @media (min-width: @tablet-width) {
     margin-top: 75px;

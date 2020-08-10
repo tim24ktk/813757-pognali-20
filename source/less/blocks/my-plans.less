@@ -5,16 +5,22 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-
-  @media (min-width: @tablet-width) {
-    padding: 0 40px;
-  }
 }
 
 .my-plans__wrapper {
-  width: 100%;
+  width: 320px;
   margin: auto;
-  padding: 0 35px;
+  padding: 0 25px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    padding: 0 60px;
+  }
 }
 
 .my-plans__heading {
@@ -31,18 +37,11 @@
 
 .my-plans__item-wrapper {
   width: 270px;
+  margin: auto;
   margin-bottom: 10px;
   padding: 23px;
   background-color: @basic-white;
   border-radius: 10px;
-
-  @media (max-width: @mobile-width-only) {
-    width: 100%;
-  }
-
-  @media (min-width: @tablet-width) {
-    width: 100%;
-  }
 }
 
 .my-plans__item {
@@ -60,7 +59,8 @@
     color: @basic_blue_light_color;
 
     @media (min-width: @tablet-width) {
-      right: 0; /*не срабатывает!!!*/
+      right: 0;
+      left: auto;
     }
   }
 
@@ -76,14 +76,6 @@
   font-size: 16px;
   line-height: 16px;
   color: @basic_blue_light_color;
-
-  @media (min-width: @tablet-width) {
-    width: 100%;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 50%;
-  }
 }
 
 .my-plans__fellow-travelers,

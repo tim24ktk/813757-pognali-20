@@ -8,27 +8,21 @@
 }
 
 .filtering-by-country__wrapper {
-  @media (max-width: @mobile-width-only) {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: left;
-    width: 320px;
-    margin: auto;
-    padding: 0 25px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: left;
+  width: 320px;
+  margin: auto;
+  padding: 0 25px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
     width: 768px;
-    margin: auto;
     padding: 0 40px;
   }
 
   @media (min-width: @desktop-width) {
     width: 1440px;
-    margin: auto;
     padding: 0 60px;
   }
 }
