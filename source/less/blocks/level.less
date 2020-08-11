@@ -37,8 +37,7 @@
 
   &--close {
     &::before {
-      width: 10px;
-      height: 5px;
+      .size(10px; 5px);
       background-image: url("../img/dropdown.svg");
       transform: rotate(180deg);
     }
@@ -53,7 +52,6 @@
   display: flex;
   padding: 5px;
   width: 220px;
-  height: 35px;
   border: 1px solid @input_border_color;
   border-radius: 4px;
   background-color: @basic-white;
@@ -98,8 +96,7 @@
   position: relative;
   top: -16px;
   left: 209px;
-  width: 10px;
-  height: 10px;
+  .size(10px; 10px);
   border-radius: 50%;
   background-color: @basic_blue_light_color;
 }

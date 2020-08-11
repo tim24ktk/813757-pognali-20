@@ -13,8 +13,7 @@
   position: absolute;
   top: 17px;
   left: 17px;
-  width: 60px;
-  height: 60px;
+  .size(60px; 60px);
   .reset();
   padding-top: 15px;
   padding-right: 15px;
@@ -43,8 +42,7 @@
       top: 0;
       left: 0;
       content: "";
-      width: 60px;
-      height: 60px;
+      .size(60px; 60px);
       background-image: url("../img/level_99.svg");
       background-repeat: no-repeat;
     }
@@ -56,8 +54,7 @@
       top: 0;
       left: 0;
       content: "";
-      width: 60px;
-      height: 60px;
+      .size(60px; 60px);
       background-image: url("../img/level_80.svg");
       background-repeat: no-repeat;
     }
@@ -105,8 +102,7 @@
   top: 15px;
   left: 60px;
   display: block;
-  width: 6px;
-  height: 6px;
+  .size(6px; 6px);
   border-radius: 50%;
   background-color: @online_background;
 }
@@ -116,15 +112,13 @@
   top: 15px;
   left: 50px;
   display: block;
-  width: 6px;
-  height: 6px;
+  .size(6px; 6px);
   border-radius: 50%;
   background-color: @offline_background;
 }
 
 .traveler-card__user-name {
-  margin: 0;
-  padding: 0;
+  .reset();
   padding-right: 10px;
   padding-left: 10px;
   font-weight: 700;

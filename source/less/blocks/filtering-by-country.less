@@ -1,7 +1,4 @@
 .filtering-by-country {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
   background-color: @heart_background;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
@@ -31,7 +28,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%;
 }
 
 .filtering-by-country__heading {
@@ -149,4 +145,18 @@
   &--selected {
     color: @special_background_light;
   }
+}
+
+.filtering-by-country-table__roll-up-button {
+  width: 270px;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: @special_background_light;
+  border-radius: 20px;
+  background-color: @roll-up-button-background;
+  border: none;
 }

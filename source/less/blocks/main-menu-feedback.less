@@ -18,8 +18,7 @@
 .main-menu-feedback__phone {
   position: relative;
   display: block;
-  width: 45px;
-  height: 45px;
+  .size(45px; 45px);
   padding: 15px;
   background-color: @phone_background;
   border-radius: 50%;
@@ -27,8 +26,7 @@
   &::before {
     position: absolute;
     content: "";
-    width: 17px;
-    height: 15px;
+    .size(17px; 15px);
     background-image: url("../img/contacts-phone.svg");
     background-repeat: no-repeat;
   }
@@ -54,8 +52,7 @@
 .main-menu-feedback__write-us {
   position: relative;
   display: block;
-  width: 45px;
-  height: 45px;
+  .size(45px; 45px);
   padding: 15px;
   background-color: @phone_background;
   border-radius: 50%;
@@ -63,8 +60,7 @@
   &::before {
     position: absolute;
     content: "";
-    width: 19px;
-    height: 13px;
+    .size(19px; 13px);
     background-image: url("../img/contacts-mail.svg");
     background-repeat: no-repeat;
   }
