@@ -1,22 +1,35 @@
 .main-menu {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
   min-height: 568px;
   padding-top: 27px;
   padding-bottom: 29px;
   background-color: @basic-white;
-  z-index: 3;
 }
 
 .main-menu__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+
   @media (max-width: @mobile-width-only) {
-    margin: auto;
     width: 320px;
     padding: 0 25px;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    padding: 0 60px;
+  }
+}
+
+.main-menu__top {
+  display: flex;
+  flwx-wrap: wrap;
+  justify-content: space-between;
 }
 
 .main-menu__buttons-list {
@@ -25,36 +38,41 @@
   }
 }
 
-.main-menu__contacts {
-  margin: auto;
+.main-menu__buttons-list-top {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }
 
-.main-menu .main-menu__autorisation {
-  margin: auto;
-  margin-top: 51px;
 
-  &--size {
-    width: 270px;
-    line-height: 30px;
+.main-menu__contacts {
+  @media (max-width: @mobile-width-only) {
+    margin: auto;
   }
 }
 
 .main-menu .main-menu__social {
   width: 136px;
-  margin: auto;
-  margin-top: 29px;
+
+  @media (max-width: @mobile-width-only) {
+    margin: auto;
+    margin-top: 29px;
+  }
 }
 
 .main-menu__close {
   position: relative;
+  .size(24px; 24px);
   border: none;
   background-color: transparent;
 
   &::before {
     display: block;
     position: absolute;
-    top: -24px;
-    right: -150px;
+    top: 1px;
+    right: 0;
     content: "";
     width: 24px;
     height: 24px;

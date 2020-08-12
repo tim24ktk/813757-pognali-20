@@ -1,7 +1,10 @@
 .buttons-list {
   .reset_for_list();
-  margin: auto;
-  text-align: center;
+
+  @media (max-width: @mobile-width-only) {
+    margin: auto;
+    text-align: center;
+  }
 
   @media (min-width: @desktop-width) {
     display: flex;
@@ -22,6 +25,11 @@
   text-align: center;
   text-transform: uppercase;
   color: @special_background_light;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 71px;
+  }
 
   @media (min-width: @desktop-width) {
     font-weight: 500;
