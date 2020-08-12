@@ -1,15 +1,23 @@
 .header {
+  display: grid;
+  grid-template-columns: 1fr;
   color: @basic-white;
-}
+  background-color: @basic_blue;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 
-.header__background {
-  &--image {
-    background-image: url("../img/traveller-illustration-mobile@1x.png"), url("../img/globe-back-mobile@1x.jpg");
-    background-repeat: no-repeat, no-repeat;
+  @media (min-width: @tablet-width) {
+    background-color: @special_blue_background;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+  }
+
+  @media (min-width: @tablet-width) {
     background-color: @basic_blue;
   }
 
-  &--color {
-    background-color: @special_blue_background;
+  @media (min-width: @desktop-width) {
+    border-bottom-left-radius: 58px;
+    border-bottom-right-radius: 58px;
   }
 }

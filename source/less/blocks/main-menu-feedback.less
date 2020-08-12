@@ -5,13 +5,20 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: @desktop-width) {
+    width: 1320px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .main-menu-feedback__phone {
   position: relative;
   display: block;
-  width: 45px;
-  height: 45px;
+  .size(45px; 45px);
   padding: 15px;
   background-color: @phone_background;
   border-radius: 50%;
@@ -19,29 +26,33 @@
   &::before {
     position: absolute;
     content: "";
-    width: 17px;
-    height: 15px;
+    .size(17px; 15px);
     background-image: url("../img/contacts-phone.svg");
     background-repeat: no-repeat;
   }
+}
 
-  &-number {
-    display: block;
-    width: 180px;
-    padding-left: 61px;
-    color: @special_background_light;
+.main-menu-feedback__phone-number {
+  display: block;
+  width: 180px;
+  padding-left: 46px;
+  color: @special_background_light;
 
-    &--color {
-      color: @basic_yellow;
-    }
+  &--color {
+    color: @basic_yellow;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 270px;
+    font-size: 28px;
+    line-height: 28px;
   }
 }
 
 .main-menu-feedback__write-us {
   position: relative;
   display: block;
-  width: 45px;
-  height: 45px;
+  .size(45px; 45px);
   padding: 15px;
   background-color: @phone_background;
   border-radius: 50%;
@@ -49,23 +60,31 @@
   &::before {
     position: absolute;
     content: "";
-    width: 19px;
-    height: 13px;
+    .size(19px; 13px);
     background-image: url("../img/contacts-mail.svg");
     background-repeat: no-repeat;
   }
 
-  &-mail {
-    display: block;
-    .reset();
-    padding-left: 61px;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 18px;
-    color: @special_background_light;
+  @media (min-width: @desktop-width) {
+    margin-right: 345px;
+  }
+}
 
-    &--color {
-      color: @basic_yellow;
-    }
+.main-menu-feedback__write-us-mail {
+  display: block;
+  .reset();
+  padding-left: 46px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  color: @special_background_light;
+
+  &--color {
+    color: @basic_yellow;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
   }
 }

@@ -1,19 +1,34 @@
 .search-companion-list {
+  .reset_for_list();
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
   color: @basic_blue;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 20px;
+  }
 }
 
 .search-companion-list__item {
   position: relative;
   display: flex;
-  .reset();
-  margin-top: -20px;
+  flex-wrap: wrap;
   width: 270px;
+  .reset();
   padding: 22px 19px;
-  border-radius: 10px;
 
   &--advice-direction {
     background-color: @special_orange;
@@ -30,16 +45,102 @@
   &--together {
     background-color: @basic_yellow;
   }
+
+  @media (max-width: @mobile-width-only) {
+    &:first-child {
+      margin-top: 0;
+    }
+    justify-content: space-between;
+    margin-top: -80px;
+    min-height: 160px;
+    border-radius: 10px;
+
+    &--together {
+      min-height: 80px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    margin-left: -21px;
+    height: 140px;
+
+    &--advice-direction {
+      width: 365px;
+      border-top-left-radius: 20px;
+    }
+
+    &--ideas {
+      width: 344px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    &--like-you {
+      width: 365px;
+      border-bottom-left-radius: 20px;
+    }
+
+    &--together {
+      width: 344px;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -39px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    &--advice-direction {
+      width: 345px;
+    }
+
+    &--ideas {
+      width: 375px;
+    }
+
+    &--like-you {
+      width: 375px;
+    }
+
+    &--together {
+      width: 315px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+  }
 }
 
 .search-companion-list__advice {
   .reset();
-  width: 150px;
+  margin-left: 5px;
+  width: 138px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 190px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 190px;
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .search-companion-list__number {
-  position: absolute;
-  top: 22px;
-  right: 21px;
   color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
 }

@@ -1,0 +1,59 @@
+.traveler-hobies {
+  .reset_for_list();
+  display: none;
+
+  &--display {
+    @media (max-width: @mobile-width-only) {
+      display: block;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+
+    &--display {
+      display: block;
+    }
+  }
+}
+
+.traveler-hobies__item {
+  .reset();
+  margin-bottom: 15px;
+}
+
+.traveler-hobies__checkbox-label {
+  position: relative;
+  display: block;
+  padding-left: 45px;
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    content: "";
+    padding: 5px;
+    .size(18px; 18px);
+    border-radius: 4px;
+    background-color: @basic-white;
+  }
+}
+
+.traveler-hobies__checkbox:checked + .traveler-hobies__checkbox-label {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 10px;
+    .size(9px; 9px);
+    background-image: url("../img/tick.svg");
+    background-repeat: no-repeat;
+  }
+}

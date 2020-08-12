@@ -1,8 +1,25 @@
 .add-plane {
-  padding-bottom: 43px;
+  display: flex;
+  flex-direction: column;
   background-color: @add_plane_background;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
+}
+
+.add-plane__wrapper {
+  margin: auto;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 0 25px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 60px;
+  }
 }
 
 .add-plane__heading {

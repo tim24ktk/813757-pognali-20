@@ -6,18 +6,93 @@
   border-bottom-right-radius: 40px;
 }
 
+.directions__wrapper {
+  margin: auto;
+
+  @media (max-width: @mobile-width-only) {
+    width: 320px;
+    padding: 0 25px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 0 40px;
+    background-image: url("../img/flags-back@1x.png");
+    background-repeat: no-repeat;
+    background-size: 289px 575px;
+    background-position: right 40px top 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 1440px;
+    padding: 0 60px;
+  }
+}
+
 .directions__heading {
-  margin: 0;
-  padding: 0;
+  .reset();
+  margin-left: 25px;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
   color: @special_orange;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 23px;
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    margin-top: 120px;
+    margin-left: 73px;
+  }
 }
 
 .directions__explanations {
+  .reset();
   width: 216px;
+  margin-top: 19px;
+  margin-left: 25px;
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: 350px;
+    margin-top: 57px;
+    margin-left: 25px;
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    margin-top: 220px;
+    margin-left: 73px;
+  }
+}
+
+.directions__show-all {
+  margin-top: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 75px;
+    margin-bottom: 80px;
+    margin-left: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    margin-top: 500px;
+    margin-left: 73px;
+  }
 }

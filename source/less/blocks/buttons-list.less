@@ -1,0 +1,33 @@
+.buttons-list {
+  .reset_for_list();
+  margin: auto;
+  text-align: center;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 390px;
+  }
+}
+
+.buttons-list__item {
+  .reset();
+}
+
+.buttons-list__link {
+  .reset();
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @special_background_light;
+
+  @media (min-width: @desktop-width) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: @basic-white;
+  }
+}

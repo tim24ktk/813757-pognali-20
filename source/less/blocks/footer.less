@@ -3,3 +3,26 @@
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
 }
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  width: 320px;
+  margin: auto;
+  padding: 0 25px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 768px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    padding: 0 60px;
+  }
+}

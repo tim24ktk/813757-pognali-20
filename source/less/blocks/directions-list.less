@@ -1,18 +1,64 @@
 .directions-list {
+  position: relative;
   .reset_for_list();
+  margin-top: 60px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 104px;
+    margin-left: 26px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -40px;
+      left: -40px;
+      width: 141px;
+      height: 141px;
+      background-color: @heart_background;
+      border-radius: 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    order: 1;
+  }
 }
 
 .directions-list__item {
   width: 270px;
   margin-top: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 32px;
+    display: flex;
+    width: 616px;
+    height: 140px;
+  }
 }
 
 .directions-list__img {
   width: 270px;
   height: 110px;
   background-color: @basic-white;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+
+  @media (max-width: @mobile-width-only) {
+    margin-top: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  @media (min-width: @tablet-width) {
+    .size(166px; 140px);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    order: 2;
+  }
 }
 
 .directions-list__item-wrapper {
@@ -20,29 +66,48 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: -20px;
   padding: 24px;
   background-color: @basic-white;
-  border-radius: 10px;
   z-index: 1;
+
+  @media (max-width: @mobile-width-only) {
+    margin-top: -20px;
+    border-radius: 10px;
+  }
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    width: 436px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
 }
 
 .directions-list__heading-country {
-  margin: 0;
-  padding: 0;
+  .reset();
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
   color: @basic_black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .directions-list__tagline {
-  margin: 0;
-  padding: 0;
+  .reset();
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   color: @special_grey_light;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    order: 2;
+  }
 }
 
 .directions-list__views {
@@ -61,5 +126,17 @@
     height: 12px;
     background-image: url("../img/views.svg");
     background-repeat: no-repeat;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 84px;
+    padding-left: 25px;
+    font-size: 20px;
+    order: 3;
+
+    &::before {
+      top: 4px;
+      left: 10px;
+    }
   }
 }

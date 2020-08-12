@@ -1,14 +1,40 @@
 .business-rates {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: @basic-white;
   box-shadow: 0 2px 8px @box_shadow;
   border-radius: 20px;
+
+  @media (max-width: @mobile-width-only) {
+    width: 270px;
+    padding-top: 34px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 688px;
+    padding-top: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 750px;
+    padding-top: 54px;
+  }
 }
 
 .business-rates__heading {
+  .reset();
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
   color: @special_orange;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 45px;
+    line-height: 45px;
+  }
 }
 
 .business-rates__list {
@@ -17,9 +43,33 @@
   font-size: 16px;
   line-height: 22px;
   color: @special_grey;
+
+  @media (max-width: @mobile-width-only) {
+    margin-left: 40px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+.business-rates__item {
+  @media (min-width: @tablet-width) {
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wpap;
+  }
+}
+
+.business-rates__services {
+  .reset();
 }
 
 .business-rates__close {
+  position: relative;
+  bottom: 0;
   width: 100%;
   padding: 21px;
   font-weight: 700;
@@ -30,4 +80,8 @@
   border: none;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+
+  @media (max-width: @mobile-width-only) {
+    text-transform: uppercase;
+  }
 }

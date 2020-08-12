@@ -4,6 +4,27 @@
   padding-bottom: 50px;
 }
 
+.user-profile__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 320px;
+  margin: auto;
+  padding: 0 25px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 768px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    padding: 0 60px;
+  }
+}
+
 .user-profile__level {
   position: relative;
   .size(100px; 100px);
@@ -19,8 +40,7 @@
     top: 50px;
     left: 24px;
     content: "";
-    width: 51px;
-    height: 1px;
+    .size(51px; 1px);
     background-color: @special_grey_light;
   }
 
@@ -29,11 +49,18 @@
     top: -16px;
     left: 0;
     content: "";
-    width: 100px;
-    height: 100px;
+    .size(100px; 100px);
     background-image: url("../img/catalog80.svg");
     background-repeat: no-repeat;
     background-size: 100px 100px;
+  }
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }
 
@@ -46,10 +73,17 @@
 }
 
 .user-profile__image {
-  width: 100px;
-  height: 100px;
+  .size(100px; 100px);
   border-radius: 50%;
   object-fit: contain;
+
+  @media (min-width: @tablet-width) {
+    order: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .user-profile__button {
@@ -64,18 +98,42 @@
   background-color: @special_blue_light;
   border: none;
   border-radius: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    order: 4;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.user-profile__form-hash-tags {
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    order: 5;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 1;
+  }
 }
 
 .user-profile__fieldset {
-  border: none;
+  border: 1px solid @input_border_color;
+  border-radius: 10px;
 }
 
 .user-profile__legend {
+  padding: 25px;
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: @basic_blue_light_color;
+  text-align: center;
+  margin-left: 94px;
 }
 
 .user-profile__preference {
@@ -90,6 +148,13 @@
   }
 }
 
+.user-profile__form-transport {
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+}
+
 .user-profile__choice-transport {
-  border: none;
+  border: 1px solid @input_border_color;
+  border-radius: 10px;
 }

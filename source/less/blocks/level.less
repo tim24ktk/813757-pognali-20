@@ -1,11 +1,18 @@
 .level {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   flex-direction: column;
   margin-top: 62px;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
 }
 
 .level__name {
+  .reset();
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
@@ -20,6 +27,7 @@
 
   &::before {
     position: absolute;
+    top: -15px;
     right: 0;
     content: "";
     width: 10px;
@@ -29,11 +37,14 @@
 
   &--close {
     &::before {
-      width: 10px;
-      height: 5px;
+      .size(10px; 5px);
       background-image: url("../img/dropdown.svg");
       transform: rotate(180deg);
     }
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 
@@ -41,7 +52,6 @@
   display: flex;
   padding: 5px;
   width: 220px;
-  height: 35px;
   border: 1px solid @input_border_color;
   border-radius: 4px;
   background-color: @basic-white;
@@ -86,13 +96,12 @@
   position: relative;
   top: -16px;
   left: 209px;
-  width: 10px;
-  height: 10px;
+  .size(10px; 10px);
   border-radius: 50%;
   background-color: @basic_blue_light_color;
 }
 
-.level-submit__button {
+.level__submit-button {
   width: 230px;
   padding: 15px;
   font-weight: 700;

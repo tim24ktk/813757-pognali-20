@@ -5,11 +5,33 @@
   border-bottom-right-radius: 40px;
 }
 
+.add-profile__wrapper {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (max-width: @mobile-width-only) {
+    width: 320px;
+    padding: 0 25px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    padding: 0 60px;
+  }
+}
+
 .add-profile__heading {
   position: relative;
-  width: 265px;
-  margin: 0;
-  padding: 0;
+  display: block;
+  width: 150px;
+  .reset();
   padding-top: 106px;
   font-weight: 700;
   font-size: 24px;
@@ -19,79 +41,99 @@
   &::before {
     position: absolute;
     top: 90px;
-    right: 0;
+    right: -125px;
     content: "";
-    width: 100px;
-    height: 100px;
+    .size(100px; 100px);
     background-image: url("../img/rates@1x.png");
     background-repeat: no-repeat;
     background-size: contain;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 482px;
+    font-size: 45px;
+    line-height: 45px;
+    align-self: center;
+  }
 }
 
 .add-profile__list {
-  list-style: none;
+  .reset_for_list();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 }
 
 .add-profile__item {
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .add-profile__heading-item {
-  margin: 0;
-  padding: 0;
+  .reset();
   width: 183px;
   font-weight: 300;
   font-size: 16px;
   line-height: 16px;
   color: @special_grey;
+
+  @media (min-width: @tablet-width) {
+    width: 245px;
+    display: flex;
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
-.add-profile__number-first {
-  width: 34px;
-  height: 34px;
+.add-profile__number {
+  .size(34px; 34px);
   padding: 10px;
   font-size: 16px;
   line-height: 16px;
   color: @basic-white;
-  background-color: @special_orange;
   border-radius: 50%;
   text-align: center;
-}
 
-.add-profile__number-second {
-  width: 34px;
-  height: 34px;
-  padding: 10px;
-  font-size: 16px;
-  line-height: 16px;
-  color: @basic-white;
-  background-color: @special_yellow_dark;
-  border-radius: 50%;
-  text-align: center;
-}
+  &--first {
+    background-color: @special_orange;
+  }
 
-.add-profile__number-third {
-  width: 34px;
-  height: 34px;
-  padding: 10px;
-  font-size: 16px;
-  line-height: 16px;
-  color: @basic-white;
-  background-color: @basic_yellow;
-  border-radius: 50%;
-  text-align: center;
+  &--second {
+    background-color: @special_yellow_dark;
+  }
+
+  &--third {
+    background-color: @basic_yellow;
+  }
+
+  @media (min-width: @tablet-width) {
+    .size(68px; 68px);
+    padding: 23px;
+    font-size: 28px;
+    line-height: 28px;
+    order: -1;
+  }
 }
 
 .add-profile__price {
+  .reset();
   font-weight: 300;
   font-size: 16px;
   line-height: 16px;
   color: @special_grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
 .add-profile__button {
+  margin-top: 15px;
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
@@ -99,4 +141,24 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: 274px;
+    margin-left: 50px;
+
+    &::before {
+      position: absolute;
+      top: -6px;
+      left: -55px;
+      content: "";
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background-image: url("../img/icon_businessman.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: @heart_background;
+    }
+  }
 }
