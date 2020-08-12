@@ -62,6 +62,7 @@
 }
 
 .directions-list__item-wrapper {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -70,7 +71,7 @@
   z-index: 1;
 
   @media (max-width: @mobile-width-only) {
-    top: -20px;
+    margin-top: -20px;
     border-radius: 10px;
   }
 

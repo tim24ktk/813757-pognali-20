@@ -29,9 +29,9 @@
 
 .add-profile__heading {
   position: relative;
-  width: 265px;
-  margin: 0;
-  padding: 0;
+  display: block;
+  width: 150px;
+  .reset();
   padding-top: 106px;
   font-weight: 700;
   font-size: 24px;
@@ -41,7 +41,7 @@
   &::before {
     position: absolute;
     top: 90px;
-    right: 0;
+    right: -125px;
     content: "";
     .size(100px; 100px);
     background-image: url("../img/rates@1x.png");
