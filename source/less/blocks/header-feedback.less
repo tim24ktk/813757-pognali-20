@@ -24,6 +24,10 @@
     background-repeat: repeat;
   }
 
+  &--main-menu-block {
+    display: none;
+  }
+
   @media (min-width: @tablet-width) {
     display: none;
   }
@@ -49,6 +53,11 @@
     background-repeat: repeat;
   }
 
+  &--main-menu-block {
+    display: none;
+  }
+
+
   @media (min-width: @tablet-width) {
     display: none;
   }
@@ -62,16 +71,19 @@
 
 .header-feedback__authorization {
   display: block;
-  .size(190px; 40px);
-  padding: 11px;
+  padding: 14px;
   font-weight: 700;
-  font-size: 17px; /*не совпадает с Pixel Perfect разобраться*/
+  font-size: 17px;
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
   color: @basic_blue;
   background-color: @basic_yellow;
   border-radius: 25px;
+
+  @media (max-width: @mobile-width-only) {
+    width: 270px;
+  }
 
   @media (min-width: @tablet-width) {
     .size(188px; 50px);
