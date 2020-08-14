@@ -4,8 +4,6 @@
   flex-wrap: wrap;
   .reset_for_list();
   width: 216px;
-  border-top: 1px solid @input_border_color;
-  border-left: 1px solid @input_border_color;
 
   @media (max-width: @mobile-width-only) {
     margin-bottom: 350px;
@@ -45,9 +43,9 @@
 
 .alphabet__item {
   width: 43px;
+  margin-top: -1px;
+  margin-right: -1px;
   text-align: center;
-  border-right: 1px solid @input_border_color;
-  border-bottom: 1px solid @input_border_color;
   background-color: @basic-white;
 
   &--active {
@@ -79,6 +77,10 @@
 
   &--active {
     color: @basic-white;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    border: 1px solid @input_border_color;
   }
 
   @media (min-width: @tablet-width) {
