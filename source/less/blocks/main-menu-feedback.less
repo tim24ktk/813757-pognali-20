@@ -1,6 +1,5 @@
 .main-menu-feedback {
   width: 270px;
-  margin-top: 51px;
   font-weight: bold;
   font-size: 16px;
   line-height: 18px;
@@ -23,19 +22,30 @@
   background-color: @phone_background;
   border-radius: 50%;
 
+  @media (min-width: @tablet-width) {
+    &--tablet-size {
+      .size(68px; 68px);
+    }
+  }
+
   &::before {
     position: absolute;
     content: "";
     .size(17px; 15px);
     background-image: url("../img/contacts-phone.svg");
     background-repeat: no-repeat;
+    transform: translate(-50%);
+    background-size: 17px 15px;
   }
 }
 
 .main-menu-feedback__phone-number {
   display: block;
   width: 180px;
-  padding-left: 46px;
+  padding-left: 32px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
   color: @special_background_light;
 
   &--color {
@@ -57,12 +67,19 @@
   background-color: @phone_background;
   border-radius: 50%;
 
+  @media (min-width: @tablet-width) {
+    &--tablet-size {
+      .size(68px; 68px);
+    }
+  }
+
   &::before {
     position: absolute;
     content: "";
     .size(19px; 13px);
     background-image: url("../img/contacts-mail.svg");
     background-repeat: no-repeat;
+    transform: translate(-50%);
   }
 
   @media (min-width: @desktop-width) {

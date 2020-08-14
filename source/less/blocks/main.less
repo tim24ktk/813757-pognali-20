@@ -8,4 +8,9 @@
 .main__wrapper {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
 }
