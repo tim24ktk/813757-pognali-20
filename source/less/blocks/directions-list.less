@@ -17,6 +17,15 @@
       background-color: @heart_background;
       border-radius: 20px;
     }
+
+    &::after {
+      position: absolute;
+      bottom: -2px;
+      content: "";
+      .size(617px; 94px);
+      background-image: url("..//img/fade_1.svg");/*тень падает только на фото, а не на весь блок!!!*/
+      background-repeat: no-repeat;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -149,7 +158,6 @@
 .directions-list__tagline {
   .reset();
   margin-left: 9px;
-  width: 178px;
   height: 40px;
   font-weight: 500;
   font-size: 16px;
@@ -160,6 +168,10 @@
     font-size: 20px;
     line-height: 20px;
     order: 2;
+
+    br {
+      display: none;
+    }
   }
 }
 
