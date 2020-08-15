@@ -5,13 +5,13 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 104px;
-    margin-left: 26px;
+    margin-left: 37px;
 
     &::before {
       position: absolute;
       content: "";
-      top: -40px;
-      left: -40px;
+      top: -36px;
+      left: -37px;
       width: 141px;
       height: 141px;
       background-color: @heart_background;
@@ -38,10 +38,13 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-top: 32px;
     display: flex;
     width: 616px;
     height: 140px;
+
+    &:not(:first-child) {
+      margin-top: 11px;
+    }
   }
 }
 
@@ -56,9 +59,9 @@
   }
 
   @media (min-width: @tablet-width) {
-    .size(166px; 140px);
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
+    .size(186px; 142px);
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
     order: 2;
   }
 }
@@ -78,9 +81,17 @@
     top: -12px;
     left: 25px;
     content: "";
-    width: 35px;
-    height: 24px;
+    .size(35px; 24px);
     background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      top: 19px;
+      right: -37px;
+      left: auto;
+      .size(70px; 47px);
+      background-size: 70px 47px;
+      border-radius: 5px;
+    }
   }
 
   &--thailand {
@@ -113,8 +124,8 @@
   @media (min-width: @tablet-width) {
     flex-direction: column;
     width: 436px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
 }
 
@@ -128,6 +139,8 @@
   color: @basic_black;
 
   @media (min-width: @tablet-width) {
+    margin-top: 32px;
+    margin-left: 12px;
     font-size: 24px;
     line-height: 24px;
   }
@@ -164,21 +177,28 @@
     top: 3px;
     right: 57px;
     content: "";
-    width: 12px;
-    height: 12px;
+    .size(12px; 12px);
     background-image: url("../img/views.svg");
     background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      .size(24px; 24px);
+      background-size: 24px 24px;
+    }
   }
 
   @media (min-width: @tablet-width) {
     width: 84px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin-left: 17px;
     padding-left: 25px;
     font-size: 20px;
     order: 3;
 
     &::before {
-      top: 4px;
-      left: 10px;
+      top: -2px;
+      left: -8px;
     }
   }
 }
