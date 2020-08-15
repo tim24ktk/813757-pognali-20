@@ -18,13 +18,18 @@
 
   &::before {
     position: absolute;
-    top: 34px;
-    right: 36px;
+    top: 25px;
+    right: 23px;
     content: "";
     width: 11px;
     height: 14px;
     background-image: url("../img/triangle.svg");
     background-repeat: no-repeat;
+
+    @media (min-width: @desktop-width) {
+      top: 34px;
+      right: 36px;
+    }
   }
 
   &--border {
