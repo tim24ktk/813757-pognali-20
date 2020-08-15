@@ -31,11 +31,18 @@
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
     grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row-end: -1;
+    width: 560px;
+    margin-top: 101px;
+    margin-left: 72px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     order: 1;
+
+    &::before {
+      top: -73px;
+      left: -72px;
+    }
   }
 }
 
@@ -53,6 +60,14 @@
 
     &:not(:first-child) {
       margin-top: 11px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 559px;
+
+    &:not(:first-child) {
+      margin-top: 10px;
     }
   }
 }
@@ -100,6 +115,11 @@
       .size(70px; 47px);
       background-size: 70px 47px;
       border-radius: 5px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 22px;
+      right: -33px;
     }
   }
 
@@ -152,6 +172,10 @@
     margin-left: 12px;
     font-size: 24px;
     line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 23px;
   }
 }
 
