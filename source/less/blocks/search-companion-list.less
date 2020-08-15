@@ -63,6 +63,7 @@
   @media (min-width: @tablet-width) {
     flex-direction: column;
     margin-left: -21px;
+    padding: 15px;
     height: 140px;
 
     &--advice-direction {
@@ -89,7 +90,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: -39px;
+    &:not(:first-child) {
+      margin-left: -39px;
+    }
+
+    height: 107px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 
@@ -115,7 +120,8 @@
 
 .search-companion-list__advice {
   .reset();
-  margin-left: 5px;
+  margin-top: 15px;
+  margin-left: 19px;
   width: 138px;
 
   @media (min-width: @tablet-width) {
@@ -133,6 +139,8 @@
 
 .search-companion-list__number {
   color: @basic-white;
+  margin-top: 14px;
+  margin-left: 29px;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
@@ -142,5 +150,9 @@
   @media (min-width: @desktop-width) {
     font-size: 24px;
     line-height: 24px;
+
+    &--position {
+      margin-right: 35px;
+    }
   }
 }

@@ -1,9 +1,6 @@
 .search-companion-service {
   width: 211px;
   .reset();
-  margin-top: 5px;
-  margin-left: 25px;
-  margin-bottom: 72px;
 
   @media (min-width: @tablet-width) {
     margin-left: 32px;
@@ -19,9 +16,15 @@
 
   @media (min-width: @tablet-width) {
     min-width: 197px;
+    margin-top: 137px;
     margin-bottom: 35px;
     font-size: 45px;
     line-height: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 255px;
+    margin-left: 38px;
   }
 }
 
@@ -32,16 +35,31 @@
   font-size: 16px;
   line-height: 22px;
 
+  @media (max-width: @mobile-width-only) {
+    width: 211px;
+
+    br {
+      display: none;
+    }
+  }
+
   @media (min-width: @tablet-width) {
+    margin-top: 40px;
     width: 308px;
     font-size: 28px;
     line-height: 33px;
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: 57px;
+    margin-left: 37px;
     min-width: 619px;
     font-size: 28px;
     line-height: 34px;
+
+    br {
+      display: none;
+    }
   }
 }
 
@@ -59,6 +77,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: 38px;
+    margin-left: 37px;
     width: 425px;
     font-size: 21px;
     line-height: 24px;

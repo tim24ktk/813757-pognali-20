@@ -18,7 +18,8 @@
 
   &::before {
     position: absolute;
-    right: 23px;
+    top: 34px;
+    right: 36px;
     content: "";
     width: 11px;
     height: 14px;
@@ -29,6 +30,18 @@
   &--border {
     border: 3px solid @special_background_light;
     border-radius: 10px;
+  }
+
+  &--details {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
   }
 
   @media (min-width: @tablet-width) {

@@ -71,6 +71,7 @@
 
 .header-feedback__authorization {
   display: block;
+  .reset();
   padding: 14px;
   font-weight: 700;
   font-size: 17px;
@@ -83,6 +84,12 @@
 
   @media (max-width: @mobile-width-only) {
     width: 270px;
+
+    &--middle-style {
+      font-size: 20px;
+      width: 194px;
+      padding: 10px;
+    }
   }
 
   @media (min-width: @tablet-width) {

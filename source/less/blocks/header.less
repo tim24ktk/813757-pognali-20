@@ -1,19 +1,17 @@
 .header {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   color: @basic-white;
   background-color: @basic_blue;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  z-index: 7;
 
   @media (min-width: @tablet-width) {
     background-color: @special_blue_background;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
-  }
-
-  @media (min-width: @tablet-width) {
-    background-color: @basic_blue;
   }
 
   @media (min-width: @desktop-width) {

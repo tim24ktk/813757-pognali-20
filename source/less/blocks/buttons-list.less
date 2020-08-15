@@ -1,6 +1,4 @@
 .buttons-list {
-  .reset_for_list();
-
   @media (max-width: @mobile-width-only) {
     margin: auto;
     text-align: center;
@@ -20,6 +18,11 @@
       content: "";
       .size(60px; 2px);
       background-color: @basic-white;
+
+      @media (min-width: @desktop-width) {
+        top: 16px;
+        left: -25px;
+      }
     }
 
     &--line {
@@ -37,6 +40,7 @@
   .reset();
 
   @media (min-width: @desktop-width) {
+    margin-top: 10px;
     margin-right: 35px;
   }
 }
