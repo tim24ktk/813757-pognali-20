@@ -8,13 +8,14 @@
   background-color: @special_background_light;
   background-image: url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-mobile@1x.png");
   background-repeat: no-repeat, no-repeat;
-  background-position: right 0, left 224px;
+  background-position: 152px 76px, -10px 347px;
   color: @basic-white;
-  z-index: 1;
+  z-index: 4;
 
   @media (max-width: @mobile-width-only) {
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
+    margin-top: -40px;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
   }
 
   @media (min-width: @tablet-width) {
@@ -24,11 +25,13 @@
 
   &::before {
     position: absolute;
+    top: 74px;
     content: "";
     width: 113px;
     height: 132px;
     background-color: @special_blue;
-    border-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     z-index: -1;
   }
 }
@@ -58,6 +61,7 @@
 .fellow-travelers__heading {
   margin: 0;
   padding: 0;
+  margin-top: 5px;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
@@ -71,7 +75,8 @@
 }
 
 .fellow-travelers__individual {
-  width: 217px;
+  .reset();
+  margin-top: 18px;
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
@@ -85,6 +90,7 @@
 
 .fellow-travelers__like-minded {
   width: 197px;
+  margin-top: 24px;
   font-weight: 700;
   font-size: 16px;
   line-height: 22px;
@@ -98,13 +104,13 @@
 
 .fellow-travelers__card-information {
   @media (max-width: @mobile-width-only) {
-    margin: auto;
+    margin-left: 24px;
   }
 }
 
 .fellow-travelers__cards-wrapper {
   @media (max-width: @mobile-width-only) {
-    margin: auto;
+    margin-top: 28px;
   }
 
   @media (min-width: @tablet-width) {
