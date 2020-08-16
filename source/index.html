@@ -329,7 +329,11 @@
           </div>
         </div>
         <div class="adress__img-wrapper">
-          <img class="address__map" src="img/background_map.png" width="320" height="424" alt="Карта с маркером нашего местонахождения">
+          <picture class="adress__picture">
+            <source media="(min-width: 1440px)" srcset="img/block_map_desktop.png" alt="Карта с маркером нашего местонахождения">
+            <source media="(min-width: 768px)" srcset="img/block_map_tablet@1px.png" alt="Карта с маркером нашего местонахождения">
+            <img class="address__map" src="img/background_map.png" width="320" height="424" alt="Карта с маркером нашего местонахождения">
+          </picture>
         </div>
       </section>
     </main>
@@ -339,17 +343,17 @@
           <img src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Сервис поиска попутчиков погнали">
         </a>
         <ul class="footer__social-list socials-list">
-          <li class="socials-list__item">
+          <li class="socials-list__item socials-list__item--footer">
             <a class="socials-list__link socials-list__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank" aria-label="Социальная сеть Фейсбук">
               <span class="visually-hidden">Фейсбук</span>
             </a>
           </li>
-          <li class="socials-list__item">
+          <li class="socials-list__item socials-list__item--footer">
             <a class="socials-list__link socials-list__link--vk" href="https://vk.com/htmlacademy" target="_blank" aria-label="Социальная сеть ВКонтакте">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
-          <li class="socials-list__item">
+          <li class="socials-list__item socials-list__item--footer">
             <a class="socials-list__link socials-list__link--instagram" href="https://www.instagram.com/htmlacademy" target="_blank" aria-label="Социальная сеть Инстаграм">
               <span class="visually-hidden">Инстаграм</span>
             </a>

@@ -5,8 +5,7 @@
 
 .socials-list__item {
   display: flex;
-  width: 45px;
-  height: 45px;
+  .size(45px; 45px);
   .reset();
   background-color: @basic_yellow;
   border-radius: 50%;
@@ -17,6 +16,11 @@
 
   @media (min-width: @tablet-width) {
     margin-left: 20px;
+    .size(62px; 62px);
+  }
+
+  &--footer {
+    margin-left: 0;
   }
 }
 
