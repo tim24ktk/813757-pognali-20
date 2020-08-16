@@ -43,6 +43,10 @@
     font-size: 45px;
     line-height: 45px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 149px;
+  }
 }
 
 .fedback__sign-up-call {
@@ -124,6 +128,10 @@
       margin-left: 23px;
       width: 501px;
     }
+
+    @media (min-width: @desktop-width) {
+      width: 808px;
+    }
   }
 
   & input::placeholder {
@@ -145,9 +153,15 @@
     margin-top: 65px;
     border-radius: 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 57px;
+    width: 1172px;
+  }
 }
 
 .feedback__registration-form-button {
+  position: relative;
   margin-left: 16px;
   padding: 24px 24px;
   .size(60px; 62px);
@@ -159,11 +173,15 @@
   &::before {
     position: absolute;
     content: "";
-    width: 11px;
-    height: 14px;
+    .size(11px; 14px);
     background-image: url("../img/triangle.svg");
     background-repeat: no-repeat;
     transform: translate(-50%, -50%);
+
+    @media (min-width: @desktop-width) {
+      top: 40px;
+      right: 30px;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -172,6 +190,28 @@
     border-bottom-left-radius: 0;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    &--desktop {
+      width: 324px;
+      text-align: left;
+    }
+  }
+}
+
+.feedback__invisible {
+  display: none;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: @basic_blue_light_color;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    margin-top: 4px;
+    margin-left: 13px;
   }
 }
 
@@ -194,11 +234,23 @@
       display: none;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    width: 614px;
+    margin-top: 70px;
+    margin-left: 347px;
+  }
 }
 
 .feedback__contacts {
   @media (min-width: @tablet-width) {
     margin-top: 38px;
     margin-left: 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 45px;
+    margin-left: 224px;
+    width: 531px;
   }
 }
