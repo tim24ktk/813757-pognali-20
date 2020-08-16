@@ -165,7 +165,6 @@
 }
 
 .traveler-card__hobbies {
-  width: 223px;
   margin: auto;
   margin-top: 15px;
   font-size: 16px;
@@ -173,7 +172,12 @@
   color: @special_grey;
   text-align: center;
 
+  @media (max-width: @mobile-width-only) {
+    width: 211px;
+  }
+
   @media (min-width: @tablet-width) {
+    width: 223px;
     margin-top: 24px;
     font-size: 20px;
     line-height: 23px;
@@ -181,8 +185,12 @@
 }
 
 .traveler-card__shaw-all {
-  margin-top: 80px;
-  margin-left: 36px;
+  margin-top: 17px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 80px;
+    margin-left: 36px;
+  }
 
   @media (min-width: @desktop-width) {
     margin-top: 65px;
