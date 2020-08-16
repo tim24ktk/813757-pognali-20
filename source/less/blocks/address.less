@@ -5,6 +5,10 @@
   text-transform: uppercase;
   color: @basic_blue_light_color;
   margin-top: -40px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: -50px;
+  }
 }
 
 .address__background {
@@ -60,9 +64,19 @@
     background-repeat: no-repeat;
     background-size: 21px 21px;
     background-position: center;
+
+    @media (min-width: @tablet-width) {
+      top: -22px;
+      left: -44px;
+      .size(68px; 68px);
+      background-size: 32px 32px;
+    }
   }
 
   @media (min-width: @tablet-width) {
+    margin-top: 110px;
+    margin-left: 79px;
+    width: auto;
     font-size: 28px;
     line-height: 28px;
   }
@@ -70,6 +84,11 @@
 
 .address__button {
   margin-top: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 34px;
+    margin-left: 35px;
+  }
 }
 
 .address__img-wrapper {
