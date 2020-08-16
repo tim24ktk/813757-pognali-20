@@ -4,6 +4,7 @@
   line-height: 22px;
   text-transform: uppercase;
   color: @basic_blue_light_color;
+  margin-top: -40px;
 }
 
 .address__background {
@@ -11,6 +12,7 @@
   border-bottom-left-radius: 40px;
 
   &--color {
+    padding-bottom: 35px;
     background-color: @basic_yellow;
   }
 }
@@ -42,10 +44,14 @@
 .address__text {
   position: relative;
   padding-left: 50px;
+  margin-top: 73px;
+  margin-left: 10px;
+  width: 195px;
 
   &::before {
     position: absolute;
-    left: 0;
+    top: -2px;
+    left: -10px;
     content: "";
     .size(45px; 45px);
     background-color: @phone_background;
@@ -60,6 +66,10 @@
     font-size: 28px;
     line-height: 28px;
   }
+}
+
+.address__button {
+  margin-top: 16px;
 }
 
 .address__img-wrapper {
