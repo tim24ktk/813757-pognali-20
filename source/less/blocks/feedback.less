@@ -1,10 +1,13 @@
 .feedback {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  margin-top: -40px;
   background-color: @special_background_light;
   border-bottom-right-radius: 40px;
   border-bottom-left-radius: 40px;
+  z-index: 2;
 }
 
 .feedback__wrapper {
@@ -24,6 +27,7 @@
 }
 
 .feedback__heading {
+  margin-top: 111px;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
@@ -31,7 +35,9 @@
   text-align: center;
 }
 
-.fedback__sign-up-call {
+.fedback__sign-up-call,
+.fedback__authorization-link {
+  .reset();
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
@@ -45,6 +51,10 @@
   @media (min-width: @tablet-width) {
     font-size: 28px;
     line-height: 32px;
+
+    br {
+      display: none;
+    }
   }
 }
 
@@ -63,7 +73,7 @@
 }
 
 .feedback__registration-form {
-  position: relative;
+  margin-top: 28px;
   width: 270px;
   background-color: @basic-white;
   border-radius: 10px;
@@ -71,7 +81,10 @@
   & input {
     border: none;
     border-radius: 10px;
-    padding: 15px;
+    padding-top: 24px;
+    padding-right: 13px;
+    padding-bottom: 21px;
+    padding-left: 23px;
   }
 
   & input::placeholder {
@@ -88,8 +101,6 @@
 }
 
 .feedback__registration-form-button {
-  position: absolute;
-  right: -6px;
   padding: 24px 24px;
   width: 60px;
   height: 62px;
@@ -110,6 +121,7 @@
 }
 
 .feedback__question {
+  margin-top: 30px;
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
