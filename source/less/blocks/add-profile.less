@@ -7,6 +7,14 @@
   @media (max-width: @mobile-width-only) {
     margin-top: -40px;
   }
+
+  @media (max-width: @tablet-width) {
+    margin-top: -50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 187px;
+  }
 }
 
 .add-profile__wrapper {
@@ -25,6 +33,19 @@
     background-image: url("../img/rates@1x.png");
     background-repeat: no-repeat;
     background-size: contain;
+
+    @media (min-width: @tablet-width) {
+      top: auto;
+      bottom: 7px;
+      right: 85px;
+      z-index: 1;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 286px;
+      right: 133px;
+      .size(198px; 198px);
+    }
   }
 
   @media (max-width: @mobile-width-only) {
@@ -35,6 +56,7 @@
   @media (min-width: @tablet-width) {
     width: 768px;
     padding: 0 40px;
+    padding-bottom: 46px;
   }
 
   @media (min-width: @desktop-width) {
@@ -55,10 +77,16 @@
   color: @special_orange;
 
   @media (min-width: @tablet-width) {
+    margin-top: 123px;
+    margin-right: 23px;
     width: 482px;
     font-size: 45px;
     line-height: 45px;
     align-self: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 107px;
   }
 }
 
@@ -75,12 +103,41 @@
     width: 200px;
     height: 1px;
     background-color: @profile_border_color;
+
+    @media (min-width: @tablet-width) {
+      bottom: -21px;
+      width: 562px;
+    }
   }
 
   @media (min-width: @tablet-width) {
+    margin-top: 94px;
+    margin-left: 89px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+
+    &::before {
+      position: absolute;
+      top: -62px;
+      right: 0;
+      content: "";
+      .size(198px; 285px);
+      background-color: @heart_background;
+      border-radius: 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 153px;
+    margin-left: 161px;
+    width: 847px;
+
+    &::before {
+      top: -70px;
+      right: -129px;
+      .size(446px; 300px);
+    }
   }
 }
 
@@ -92,6 +149,10 @@
 
   &:not(:first-child) {
     margin-top: 27px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 37px;
+    }
   }
 
   &::before {
@@ -101,6 +162,15 @@
     width: 200px;
     height: 1px;
     background-color: @profile_border_color;
+
+    @media (min-width: @tablet-width) {
+      top: -20px;
+      width: 562px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 812px;
+    }
   }
 
   &::after {
@@ -113,6 +183,19 @@
     color: @basic-white;
     border-radius: 50%;
     text-align: center;
+
+    @media (min-width: @tablet-width) {
+      top: -23px;
+      left: -89px;
+      .size(68px; 68px);
+      font-size: 28px;
+      line-height: 71px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -22px;
+      left: -91px;
+    }
   }
 
   &--first {
@@ -126,6 +209,10 @@
     &::after {
       content: "2";
       background-color: @special_yellow_dark;
+
+      @media (min-width: @tablet-width) {
+        top: -20px;
+      }
     }
   }
 
@@ -133,7 +220,16 @@
     &::after {
       content: "3";
       background-color: @basic_yellow;
+
+      @media (min-width: @tablet-width) {
+        top: -18px;
+      }
     }
+  }
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+    flex-direction: row;
   }
 }
 
@@ -146,7 +242,7 @@
   color: @special_grey;
 
   @media (min-width: @tablet-width) {
-    width: 245px;
+    width: 320px;
     display: flex;
     font-size: 28px;
     line-height: 28px;
@@ -172,6 +268,8 @@
   color: @special_grey;
 
   @media (min-width: @tablet-width) {
+    margin-top: 0;
+    margin-right: 35px;
     font-size: 28px;
     line-height: 28px;
   }
@@ -190,13 +288,16 @@
 
   @media (min-width: @tablet-width) {
     position: relative;
-    width: 274px;
-    margin-left: 50px;
+    align-self: flex-start;
+    margin-top: 78px;
+    margin-left: 83px;
+    font-size: 20px;
+    line-height: 20px;
 
     &::before {
       position: absolute;
-      top: -6px;
-      left: -55px;
+      top: -25px;
+      left: -83px;
       content: "";
       width: 68px;
       height: 68px;
@@ -206,5 +307,9 @@
       background-position: center;
       background-color: @heart_background;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 155px;
   }
 }
