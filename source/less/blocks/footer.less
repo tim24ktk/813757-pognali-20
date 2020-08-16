@@ -1,7 +1,10 @@
 .footer {
+  margin-top: -119px;
+  position: relative;
   background-color: @basic-white;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
+  z-index: 2;
 }
 
 .footer__wrapper {
@@ -9,7 +12,6 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  align-content: center;
   width: 320px;
   margin: auto;
   padding: 0 25px;
@@ -25,4 +27,18 @@
     width: 1440px;
     padding: 0 60px;
   }
+}
+
+
+.footer__logo {
+  margin-top: 37px;
+}
+
+.footer__wrapper .footer__social-list {
+  margin-top: 29px;
+}
+
+.footer__copyright {
+  margin-top: 46px;
+  align-self: flex-start;
 }

@@ -1,3 +1,17 @@
+.copyright {
+  display: flex;
+  flex-wrap: wrap;
+
+  &::after {
+    position: absolute;
+    bottom: 51px;
+    content: "";
+    width: 270px;
+    height: 1px;
+    background-color: @copyright_border;
+  }
+}
+
 .copyright__heading {
   font-weight: 400;
   font-size: 16px;
@@ -11,6 +25,8 @@
 
   &::before {
     position: absolute;
+    top: 5px;
+    right: -188px;
     content: "";
     width: 27px;
     height: 34px;
