@@ -18,6 +18,14 @@
   &--color {
     padding-bottom: 35px;
     background-color: @basic_yellow;
+
+    @media (min-width: @tablet-width) {
+      padding-bottom: 84px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-bottom: 59px;
+    }
   }
 }
 
@@ -39,9 +47,8 @@
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
-    justify-content: space-between;
-    width: 1440px;
     padding: 0 60px;
+    width: 1440px;
   }
 }
 
@@ -71,6 +78,13 @@
       .size(68px; 68px);
       background-size: 32px 32px;
     }
+
+    @media (min-width: @desktop-width) {
+      top: -31px;
+      left: -72px;
+      .size(90px; 90px);
+      background-size: 42px 42px;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -80,6 +94,11 @@
     font-size: 28px;
     line-height: 28px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 136px;
+    margin-left: 295px;
+  }
 }
 
 .address__button {
@@ -88,6 +107,11 @@
   @media (min-width: @tablet-width) {
     margin-top: 34px;
     margin-left: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 110px;
+    margin-left: 146px;
   }
 }
 
