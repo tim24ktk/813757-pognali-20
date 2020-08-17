@@ -14,8 +14,10 @@
     margin-top: -40px;
   }
 
-  @media (max-width: @tablet-width) {
-    margin-top: -50px;
+  @media (min-width: @tablet-width) {
+    margin-top: -60px;
+    border-bottom-left-radius: @border_radius_60;
+    border-bottom-right-radius: @border_radius_60;
   }
 
   @media (min-width: @desktop-width) {
@@ -33,7 +35,7 @@
 
   &::before {
     position: absolute;
-    top: 86px;
+    top: 76px;
     right: 25px;
     content: "";
     .size(100px; 100px);
@@ -76,15 +78,15 @@
   display: block;
   width: 150px;
   .reset();
-  margin-top: 102px;
-  margin-left: 27px;
+  margin-top: 92px;
+  margin-left: 26px;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
   color: @special_orange;
 
   @media (min-width: @tablet-width) {
-    margin-top: 123px;
+    margin-top: 134px;
     margin-right: 23px;
     width: 482px;
     font-size: 45px;

@@ -27,8 +27,8 @@
     background-repeat: no-repeat;
 
     @media (min-width: @tablet-width) {
-      top: 34px;
-      right: 36px;
+      top: 36px;
+      right: 33px;
     }
   }
 
@@ -77,6 +77,17 @@
 
     &--tablet-style {
       width: 618px;
+      height: 82px;
+    }
+
+    &--tablet-all {
+      width: 616px;
+      height: 80px;
+
+      &::before {
+        top: 33px;
+        right: 34px;
+      }
     }
   }
 

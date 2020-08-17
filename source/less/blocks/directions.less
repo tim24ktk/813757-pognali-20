@@ -4,13 +4,15 @@
   padding-top: 111px;
   padding-bottom: 34px;
   background-color: @basic_blue_light;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: @border_radius_30;
+  border-bottom-right-radius: @border_radius_30;
   z-index: 6;
 
   @media (min-width: @tablet-width) {
-    margin-top: -50px;
+    margin-top: -60px;
     padding-bottom: 0;
+    border-bottom-left-radius: @border_radius_60;
+    border-bottom-right-radius: @border_radius_60;
   }
 }
 
@@ -28,7 +30,7 @@
     background-image: url("../img/flags-back@1x.png");
     background-repeat: no-repeat;
     background-size: 289px 575px;
-    background-position: right 60px top 28px;
+    background-position: right 39px top 8px;
   }
 
   @media (min-width: @desktop-width) {
@@ -50,8 +52,8 @@
   color: @special_orange;
 
   @media (min-width: @tablet-width) {
-    margin-top: 10px;
-    margin-left: 32px;
+    margin-top: 22px;
+    margin-left: 33px;
     font-size: 45px;
     line-height: 45px;
   }
@@ -76,7 +78,7 @@
 
   @media (min-width: @tablet-width) {
     width: 350px;
-    margin-top: 57px;
+    margin-top: 58px;
     margin-left: 35px;
     font-size: 28px;
     line-height: 33px;
@@ -94,9 +96,9 @@
   margin-top: 27px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 47px;
+    margin-top: 45px;
     margin-bottom: 80px;
-    margin-left: 36px;
+    margin-left: 34px;
   }
 
   @media (min-width: @desktop-width) {
