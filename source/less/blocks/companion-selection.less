@@ -1,10 +1,12 @@
 .companion-selection {
-  padding: 20px 22px;
+  padding: 25px 20px;
+  padding-bottom: 22px;
   background-color: @basic_yellow;
   border-radius: 20px;
   margin: auto;
 
   @media (max-width: @mobile-width-only) {
+    margin-top: 116px;
     width: 270px;
   }
 
@@ -20,6 +22,7 @@
 
 .companion-selection__heading {
   .reset();
+  margin-left: 5px;
   font-weight: 700;
   font-size: 22px;
   line-height: 22px;
@@ -27,12 +30,30 @@
   color: @basic_blue_light_color;
 }
 
+.companion-selection__form {
+  margin-top: 35px;
+}
+
 .companion-selection__fieldset {
+  position: relative;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 25px;
+  margin-left: 5px;
+
+  &::before {
+    position: absolute;
+    top: -13px;
+    content: "";
+    width: 220px;
+    height: 1px;
+    background-color: @level_border;
+  }
+
+  &--third {
+    margin-top: 19px;
+  }
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -44,6 +65,7 @@
 }
 
 .companion-selection__legend {
+  width: 150px;
   .reset();
   font-weight: 700;
   font-size: 16px;
@@ -52,15 +74,27 @@
   color: @basic_blue_light_color;
 }
 
+.companion-selection__fieldset .companion-selection__hobies-list {
+  margin-top: 17px;
+}
+
+.companion-selection__transport-list {
+  margin-top: 15px;
+  margin-left: 16px;
+}
+
 .companion-selection__button {
   position: relative;
-  border: none;
+  margin-top: 5px;
+  .size(10px; 10px);
   background-color: transparent;
+  border: none;
+  cursor: pointer;
 
   &::before {
     position: absolute;
-    top: -17px;
-    right: 0;
+    top: 2px;
+    right: 4px;
     content: "";
     width: 10px;
     height: 5px;
@@ -69,6 +103,7 @@
 
   &--close {
     &::before {
+      top: 0;
       width: 10px;
       height: 5px;
       background-image: url("../img/dropdown.svg");

@@ -7,10 +7,15 @@
     .main-nav__logo {
       display: block;
       margin-top: 26px;
+
+      &--catalog {
+        margin-top: 19px;
+      }
     }
 
     &--column {
       flex-direction: column;
+      padding-bottom: 11px;
     }
   }
 
@@ -20,6 +25,26 @@
 
   @media (min-width: @desktop-width) {
     background-color: @basic_blue;
+  }
+}
+
+.main-nav__heading {
+  position: relative;
+  .reset();
+  margin-top: 51px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+
+  &::before {
+    position: absolute;
+    bottom: -13px;
+    content: "";
+    width: 173px;
+    height: 5px;
+    border-radius: 4px;
+    background-color: @special_orange;
   }
 }
 
@@ -64,6 +89,10 @@
 
   @media (max-width: @mobile-width-only) {
     margin-top: 30px;
+
+    &--catalog-margin {
+      margin-top: 23px;
+    }
   }
 
   &::before {

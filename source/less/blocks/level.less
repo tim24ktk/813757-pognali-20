@@ -1,10 +1,20 @@
 .level {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  flex-direction: column;
-  margin-top: 62px;
+  margin-top: 66px;
+  margin-left: 5px;
   border: none;
+
+  &::before {
+    position: absolute;
+    top: -13px;
+    content: "";
+    width: 220px;
+    height: 1px;
+    background-color: @level_border;
+  }
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -22,6 +32,7 @@
 
 .level__button {
   position: relative;
+  .size(10px; 10px);
   border: none;
   background-color: transparent;
 
@@ -30,13 +41,14 @@
     top: -15px;
     right: 0;
     content: "";
-    width: 10px;
-    height: 5px;
+    .size(10px; 10px);
     background-image: url("../img/dropdown.svg");
   }
 
   &--close {
     &::before {
+      top: 5px;
+      right: 5px;
       .size(10px; 5px);
       background-image: url("../img/dropdown.svg");
       transform: rotate(180deg);
@@ -49,19 +61,52 @@
 }
 
 .level__price-controls {
+  position: relative;
   display: flex;
+  margin-top: 12px;
   padding: 5px;
   width: 220px;
+  height: 35px;
   border: 1px solid @input_border_color;
   border-radius: 4px;
   background-color: @basic-white;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 109px;
+    content: "";
+    width: 1px;
+    height: 11px;
+    background-color: @input_border_color;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 109px;
+    content: "";
+    width: 1px;
+    height: 11px;
+    background-color: @input_border_color;
+  }
 }
 
 .level__input-min,
 .level__input-max {
-  width: 106px;
+  width: 102px;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 13px;
+  letter-spacing: 0.06em;
   text-align: center;
+  color: @basic_blue_light_color;
   border: none;
+}
+
+.level__input-min {
+  position: relative;
 }
 
 .level__range-controls {
@@ -76,7 +121,7 @@
 
 .level__bar {
   position: relative;
-  left: 83px;
+  left: 77px;
   width: 62%;
   height: 2px;
   background: @basic_blue_light_color;
@@ -85,7 +130,7 @@
 .level__toggle-min {
   position: relative;
   top: -6px;
-  left: 74px;
+  left: 67px;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -95,15 +140,17 @@
 .level__toggle-max {
   position: relative;
   top: -16px;
-  left: 209px;
+  left: 210px;
   .size(10px; 10px);
   border-radius: 50%;
   background-color: @basic_blue_light_color;
 }
 
 .level__submit-button {
-  width: 230px;
-  padding: 15px;
+  width: 231px;
+  margin-top: 5px;
+  padding: 12px;
+  font-family: "Blogger Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 17px;

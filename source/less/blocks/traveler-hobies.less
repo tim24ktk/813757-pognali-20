@@ -24,22 +24,23 @@
 
 .traveler-hobies__item {
   .reset();
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .traveler-hobies__checkbox-label {
   position: relative;
   display: block;
-  padding-left: 45px;
+  padding-left: 27px;
+  font-size: 15px;
+  line-height: 20px;
   cursor: pointer;
   user-select: none;
 
   &::before {
     position: absolute;
-    top: -4px;
+    top: -2px;
     left: 0;
     content: "";
-    padding: 5px;
     .size(18px; 18px);
     border-radius: 4px;
     background-color: @basic-white;
@@ -50,8 +51,8 @@
   &::after {
     position: absolute;
     content: "";
-    top: 5px;
-    left: 10px;
+    top: 2px;
+    left: 5px;
     .size(9px; 9px);
     background-image: url("../img/tick.svg");
     background-repeat: no-repeat;
