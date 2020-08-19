@@ -3,10 +3,10 @@
   display: flex;
   flex-wrap: wrap;
   .reset_for_list();
-  width: 216px;
+  .size(220px; 205px;);
 
   @media (max-width: @mobile-width-only) {
-    margin-bottom: 350px;
+    margin-bottom: 284px;
   }
 
   @media (min-width: @tablet-width) {
@@ -26,7 +26,8 @@
 
   &--active {
     position: absolute;
-    top: 200px;
+    top: 209px;
+    left: -9px;
     display: block;
     height: 277px;
     overflow: auto;
@@ -44,7 +45,6 @@
 }
 
 .alphabet__item {
-  width: 43px;
   margin-top: -1px;
   margin-right: -1px;
   text-align: center;
@@ -69,7 +69,8 @@
 
 .alphabet__item-link {
   display: block;
-  padding: 10px;
+  .size(45px; 42px);
+  padding: 15px;
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
