@@ -11,6 +11,7 @@
   }
 
   @media (min-width: @tablet-width) {
+    margin-top: 42px;
     width: 688px;
   }
 
@@ -28,10 +29,33 @@
   line-height: 22px;
   letter-spacing: 0.02em;
   color: @basic_blue_light_color;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 12px;
+    margin-left: 14px;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: normal;
+  }
 }
 
 .companion-selection__form {
+  position: relative;
   margin-top: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 76px;
+    margin-left: 10px;
+
+    &::before {
+      position: absolute;
+      top: -37px;
+      content: "";
+      width: 617px;
+      height: 1px;
+      background-color: @level_border;
+    }
+  }
 }
 
 .companion-selection__fieldset {
@@ -42,13 +66,15 @@
   margin-top: 25px;
   margin-left: 5px;
 
-  &::before {
-    position: absolute;
-    top: -13px;
-    content: "";
-    width: 220px;
-    height: 1px;
-    background-color: @level_border;
+  @media (max-width: @mobile-width-only) {
+    &::before {
+      position: absolute;
+      top: -13px;
+      content: "";
+      width: 220px;
+      height: 1px;
+      background-color: @level_border;
+    }
   }
 
   &--third {
@@ -56,6 +82,8 @@
   }
 
   @media (min-width: @tablet-width) {
+    margin-top: 22px;
+    justify-content: flex-start;
     flex-direction: row;
   }
 
@@ -72,15 +100,49 @@
   line-height: 16px;
   text-transform: uppercase;
   color: @basic_blue_light_color;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    display: flex;
+    width: 107px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+
+    &--margin {
+      margin-top: 5px;
+    }
+  }
+}
+
+.companion-selection__legend-colon {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }
 
 .companion-selection__fieldset .companion-selection__hobies-list {
   margin-top: 17px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    margin-left: 26px;
+  }
 }
 
 .companion-selection__transport-list {
-  margin-top: 15px;
-  margin-left: 16px;
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    margin-left: 16px;
+  }
+}
+
+.companion-selection .companion-selection__level {
+  @media (min-width: @tablet-width) {
+    margin-top: 11px;
+  }
 }
 
 .companion-selection__button {

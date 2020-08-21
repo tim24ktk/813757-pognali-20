@@ -25,6 +25,15 @@
 .traveler-hobies__item {
   .reset();
   margin-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 9px;
+    width: 150px;
+
+    &:not(:last-child) {
+      margin-right: 21px;
+    }
+  }
 }
 
 .traveler-hobies__checkbox-label {
@@ -45,6 +54,17 @@
     border-radius: 4px;
     background-color: @basic-white;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      top: -3px;
+      left: -8px;
+      .size(24px; 24px);
+    }
+  }
 }
 
 .traveler-hobies__checkbox:checked + .traveler-hobies__checkbox-label {
@@ -56,5 +76,14 @@
     .size(9px; 9px);
     background-image: url("../img/tick.svg");
     background-repeat: no-repeat;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      top: 3px;
+      left: 0;
+      .size(11px; 11px);
+      background-size: 11px 11px;
+    }
   }
 }

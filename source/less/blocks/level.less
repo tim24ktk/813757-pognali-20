@@ -14,6 +14,12 @@
     width: 220px;
     height: 1px;
     background-color: @level_border;
+
+    @media (min-width: @tablet-width) {
+      top: auto;
+      bottom: -33px;
+      width: 617px;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -28,6 +34,15 @@
   line-height: 16px;
   text-transform: uppercase;
   color: @basic_blue_light_color;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 27px;
+    display: flex;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    order: 1;
+  }
 }
 
 .level__button {
@@ -76,9 +91,13 @@
     top: 0;
     left: 109px;
     content: "";
-    width: 1px;
-    height: 11px;
+    .size(1px; 11px);
     background-color: @input_border_color;
+
+    @media (min-width: @tablet-width) {
+      left: 73px;
+      .size(1px;15px);
+    }
   }
 
   &::after {
@@ -86,9 +105,19 @@
     bottom: 0;
     left: 109px;
     content: "";
-    width: 1px;
-    height: 11px;
+    .size(1px; 11px);
     background-color: @input_border_color;
+
+    @media (min-width: @tablet-width) {
+      left: 73px;
+      .size(1px;15px);
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-right: 16px;
+    .size(148px; 46px);
+    order: 3;
   }
 }
 
@@ -103,6 +132,12 @@
   text-align: center;
   color: @basic_blue_light_color;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    width: 68px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .level__input-min {
@@ -112,11 +147,22 @@
 .level__range-controls {
   width: 220px;
   margin-top: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 33px;
+    margin-left: 6px;
+    width: 282px;
+    order: 2;
+  }
 }
 
 .level__scale {
   height: 2px;
   background: @basic_blue_light_color_special;
+
+  @media (min-width: @tablet-width) {
+    height: 3px;
+  }
 }
 
 .level__bar {
@@ -125,16 +171,25 @@
   width: 62%;
   height: 2px;
   background: @basic_blue_light_color;
+
+  @media (min-width: @tablet-width) {
+    width: 72%;
+    height: 3px;
+  }
 }
 
 .level__toggle-min {
   position: relative;
   top: -6px;
   left: 67px;
-  width: 10px;
-  height: 10px;
+  .size(10px; 10px);
   border-radius: 50%;
   background-color: @basic_blue_light_color;
+
+  @media (min-width: @tablet-width) {
+    top: -9px;
+    .size(13px; 13px);
+  }
 }
 
 .level__toggle-max {
@@ -144,6 +199,12 @@
   .size(10px; 10px);
   border-radius: 50%;
   background-color: @basic_blue_light_color;
+
+  @media (min-width: @tablet-width) {
+    top: -22px;
+    left: 268px;
+    .size(13px; 13px);
+  }
 }
 
 .level__submit-button {
@@ -161,4 +222,14 @@
   border-radius: 25px;
   border: none;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 69px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    padding: 18px;
+    .size(617px; 50px);
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

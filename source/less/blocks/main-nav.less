@@ -21,6 +21,11 @@
 
   @media (min-width: @tablet-width) {
     background-color: @special_blue_background;
+
+    &--catalog-radius {
+      border-bottom-left-radius: @border_radius_60;
+      border-bottom-right-radius: @border_radius_60;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -41,10 +46,23 @@
     position: absolute;
     bottom: -13px;
     content: "";
-    width: 173px;
-    height: 5px;
+    .size(173px; 5px);
     border-radius: 4px;
     background-color: @special_orange;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 112px;
+    margin-left: 34px;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 20px;
+
+    &::before {
+      bottom: -90px;
+      left: 3px;
+      .size(288px; 8px);
+    }
   }
 }
 
@@ -124,6 +142,7 @@
 }
 
 .main-nav__toggle-link {
+  position: relative;
   font-weight: bold;
   font-size: 20px;
   line-height: 20px;
@@ -132,6 +151,22 @@
 
   @media (max-width: @mobile-width-only) {
     display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    align-self: flex-end;
+    margin-top: 115px;
+    margin-right: 24px;
+    padding-right: 70px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      right: 10px;
+      .size(32px; 16px);
+      background-image: url("../img/icon_arrow_bend.svg");
+      background-repeat: no-repeat;
+    }
   }
 }
 
