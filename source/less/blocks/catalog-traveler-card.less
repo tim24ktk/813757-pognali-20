@@ -16,6 +16,10 @@
     @media (min-width: @tablet-width) {
       margin-top: 40px;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 31px;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -28,11 +32,19 @@
     padding-bottom: 25px;
     width: 688px;
   }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 285px 1fr 1fr;
+    grid-auto-rows: auto;
+    margin-top: 74px;
+    padding: 0;
+    width: 951px;
+  }
 }
 
 .catalog-traveler-card__image {
   grid-column-start: 1;
-  gird-column-end: 2;
+  grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 3;
   margin-left: 3px;
@@ -45,6 +57,18 @@
     border-radius: 20%;
     object-fit: cover;
   }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    .size(285px; 285px);
+    border-radius: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    object-fit: cover;
+  }
 }
 
 .catalog-traveler-card__traveler-name {
@@ -52,6 +76,8 @@
   grid-column-start: 2;
   grid-row-start: 1;
   grid-row-end: 2;
+  display: flex;
+  flex-wrap: wrap;
   .reset();
   margin-left: 12px;
   width: 77px;
@@ -73,6 +99,10 @@
       top: 11px;
       right: -1px;
       .size(8px; 8px);
+    }
+
+    @media (min-width: @desktop-width) {
+      left: -26px;
     }
   }
 
@@ -97,6 +127,11 @@
     width: 217px;
     font-size: 30px;
     line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 46px;
+    margin-left: 65px;
   }
 }
 
@@ -168,6 +203,12 @@
     line-height: 20px;
     margin-top: 16px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: auto;
+    margin-right: 21px;
+    margin-bottom: 60px;
+  }
 }
 
 .catalog-traveler-card__hobbies {
@@ -196,6 +237,12 @@
     width: 227px;
     font-size: 20px;
     line-height: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: auto;
+    margin-bottom: 30px;
+    margin-left: 64px;
   }
 }
 
@@ -246,6 +293,10 @@
     margin-top: 25px;
     margin-left: 52px;
   }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .catalog-traveler-card__countries-list {
@@ -265,6 +316,16 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    flex-direction: column;
+    margin-top: 55px;
+    margin-left: 62px;
+  }
 }
 
 .catalog-traveler-card__countrie-item {
@@ -283,6 +344,10 @@
     @media (min-width: @tablet-width) {
       margin-top: 0;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 16px;
+    }
   }
 
   &::before {
@@ -297,6 +362,10 @@
     @media (min-width: @tablet-width) {
       left: 4px;
       .size(35px; 24px);
+    }
+
+    @media (min-width: @desktop-width) {
+      left: -2px;
     }
   }
 
@@ -416,6 +485,13 @@
     grid-row-start: 1;
     grid-row-end: 3;
   }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
 }
 
 .catalog-traveler-card .catalog-traveler-card__transport-list {
@@ -430,6 +506,13 @@
     justify-self: end;
     align-items: flex-end;
     margin-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-self: start;
+    align-items: flex-start;
+    margin-top: 23px;
+    margin-left: 61px;
   }
 }
 
@@ -501,6 +584,12 @@
       .size(65px; 65px);
       background-size: 65px 65px;
     }
+
+    @media (min-width: @desktop-width) {
+      top: -15px;
+      right: -18px;
+      left: auto;
+    }
   }
 
   &--good {
@@ -515,6 +604,12 @@
       @media (min-width: @tablet-width) {
         top: -16px;
         left: -29px;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: -15px;
+        right: -18px;
+        left: auto;
       }
     }
   }
@@ -533,6 +628,12 @@
         background-image: url("../img/catalog_tablet_25.svg");
         background-size: 31px 37px;
       }
+
+      @media (min-width: @desktop-width) {
+        top: -15px;
+        right: -52px;
+        left: auto;
+      }
     }
   }
 
@@ -548,6 +649,12 @@
         top: -16px;
         left: -13px;
       }
+
+      @media (min-width: @desktop-width) {
+        top: -15px;
+        right: -34px;
+        left: auto;
+      }
     }
   }
 
@@ -561,6 +668,11 @@
     align-items: flex-end;
     margin-top: 21px;
     margin-right: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 21px;
+    margin-right: 58px;
   }
 }
 
@@ -604,5 +716,10 @@
     grid-row-end: 4;
     margin-top: 13px;
     margin-left: 7px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 35px;
+    margin-left: 57px;
   }
 }

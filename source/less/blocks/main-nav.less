@@ -64,6 +64,16 @@
       .size(288px; 8px);
     }
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 100px;
+    margin-left: 65px;
+
+    &::before {
+      bottom: -93px;
+      left: 0;
+    }
+  }
 }
 
 .main-nav__list {
@@ -95,6 +105,10 @@
     align-items: center;
     width: 1440px;
     padding: 0 60px;
+
+    &--style {
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -167,6 +181,11 @@
       background-image: url("../img/icon_arrow_bend.svg");
       background-repeat: no-repeat;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 105px;
+    margin-right: 52px;
   }
 }
 

@@ -16,6 +16,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: 75px;
+    margin-left: 249px;
     width: 285px;
     order: 2;
   }
@@ -37,6 +39,11 @@
     line-height: 30px;
     letter-spacing: normal;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 20px;
+    margin-left: 27px;
+  }
 }
 
 .companion-selection__form {
@@ -54,6 +61,15 @@
       width: 617px;
       height: 1px;
       background-color: @level_border;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 35px;
+    margin-left: 21px;
+
+    &::before {
+      display: none;
     }
   }
 }
@@ -88,7 +104,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
@@ -121,6 +137,10 @@
   @media (min-width: @tablet-width) {
     display: block;
   }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .companion-selection__fieldset .companion-selection__hobies-list {
@@ -130,12 +150,22 @@
     margin-top: 0;
     margin-left: 26px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 26px;
+    margin-left: 9px;
+  }
 }
 
 .companion-selection__transport-list {
   @media (min-width: @tablet-width) {
     margin-top: 0;
     margin-left: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 25px;
+    margin-left: 0;
   }
 }
 
@@ -178,6 +208,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-right: 22px;
     display: block;
   }
 }

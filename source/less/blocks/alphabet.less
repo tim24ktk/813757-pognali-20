@@ -43,6 +43,7 @@
   @media (min-width: @desktop-width) {
     position: inherit;
     display: block;
+    margin-left: 4px;
   }
 }
 
@@ -67,8 +68,16 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 200px;
-    margin-right: 22px;
+    width: 230px;
+    margin-bottom: 25px;
+
+    &:not(:nth-child(5n)) {
+      margin-right: 20px;
+    }
+
+    &--diff-margin {
+      margin-top: 40px;
+    }
   }
 }
 
@@ -103,6 +112,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-bottom: 53px;
     color: @special_background_light;
     text-align: left;
   }

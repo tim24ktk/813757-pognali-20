@@ -22,6 +22,10 @@
       padding-bottom: 52px;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    background-color: @basic_blue_light;
+  }
 }
 
 .filtering-by-country__wrapper {
@@ -48,12 +52,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-start;
+  }
 }
 
 .filtering-by-country__heading {
   position: relative;
   padding-left: 27px;
   display: flex;
+  .reset();
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
@@ -68,6 +77,13 @@
     .size(15px; 10px);
     background-image: url("../img/filter.svg");
     background-repeat: no-repeat;
+
+    @media (min-width: @desktop-width) {
+      top: 2px;
+      left: -45px;
+      .size(23px; 15px);
+      background-size: 23px 15px;
+    }
   }
 
   &--colon {
@@ -83,7 +99,16 @@
   }
 
   @media (min-width: @desktop-width) {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 65px;
+    margin-left: 65px;
+    font-size: 20px;
+    line-height: 20px;
+
+    &--expanded {
+      margin-top: 55px;
+    }
   }
 }
 
@@ -148,7 +173,16 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: 67px;
     order: 3;
+
+
+    &--expanded {
+      margin-top: 50px;
+      margin-right: 91px;
+    }
   }
 }
 
@@ -167,7 +201,19 @@
 
     &--display {
       display: none;
-      margin-right: 15px;
+      margin-right: 26px;
+      margin-bottom: 5px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--display-shaw-all {
+      display: none;
+    }
+
+    &--display {
+      display: block;
+      margin-right: 26px;
       margin-bottom: 5px;
     }
   }
@@ -182,6 +228,13 @@
     display: none;
     margin-top: 41px;
     margin-left: 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 54px;
+    margin-left: 22px;
   }
 }
 
@@ -208,7 +261,14 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: 66px;
+    justify-content: flex-start;
+    width: 385px;
     order: 0;
+
+    &--expanded {
+      margin-top: 56px;
+    }
   }
 }
 
@@ -233,6 +293,11 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    &:not(:first-child) {
+      margin-left: 27px;
+    }
 }
 
 .filtering-by-country__roll-up-button {
@@ -273,7 +338,19 @@
       left: 242px;
       .size(24px; 24px);
       background-size: 24px 24px;
+
+      @media (min-width: @desktop-width) {
+        left: 592px;
+      }
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    .size(1320px; 100px);
+    margin-top: 31px;
+    margin-right: 25px;
+    margin-left: auto;
   }
 }
 

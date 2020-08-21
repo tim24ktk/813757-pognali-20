@@ -51,15 +51,15 @@
       <section class="filtering-by-country filtering-by-country--bottom">
         <div class="filtering-by-country__wrapper">
           <div class="filtering-by-country__top">
-            <h2 class="filtering-by-country__heading">Фильтрация по странам<span class="filtering-by-country__heading--colon">:</span></h2>
-            <button class="filtering-by-country__button filtering-by-country__button--expand" type="button">
+            <h2 class="filtering-by-country__heading filtering-by-country__heading--expanded">Фильтрация по странам<span class="filtering-by-country__heading--colon">:</span></h2>
+            <button class="filtering-by-country__button filtering-by-country__button--expanded filtering-by-country__button--close" type="button">
               <span class="filtering-by-country__button-description filtering-by-country__button-description--display-shaw-all">Показать все</span><span class="filtering-by-country__button-description filtering-by-country__button-description--display">Свернуть</span>
             </button>
-            <ul class="filtering-by-country__list-mainland">
+            <ul class="filtering-by-country__list-mainland filtering-by-country__list-mainland--expanded">
               <li class="filtering-by-country__item-mainland filtering-by-country__item-mainland--selected">Европа</li>
-              <li class="filtering-by-country__item-mainland">Азия</li>
-              <li class="filtering-by-country__item-mainland">Америка</li>
-              <li class="filtering-by-country__item-mainland">Острова</li>
+              <li class="filtering-by-country__item-mainland filtering-by-country__item-mainland--expanded">Азия</li>
+              <li class="filtering-by-country__item-mainland filtering-by-country__item-mainland--expanded">Америка</li>
+              <li class="filtering-by-country__item-mainland filtering-by-country__item-mainland--expanded">Острова</li>
             </ul>
           </div>
           <ul class="filtering-by-country__alphabet alphabet">
@@ -486,7 +486,7 @@
                 </li>
               </ul>
             </li>
-            <li class="alphabet__item">
+            <li class="alphabet__item alphabet__item--diff-margin">
               <a class="alphabet__item-link" href="#">с</a>
               <ul class="alphabet__counries-list">
                 <li class="alphabet__counries-item">
@@ -527,7 +527,7 @@
                 </li>
               </ul>
             </li>
-            <li class="alphabet__item">
+            <li class="alphabet__item alphabet__item--diff-margin">
               <a class="alphabet__item-link" href="#">т</a>
               <ul class="alphabet__counries-list">
                 <li class="alphabet__counries-item">
@@ -562,7 +562,7 @@
                 </li>
               </ul>
             </li>
-            <li class="alphabet__item">
+            <li class="alphabet__item alphabet__item--diff-margin">
               <a class="alphabet__item-link" href="#">у</a>
               <ul class="alphabet__counries-list">
                 <li class="alphabet__counries-item">
@@ -579,7 +579,7 @@
                 </li>
               </ul>
             </li>
-            <li class="alphabet__item">
+            <li class="alphabet__item alphabet__item--diff-margin">
               <a class="alphabet__item-link" href="#">ф</a>
               <ul class="alphabet__counries-list">
                 <li class="alphabet__counries-item">
@@ -596,7 +596,7 @@
                 </li>
               </ul>
             </li>
-            <li class="alphabet__item">
+            <li class="alphabet__item alphabet__item--diff-margin">
               <a class="alphabet__item-link" href="#">х</a>
               <ul class="alphabet__counries-list">
                 <li class="alphabet__counries-item">
@@ -681,7 +681,7 @@
           <button class="filtering-by-country__roll-up-button" type="button"><span class="filtering-by-country__roll-up-button-text">Свернуть</span></button>
         </div>
       </section>
-      <div class="main__wrapper">
+      <div class="main__wrapper main__wrapper--catalog">
         <section class="companion-selection">
           <h2 class="companion-selection__heading">Подберите идеального попутчика</h2>
           <form class="companion-selection__form" action="https://echo.htmlacademy.ru" method="get">
