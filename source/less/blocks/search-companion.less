@@ -8,26 +8,29 @@
   border-bottom-right-radius: 30px;
 
   @media (max-width: @mobile-width-only) {
-    background-image: url("../img/about-mobile@1x.png");
-    background-repeat: no-repeat;
-    background-position: center 280px;
+    margin-top: 109px;
 
     &::before {
       position: absolute;
+      top: 278px;
       content: "";
       width: 113px;
       height: 132px;
       background-color: @special_blue;
-      border-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      z-index: -1;
     }
   }
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 88px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
   }
 
   @media (min-width: @desktop-width) {
+    padding-bottom: 0;
     border-bottom-left-radius: 58px;
     border-bottom-right-radius: 58px;
   }
@@ -38,6 +41,9 @@
     margin: auto;
     width: 320px;
     padding: 0 25px;
+    background-image: url("../img/about-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: center 280px;
   }
 
   @media (min-width: @tablet-width) {
@@ -47,11 +53,11 @@
     background-image: url("../img/about-tablet@1x.png");
     background-repeat: no-repeat;
     background-size: 376px 548px;
-    background-position: 389px 285px;
+    background-position: 384px 283px;
 
     &::before {
       position: absolute;
-      top: 237px;
+      top: 235px;
       content: "";
       width: 688px;
       height: 212px;
@@ -65,14 +71,15 @@
     margin: auto;
     width: 1440px;
     padding: 0 60px;
+    padding-bottom: 163px;
     background-image: url("../img/about-desktop@1x.png");
     background-repeat: no-repeat;
     background-size: 630px 665px;
-    background-position: right 143px;
+    background-position: 749px 85px;
 
     &::before {
       position: absolute;
-      top: 128px;
+      top: 70px;
       content: "";
       width: 212px;
       height: 212px;
@@ -84,19 +91,38 @@
 }
 
 .search-companion__wrapper .search-companion__position {
+  @media (max-width: @mobile-width-only) {
+    margin-top: -80px;
+  }
+
   @media (min-width: @tablet-width) {
-    margin-top: -143px;
+    margin-top: -141px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -230px;
+  }
+}
+
+.search-companion .search-companion__service {
+  margin-top: 56px;
+  margin-left: 25px;
+  margin-bottom: 83px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    margin-left: 33px;
   }
 }
 
 .search-companion__details {
   @media (min-width: @tablet-width) {
-    margin-top: 54px;
-    margin-left: 32px;
+    margin-top: 51px;
+    margin-left: 34px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 160px;
-    margin-left: 63px;
+    margin-top: 85px;
+    margin-left: 70px;
   }
 }

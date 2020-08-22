@@ -3,16 +3,14 @@
   display: flex;
   flex-wrap: wrap;
   .reset_for_list();
-  width: 216px;
-  border-top: 1px solid @input_border_color;
-  border-left: 1px solid @input_border_color;
+  .size(220px; 205px);
 
   @media (max-width: @mobile-width-only) {
-    margin-bottom: 350px;
+    margin-bottom: 284px;
   }
 
   @media (min-width: @tablet-width) {
-    width: 381px;
+    .size(381px; auto);
     border: none;
   }
 
@@ -28,26 +26,31 @@
 
   &--active {
     position: absolute;
-    top: 200px;
+    top: 209px;
+    left: -9px;
     display: block;
+    height: 277px;
+    overflow: auto;
 
     @media (min-width: @tablet-width) {
       top: 0;
-      right: -150px;
+      right: -242px;
+      left: auto;
+      height: auto;
     }
   }
 
   @media (min-width: @desktop-width) {
     position: inherit;
     display: block;
+    margin-left: 4px;
   }
 }
 
 .alphabet__item {
-  width: 43px;
+  margin-top: -1px;
+  margin-right: -1px;
   text-align: center;
-  border-right: 1px solid @input_border_color;
-  border-bottom: 1px solid @input_border_color;
   background-color: @basic-white;
 
   &--active {
@@ -55,21 +58,33 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-right: 10px;
+    &:not(:nth-child(5n)) {
+      margin-right: 16px;
+    }
+    margin-bottom: 42px;
     width: 60px;
     border: none;
     background-color: transparent;
   }
 
   @media (min-width: @desktop-width) {
-    width: 200px;
-    margin-right: 22px;
+    width: 230px;
+    margin-bottom: 25px;
+
+    &:not(:nth-child(5n)) {
+      margin-right: 20px;
+    }
+
+    &--diff-margin {
+      margin-top: 40px;
+    }
   }
 }
 
 .alphabet__item-link {
   display: block;
-  padding: 10px;
+  .size(45px; 42px);
+  padding: 15px;
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
@@ -79,6 +94,10 @@
 
   &--active {
     color: @basic-white;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    border: 1px solid @input_border_color;
   }
 
   @media (min-width: @tablet-width) {
@@ -93,6 +112,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-bottom: 53px;
     color: @special_background_light;
     text-align: left;
   }
@@ -107,4 +127,9 @@
   font-size: 16px;
   line-height: 22px;
   color: @special_grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

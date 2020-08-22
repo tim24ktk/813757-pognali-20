@@ -18,33 +18,93 @@
 
   &::before {
     position: absolute;
+    top: 25px;
     right: 23px;
     content: "";
     width: 11px;
     height: 14px;
     background-image: url("../img/triangle.svg");
     background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      top: 36px;
+      right: 33px;
+    }
+  }
+
+  &--directions-style {
+    height: 62px;
   }
 
   &--border {
+    height: 62px;
     border: 3px solid @special_background_light;
     border-radius: 10px;
+
+    &::before {
+      top: 21px;
+      right: 20px;
+    }
+
+    @media (min-width: @tablet-width) {
+      height: 80px;
+
+      &::before {
+        top: 32px;
+        right: 33px;
+      }
+    }
+  }
+
+  &--details {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
   }
 
   @media (min-width: @tablet-width) {
     width: 276px;
-    padding: 28px 32px;
+    padding: 29px 32px;
     font-size: 24px;
     line-height: 24px;
     border-radius: 20px;
 
     &--tablet-style {
-      width: 100%;
+      width: 618px;
+      height: 82px;
+    }
+
+    &--tablet-all {
+      width: 616px;
+      height: 80px;
+
+      &::before {
+        top: 33px;
+        right: 34px;
+      }
     }
   }
 
   @media (min-width: @desktop-width) {
-    width: 275px;
+    width: 280px;
     height: 80px;
+
+    &--search-companion {
+      width: 274px;
+    }
+
+    &--directions-style {
+      width: 274px;
+    }
+
+    &--desktop-style {
+      width: 324px;
+    }
   }
 }

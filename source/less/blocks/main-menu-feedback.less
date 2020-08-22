@@ -1,4 +1,5 @@
 .main-menu-feedback {
+  padding-bottom: 29px;
   width: 270px;
   font-weight: bold;
   font-size: 16px;
@@ -7,7 +8,10 @@
   text-align: center;
 
   @media (min-width: @desktop-width) {
-    width: 1320px;
+    &--top-display {
+      display: none;
+    }
+
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -24,7 +28,15 @@
 
   @media (min-width: @tablet-width) {
     &--tablet-size {
+      padding: 20px;
       .size(68px; 68px);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--desktop-size {
+      padding: 27px;
+      .size(90px; 90px);
     }
   }
 
@@ -35,7 +47,16 @@
     background-image: url("../img/contacts-phone.svg");
     background-repeat: no-repeat;
     transform: translate(-50%);
-    background-size: 17px 15px;
+
+    @media (min-width: @tablet-width) {
+      .size(27px; 26px);
+      background-size: 27px 26px;
+    }
+
+    @media (min-width: @desktop-width) {
+      .size(36px; 34px);
+      background-size: 36px 34px;
+    }
   }
 }
 
@@ -53,9 +74,15 @@
   }
 
   @media (min-width: @tablet-width) {
+    margin-top: 5px;
+    margin-left: 23px;
     width: 270px;
     font-size: 28px;
     line-height: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 46px;
   }
 }
 
@@ -69,7 +96,15 @@
 
   @media (min-width: @tablet-width) {
     &--tablet-size {
+      padding: 25px 22px;
       .size(68px; 68px);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--desktop-size {
+      padding: 33px;
+      .size(90px; 90px);
     }
   }
 
@@ -80,10 +115,16 @@
     background-image: url("../img/contacts-mail.svg");
     background-repeat: no-repeat;
     transform: translate(-50%);
-  }
 
-  @media (min-width: @desktop-width) {
-    margin-right: 345px;
+    @media (min-width: @tablet-width) {
+      .size(27px; 19px);
+      background-size: 27px 19px;
+    }
+
+    @media (min-width: @desktop-width) {
+      .size(36px; 25px);
+      background-size: 36px 25px;
+    }
   }
 }
 
@@ -101,7 +142,12 @@
   }
 
   @media (min-width: @tablet-width) {
+    margin-left: 25px;
     font-size: 28px;
     line-height: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 40px;
   }
 }

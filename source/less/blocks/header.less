@@ -1,23 +1,33 @@
 .header {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   color: @basic-white;
   background-color: @basic_blue;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: @border_radius_30;
+  border-bottom-right-radius: @border_radius_30;
+  z-index: 7;
+
+  &--radius-catalog {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
 
   @media (min-width: @tablet-width) {
     background-color: @special_blue_background;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
-  }
+    border-bottom-left-radius: @border_radius_60;
+    border-bottom-right-radius: @border_radius_60;
 
-  @media (min-width: @tablet-width) {
-    background-color: @basic_blue;
+    &--radius-catalog {
+      padding-bottom: 85px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    border-bottom-left-radius: 58px;
-    border-bottom-right-radius: 58px;
+    background-color: @basic_blue;
+
+    &--radius-catalog {
+      padding-bottom: 71px;
+    }
   }
 }

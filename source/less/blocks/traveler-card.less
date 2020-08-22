@@ -1,12 +1,23 @@
 .traveler-card {
   position: relative;
   width: 270px;
+  margin-top: 9px;
+
+  @media (min-width: @tablet-width) {
+    width: 285px;
+    margin-top: 37px;
+  }
 }
 
 .traveler-card__image {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   object-fit: contain;
+
+  @media (min-width: @tablet-width) {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
 }
 
 .traveler-card__level {
@@ -26,6 +37,11 @@
   border-radius: 50%;
   text-align: center;
   z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    top: 20px;
+    left: 22px;
+  }
 
   &::before {
     position: absolute;
@@ -71,21 +87,28 @@
 
 .traveler-card__user-name-wrapper {
   flex-direction: column;
-  position: relative;
-  top: -40px;
   display: flex;
+  margin-top: -7px;
   background-color: @basic-white;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
 }
 
 .traveler-card__countries-list {
-  position: relative;
-  top: -13px;
-  padding: 0;
+  .reset();
   margin: auto;
+  margin-top: -11px;
   display: flex;
   list-style: none;
+
+  @media (min-width: tablet-width) {
+    margin-top: -13px;
+  }
 }
 
 .traveler-card__countrie-item {
@@ -97,28 +120,10 @@
   }
 }
 
-.traveler-card__online {
-  position: relative;
-  top: 15px;
-  left: 60px;
-  display: block;
-  .size(6px; 6px);
-  border-radius: 50%;
-  background-color: @online_background;
-}
-
-.traveler-card__offline {
-  position: relative;
-  top: 15px;
-  left: 50px;
-  display: block;
-  .size(6px; 6px);
-  border-radius: 50%;
-  background-color: @offline_background;
-}
-
 .traveler-card__user-name {
+  position: relative;
   .reset();
+  margin-top: 6px;
   padding-right: 10px;
   padding-left: 10px;
   font-weight: 700;
@@ -126,14 +131,73 @@
   line-height: 21px;
   color: @basic_blue_light_special;
   text-align: center;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 8px;
+    left: 63px;
+    display: block;
+    .size(6px; 6px);
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      top: 7px;
+      left: 46px;
+      .size(8px; 8px);
+    }
+  }
+
+  &--offline {
+    &::before {
+      background-color: @offline_background;
+    }
+  }
+
+  &--online {
+    &::before {
+      background-color: @online_background;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 12px;
+    font-size: 24px;
+    line-height: 22px;
+  }
 }
 
 .traveler-card__hobbies {
-  width: 188px;
   margin: auto;
   margin-top: 15px;
   font-size: 16px;
   line-height: 18px;
   color: @special_grey;
   text-align: center;
+
+  @media (max-width: @mobile-width-only) {
+    width: 211px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 223px;
+    margin-top: 24px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+.traveler-card__shaw-all {
+  margin-top: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 81px;
+    margin-left: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 64px;
+    margin-bottom: 54px;
+    margin-left: 71px;
+  }
 }

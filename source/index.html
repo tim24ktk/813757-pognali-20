@@ -23,7 +23,7 @@
             </a>
             <a class="header-feedback__authorization" href="authorization.html">Авторизация</a>
           </div>
-          <ul class="main-menu__buttons-list buttons-list">
+          <ul class="main-menu__buttons-list buttons-list buttons-list--line">
             <li class="buttons-list__item">
               <a class="buttons-list__link buttons-list__link--main-menu" href="#">О сервисе</a>
             </li>
@@ -34,7 +34,7 @@
               <a class="buttons-list__link buttons-list__link--main-menu" href="catalog.html">Попутчики</a>
             </li>
           </ul>
-          <div class="main-menu__contacts main-menu-feedback">
+          <div class="main-menu__contacts main-menu-feedback main-menu-feedback--top-display">
             <a class="main-menu-feedback__phone main-menu-feedback__phone--tablet-size" href="tel:88005558628" aria-label="Позвоните нам">
               <span class="main-menu-feedback__phone-number">8 800 555-86-28</span>
             </a>
@@ -104,11 +104,11 @@
             <a class="header-feedback__write-us" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам">
               <span class="visually-hidden">Напишите нам</span>
             </a>
-            <a class="header-feedback__authorization" href="authorization.html">Авторизация</a>
+            <a class="header-feedback__authorization header-feedback__authorization--middle-style" href="authorization.html">Авторизация</a>
           </div>
           <blockquote class="header-middle__review header-top-review">
-              <p class="header-top-review__comment">&laquo;Лучшее приложение, что я видел в жизни!&raquo;</p>
-              <cite class="header-top-review__commentator">Мурат Эльтазин<br> главный редактор газеты &laquo;гаджетлайф&raquo;</cite>
+              <p class="header-top-review__comment">&lsaquo;&lsaquo;Лучшее приложение,<br> что я видел в жизни!&rsaquo;&rsaquo;</p>
+              <cite class="header-top-review__commentator">Мурат Эльтазин<br> главный редактор газеты &lsaquo;&lsaquo;гаджетлайф&rsaquo;&rsaquo;</cite>
           </blockquote>
         </div>
       </section>
@@ -117,7 +117,7 @@
           <ul class="search-companion__position search-companion-list">
             <li class="search-companion-list__item search-companion-list__item--advice-direction">
               <p class="search-companion-list__advice">Выберите направление</p>
-              <span class="search-companion-list__number">1</span>
+              <span class="search-companion-list__number search-companion-list__number--position">1</span>
             </li>
             <li class="search-companion-list__item search-companion-list__item--ideas">
               <p class="search-companion-list__advice">Изучите идеи путешественников</p>
@@ -132,12 +132,12 @@
               <span class="search-companion-list__number">4</span>
             </li>
           </ul>
-          <div class="search-companion-service">
+          <div class="search-companion__service search-companion-service">
             <h2 class="search-companion-service__heading">О сервисе</h2>
-            <p class="search-companion-service__about-service">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-            <p class="search-companion-service__call-for">А если найдете кого-то близкого по духу &mdash; скорее зовите в совместный трип!</p>
+            <p class="search-companion-service__about-service">Любое путешествие<br> веселее с попутчиками,<br> которые на одной волне<br> с тобой! Делитесь своими<br> идеями путешествий<br> и черпайте вдохновение<br> в чужих.</p>
+            <p class="search-companion-service__call-for">А если найдете кого-то близкого по духу &horbar; скорее зовите в совместный трип!</p>
           </div>
-          <a class="rectangular-button search-companion__details" href="details.html">Подробнее</a>
+          <a class="rectangular-button rectangular-button--details rectangular-button--search-companion search-companion__details" href="details.html">Подробнее</a>
         </div>
       </section>
     </header>
@@ -149,7 +149,7 @@
           <ul class="directions-list">
             <li class="directions-list__item">
               <img class="directions-list__img" src="img/thailand-mobile@1x.jpg" width="270" height="110" alt="Фото островка в Тайланде">
-              <div class="directions-list__item-wrapper">
+              <div class="directions-list__item-wrapper directions-list__item-wrapper--thailand">
                 <h3 class="directions-list__heading-country">Таиланд</h3>
                 <span class="directions-list__views">18321</span>
                 <p class="directions-list__tagline">Джунгли зовут!</p>
@@ -157,7 +157,7 @@
             </li>
             <li class="directions-list__item">
               <img class="directions-list__img" src="img/france-mobile@1x.jpg" width="270" height="110" alt="Фото улицы во Франции">
-              <div class="directions-list__item-wrapper">
+              <div class="directions-list__item-wrapper directions-list__item-wrapper--france">
                 <h3 class="directions-list__heading-country">Франция</h3>
                 <span class="directions-list__views">12518</span>
                 <p class="directions-list__tagline">Трэ бьен, манифик!</p>
@@ -165,27 +165,27 @@
             </li>
             <li class="directions-list__item">
               <img class="directions-list__img" src="img/czech-mobile@1x.jpg" width="270" height="110" alt="Фото вида города в Чехии">
-              <div class="directions-list__item-wrapper">
+              <div class="directions-list__item-wrapper directions-list__item-wrapper--czech directions-list__item-wrapper--last">
                 <h3 class="directions-list__heading-country">Чехия</h3>
                 <span class="directions-list__views">5326</span>
-                <p class="directions-list__tagline">Закоулки старой Европы</p>
+                <p class="directions-list__tagline">Закоулки старой<br> Европы</p>
               </div>
             </li>
           </ul>
-          <a class="rectangular-button rectangular-button--tablet-style rectangular-button--desktop-style directions__show-all href="all-countryes.html">Показать все</a>
+          <a class="rectangular-button rectangular-button--tablet-style rectangular-button--directions-style directions__show-all href="all-countryes.html">Показать все</a>
         </div>
       </section>
       <section class="fellow-travelers">
         <div class="fellow-travelers__wrapper">
           <div class="fellow-travelers__card-information">
             <h2 class="fellow-travelers__heading">Попутчики</h2>
-            <p class="fellow-travelers__individual">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-            <p class="fellow-travelers__like-minded">Теперь можно легко найти единомышленников</p>
+            <p class="fellow-travelers__individual">Все мы индивидуальны и у каждого<br> свой взгляд на идеальный отдых.<br> Одному нужен пляж и коктейль,<br> а другому маршрут для хайкинга.</p>
+            <p class="fellow-travelers__like-minded">Теперь можно легко<br> найти единомышленников!</p>
           </div>
           <div class="fellow-travelers__cards-wrapper">
             <article class="fellow-travelers__traveler-card traveler-card">
               <img class="traveler-card__image" src="img/firsova-desktop@1x.jpg" width="285" height="285" alt="Фото пользователя">
-              <p class="traveler-card__level traveler-card__level--best">99<br><span class="treveler-card__level-word">level</p>
+              <p class="traveler-card__level traveler-card__level--best">99<br><span class="treveler-card__level-word">level</span></p>
               <div class="traveler-card__user-name-wrapper">
                 <ul class="traveler-card__countries-list">
                   <li class="traveler-card__countrie-item">
@@ -201,12 +201,11 @@
                     <img class="traveler-card__country" src="img/Seychelles @1px.png" width="35" height="25" alt="Флаг Тайланда">
                   </li>
                 </ul>
-                <span class="traveler-card__offline"></span>
-                <h3 class="traveler-card__user-name">
+                <h3 class="traveler-card__user-name traveler-card__user-name--offline">
                   Таня Фирсова
                 </h3>
                 <p class="traveler-card__hobbies">&#35;ЗОЖ &#35;ПП &#35;Фитнес &#35;пляж &#35;авокадо &#35;смузи</p>
-                <ul class="traveler-card__transport-list transport-list">
+                <ul class="traveler-card__transport-list transport-list transport-list--shrink">
                   <li class="transport-list__item transport-list__item--plane">
                     <span class="visually-hidden">Самолет</span>
                   </li>
@@ -236,10 +235,9 @@
                     <img class="traveler-card__country" src="img/Czech@1px.png" width="35" height="25" alt="Чехия">
                   </li>
                 </ul>
-                <span class="traveler-card__online"></span>
-                <h3 class="traveler-card__user-name">Петя Демин</h3>
+                <h3 class="traveler-card__user-name traveler-card__user-name--online">Петя Демин</h3>
                 <p class="traveler-card__hobbies">&#35;бургер &#35;бар &#35;футбол &#35;концерт &#35;крафт</p>
-                <ul class="traveler-card__transport-list transport-list">
+                <ul class="traveler-card__transport-list transport-list transport-list--shrink">
                   <li class="transport-list__item transport-list__item--plane">
                     <span class="visually-hidden">Самолет</span>
                   </li>
@@ -256,30 +254,29 @@
               </div>
             </article>
           </div>
-          <a class="rectangular-button rectangular-button--tablet-style traveler-card__shaw-all" href="catalog.html">Показать всех</a>
+          <a class="rectangular-button rectangular-button--tablet-style rectangular-button--tablet-all traveler-card__shaw-all" href="catalog.html">Показать всех</a>
         </div>
       </section>
       <section class="add-profile">
-        <div class="add-profile__wrapper">
-          <h2 class="add-profile__heading">Добавьте свой профиль</h2>
-          <ul class="add-profile__list">
-            <li class="add-profile__item">
-              <h3 class="add-profile__heading-item">Базовое размещение</h3>
-              <span class="add-profile__number add-profile__number--first">1</span>
-              <p class="add-profile__price">Бесплатно</p>
-            </li>
-            <li class="add-profile__item">
-              <h3 class="add-profile__heading-item">Вывод на первых позициях</h3>
-              <span class="add-profile__number add-profile__number--second">2</span>
-              <p class="add-profile__price">99 руб./мес</p>
-            </li>
-            <li class="add-profile__item">
-              <h3 class="add-profile__heading-item">Кастомный цвет карточки</h3>
-              <span class="add-profile__number add-profile__number--third">3</span>
-              <p class="add-profile__price">59 руб./мес</p>
-            </li>
-          </ul>
-          <button class="add-profile__button" type="button">Показать тарифы для бизнеса</button>
+        <div class="add-profile__business-position">
+          <div class="add-profile__wrapper">
+            <h2 class="add-profile__heading">Добавьте свой профиль</h2>
+            <ul class="add-profile__list">
+              <li class="add-profile__item add-profile__item--first">
+                <h3 class="add-profile__heading-item ">Базовое размещение</h3>
+                <p class="add-profile__price">Бесплатно</p>
+              </li>
+              <li class="add-profile__item add-profile__item--second">
+                <h3 class="add-profile__heading-item ">Вывод на первых позициях</h3>
+                <p class="add-profile__price">99 руб./мес</p>
+              </li>
+              <li class="add-profile__item add-profile__item--third">
+                <h3 class="add-profile__heading-item">Кастомный цвет карточки</h3>
+                <p class="add-profile__price">59 руб./мес</p>
+              </li>
+            </ul>
+            <button class="add-profile__button" type="button">Показать тарифы для бизнеса</button>
+          </div>
         </div>
         <div class="business-rates">
           <h2 class="business-rates__heading">Бизнес-тарифы</h2>
@@ -307,18 +304,19 @@
       <section class="feedback">
         <div class="feedback__wrapper">
           <h2 class="feedback__heading">Заинтересовались?</h2>
-          <p class="fedback__sign-up-call">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="feedback__link" href="autorisation.html">авторизуйтесь</a>.</p>
+          <p class="fedback__sign-up-call">Зарегистрируйтесь,<br> это быстро и бесплатно!</p>
+          <p class="fedback__authorization-link">Уже зарегистрированы? Тогда<br> скорее <a class="feedback__link" href="autorisation.html">авторизуйтесь</a>.</p>
           <form class="feedback__registration-form" action="https://echo.htmlacademy.ru" method="get">
             <input type="text" name="register" id="register" placeholder="E-mail">
             <label class="visually-hidden" for="register">Зарегистрируйтесь</label>
-            <button class="feedback__registration-form-button feedback__button" type="submit" aria-label="Кнопка регистрации"><span class="visually-hidden">Регистрация</span></button>
+            <button class="feedback__registration-form-button feedback__registration-form-button--desktop" type="submit" aria-label="Кнопка регистрации"><span class="feedback__invisible">Регистрация</span></button>
           </form>
-          <p class="feedback__question">Остались вопрсы? Мыс радостью на них ответим!</p>
+          <p class="feedback__question">Остались вопросы?<br> Мы с радостью на них ответим!</p>
           <div class="feedback__contacts main-menu-feedback">
-            <a class="main-menu-feedback__phone" href="tel:88005558628" aria-label="Позвоните нам">
+            <a class="main-menu-feedback__phone main-menu-feedback__phone--tablet-size main-menu-feedback__phone--desktop-size" href="tel:88005558628" aria-label="Позвоните нам">
               <span class="main-menu-feedback__phone-number main-menu-feedback__phone-number--color">8 800 555-86-28</span>
             </a>
-            <a class="main-menu-feedback__write-us" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам">
+            <a class="main-menu-feedback__write-us main-menu-feedback__write-us--tablet-size main-menu-feedback__write-us--desktop-size" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам">
               <span class="visually-hidden">Напишите нам</span>
               <p class="main-menu-feedback__write-us-mail main-menu-feedback__write-us-mail--color">mail@htmlacademy.ru</p>
             </a>
@@ -329,10 +327,16 @@
         <div class="address__background address__background--color">
           <div class="address__wrapper">
             <p class="address__text">ул. Большая Конюшенная, 19/8</p>
-            <button class="rectangular-button rectangular-button--tablet-style rectangular-button--border" type="button">Проложить маршрут</button>
+            <button class="address__button rectangular-button rectangular-button--tablet-style rectangular-button--desktop-style rectangular-button--border" type="button">Проложить маршрут</button>
           </div>
         </div>
-          <img class="address__map" src="img/background_map.png" width="320" height="424" alt="Карта с маркером нашего местонахождения">
+        <div class="adress__img-wrapper">
+          <picture class="adress__picture">
+            <source media="(min-width: 1440px)" srcset="img/block_map_desktop.png" width="1440" height="584" alt="Карта с маркером нашего местонахождения">
+            <source media="(min-width: 768px)" srcset="img/block_map_tablet@1px.png" width="768" height="581" alt="Карта с маркером нашего местонахождения">
+            <img class="address__map" src="img/background_map.png" width="320" height="424" alt="Карта с маркером нашего местонахождения">
+          </picture>
+        </div>
       </section>
     </main>
     <footer class="footer">
@@ -341,17 +345,17 @@
           <img src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Сервис поиска попутчиков погнали">
         </a>
         <ul class="footer__social-list socials-list">
-          <li class="socials-list__item">
+          <li class="socials-list__item socials-list__item--footer">
             <a class="socials-list__link socials-list__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank" aria-label="Социальная сеть Фейсбук">
               <span class="visually-hidden">Фейсбук</span>
             </a>
           </li>
-          <li class="socials-list__item">
+          <li class="socials-list__item socials-list__item--footer">
             <a class="socials-list__link socials-list__link--vk" href="https://vk.com/htmlacademy" target="_blank" aria-label="Социальная сеть ВКонтакте">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
-          <li class="socials-list__item">
+          <li class="socials-list__item socials-list__item--footer">
             <a class="socials-list__link socials-list__link--instagram" href="https://www.instagram.com/htmlacademy" target="_blank" aria-label="Социальная сеть Инстаграм">
               <span class="visually-hidden">Инстаграм</span>
             </a>

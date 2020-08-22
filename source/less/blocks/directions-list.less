@@ -4,41 +4,71 @@
   margin-top: 60px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 104px;
-    margin-left: 26px;
+    margin-top: 103px;
+    margin-left: 37px;
 
     &::before {
       position: absolute;
       content: "";
-      top: -40px;
-      left: -40px;
+      top: -38px;
+      left: -37px;
       width: 141px;
       height: 141px;
       background-color: @heart_background;
       border-radius: 20px;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: -2px;
+      content: "";
+      .size(617px; 94px);
+      background-image: url("..//img/fade_1.svg");/*тень падает только на фото, а не на весь блок!!!*/
+      background-repeat: no-repeat;
     }
   }
 
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
     grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row-end: -1;
+    width: 560px;
+    margin-top: 110px;
+    margin-left: 72px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     order: 1;
+
+    &::before {
+      top: -73px;
+      left: -72px;
+    }
   }
 }
 
 .directions-list__item {
   width: 270px;
-  margin-top: 10px;
+
+  &:not(:first-child) {
+    margin-top: 11px;
+  }
 
   @media (min-width: @tablet-width) {
-    margin-top: 32px;
     display: flex;
     width: 616px;
     height: 140px;
+
+    &:not(:first-child) {
+      margin-top: 11px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 559px;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
   }
 }
 
@@ -48,70 +78,133 @@
   background-color: @basic-white;
 
   @media (max-width: @mobile-width-only) {
-    margin-top: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
 
   @media (min-width: @tablet-width) {
-    .size(166px; 140px);
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
+    .size(186px; 142px);
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
     order: 2;
   }
 }
 
 .directions-list__item-wrapper {
   position: relative;
+  min-height: 89px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 24px;
+  padding: 0 16px;
   background-color: @basic-white;
   z-index: 1;
 
+  &::before {
+    position: absolute;
+    top: -12px;
+    left: 25px;
+    content: "";
+    .size(35px; 24px);
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      top: 17px;
+      right: -36px;
+      left: auto;
+      .size(70px; 47px);
+      background-size: 70px 47px;
+      border-radius: 5px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 22px;
+      right: -33px;
+    }
+  }
+
+  &--thailand {
+    &::before {
+      background-image: url("../img/Thailand@1px.png");
+    }
+  }
+
+  &--france {
+    &::before {
+      background-image: url("../img/France @1px.png");
+    }
+  }
+
+  &--czech {
+    &::before {
+      background-image: url("../img/Czech@1px.png");
+    }
+  }
+
   @media (max-width: @mobile-width-only) {
-    margin-top: -20px;
+    margin-top: -18px;
     border-radius: 10px;
+
+    &--last {
+      margin-top: -19px;
+    }
   }
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
     width: 436px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
 }
 
 .directions-list__heading-country {
   .reset();
+  margin-top: 26px;
+  margin-left: 10px;
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
   color: @basic_black;
 
   @media (min-width: @tablet-width) {
+    margin-top: 30px;
+    margin-left: 12px;
     font-size: 24px;
     line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 23px;
   }
 }
 
 .directions-list__tagline {
   .reset();
+  margin-left: 9px;
+  height: 40px;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   color: @special_grey_light;
 
   @media (min-width: @tablet-width) {
+    margin-top: 3px;
+    margin-left: 11px;
     font-size: 20px;
     line-height: 20px;
     order: 2;
+
+    br {
+      display: none;
+    }
   }
 }
 
 .directions-list__views {
   position: relative;
+  margin-top: 28px;
+  width: 50px;
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
@@ -120,23 +213,30 @@
   &::before {
     position: absolute;
     top: 3px;
-    right: 50px;
+    right: 57px;
     content: "";
-    width: 12px;
-    height: 12px;
+    .size(12px; 12px);
     background-image: url("../img/views.svg");
     background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      .size(24px; 24px);
+      background-size: 24px 24px;
+    }
   }
 
   @media (min-width: @tablet-width) {
     width: 84px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin-left: 17px;
     padding-left: 25px;
     font-size: 20px;
     order: 3;
 
     &::before {
-      top: 4px;
-      left: 10px;
+      top: -4px;
+      left: -8px;
     }
   }
 }
