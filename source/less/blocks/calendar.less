@@ -1,3 +1,12 @@
+.calendar__months-wrapper {
+  margin-top: 38px;
+  margin-left: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .size(221px; 42px);
+}
+
 .calendar__previous-month {
   .size(15px; 21px);
   background-image: url("../img/month-arrow-left.svg");
@@ -13,6 +22,10 @@
 }
 
 .calendar__calendar-table {
+  margin-top: 4px;
+  margin-left: 4px;
+  width: 221px;
+  height: 187px;
   border-collapse: collapse;
 }
 
@@ -32,7 +45,6 @@
   color: @special_grey;
   text-transform: uppercase;
   text-align: center;
-  border: 1px solid @calendar_border_color;
 
   &--holiday {
     color: @holiday_color;
@@ -40,7 +52,7 @@
 }
 
 .calendar__day-of-week-item {
-  .size(32px; 32px);
+  .size(32px; 31px);
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;

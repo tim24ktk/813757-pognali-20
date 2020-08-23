@@ -1,16 +1,19 @@
 .add-plane {
   display: flex;
   flex-direction: column;
+  margin-top: -40px;
   background-color: @add_plane_background;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .add-plane__wrapper {
   margin: auto;
 
   @media (max-width: @mobile-width-only) {
+    width: 320px;
     padding: 0 25px;
+    padding-bottom: 50px;
   }
 
   @media (min-width: @tablet-width) {
@@ -22,7 +25,19 @@
   }
 }
 
+.add-plane__form {
+  margin-top: 30px;
+}
+
+.add-plane__heading-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .add-plane__heading {
+  .reset();
+  margin-top: 30px;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
@@ -33,6 +48,7 @@
 .add-plane__button-two,
 .add-plane__button-three {
   .reset();
+  margin-top: 39px;
   .size(5px; 5px);
   background-color: @basic_blue_light_30;
   border: none;
@@ -44,55 +60,97 @@
   }
 }
 
+.add-plane__button-one {
+  margin-left: 21px;
+}
+
+.add-plane__button-three {
+  margin-right: 18px;
+}
+
 .add-plane__date {
+  .reset();
   margin-bottom: 10px;
-  padding: 24px 25px;
+  padding: 23px 20px;
   background-color: @basic-white;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
+}
+
+.add-plane__date-wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .add-plane__legend {
+  margin-left: 7px;
   font-weight: 700;
   font-size: 20px;
   line-height: 20px;
   color: @basic_blue_light_color;
+
+  &--step-one {
+    margin-left: 4px;
+  }
+
+  &--step-three {
+    margin-left: 2px;
+    margin-top: 4px;
+  }
 }
 
 .add-plane__preferences {
+  margin-left: 5px;
+  width: 220px;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   color: @special_grey;
+
+  &--step-two {
+    margin-left: 10px;
+  }
 }
 
 .add-plane__label {
+  margin-top: 4px;
+  margin-left: 5px;
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: @basic_blue_light_color;
+
+  &--margin {
+    margin-top: 21px;
+  }
 }
 
 .add-plane__measure {
+  margin-top: 4px;
+  margin-left: 33px;
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: @basic_blue_light_30;
+
+  &--margin {
+    margin-top: 21px;
+    margin-left: 66px;
+  }
 }
 
 .add-plane__people,
 .add-plane__duration {
-  width: 220px;
   padding: 13px;
   text-align: center;
-  border: 1px solid @input_border_color;
-  border-radius: 4px;
+  border: none;
 
   &[value] {
+    width: 165px;
     font-weight: 500;
     font-size: 15px;
     line-height: 14px;
@@ -101,47 +159,70 @@
   }
 }
 
+.add-plane__button-wrapper {
+  display: flex;
+  margin-top: 8px;
+  margin-left: 5px;
+  .size(220px; 43px);
+  border: 1px solid @input_border_color;
+  border-radius: 4px;
+}
+
 .add-plane__button-reduce {
   position: relative;
-  top: -5px;
-  left: 45px;
-  .size(14px; 2px);
   padding: 13px;
-  background-image: url("../img/qty-minus.svg");
-  background-repeat: no-repeat;
   background-color: transparent;
-  background-position: center;
   border: none;
   cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 20px;
+    right: -1px;
+    .size(14px; 2px);
+    content: "";
+    background-image: url("../img/qty-minus.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .add-plane__button-add {
   position: relative;
-  top: -5px;
-  right: 45px;
-  .size(14px; 14px);
   padding: 13px;
-  background-image: url("../img/qty-plus.svg");
-  background-repeat: no-repeat;
   background-color: transparent;
-  background-position: center;
   border: none;
   cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    .size(14px; 14px);
+    content: "";
+    background-image: url("../img/qty-plus.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .add-plane__children-label {
   position: relative;
+  margin-top: 28px;
+  margin-left: 10px;
   padding-left: 35px;
+  font-size: 15px;
+  line-height: 15px;
   cursor: pointer;
   user-select: none;
 
   &::before {
     position: absolute;
-    top: -7px;
-    left: 0;
+    top: -8px;
+    left: -5px;
     content: "";
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
     background-color: @basic-white;
     border: 1px solid @input_border_color;
     border-radius: 5px;
@@ -152,7 +233,7 @@
   &::after {
     position: absolute;
     top: 0;
-    left: 7px;
+    left: 1px;
     content: "";
     width: 14px;
     height: 13px;
@@ -161,15 +242,125 @@
   }
 }
 
+.add-plane__next-step {
+  margin-top: 22px;
+
+  &--step-two {
+    margin-top: 25px;
+    margin-left: 6px;
+  }
+
+  &--step-three {
+    margin-top: 15px;
+  }
+}
+
+.add-plane__previous-step {
+  margin-top: 12px;
+  margin-left: 56px;
+
+  &--step-three {
+    margin-left: 51px;
+  }
+}
+
 .add-plane__route {
+  .reset();
   margin-bottom: 10px;
+  padding: 23px 15px;
+  padding-bottom: 8px;
   background-color: @basic-white;
-  border-radius: 20px;
+  border-radius: 10px;
   border: none;
 }
 
+.add-plane__selected-wrapper {
+  position: relative;
+  display: flex;
+  margin-left: 5px;
+  flex-wrap: wrap;
+
+  &::before {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    content: "";
+    display: inline-block;
+    .size(51px; 40px);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid @input_border_color;
+    border-radius: 4px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 52px;
+    right: 59px;
+    content: "";
+    .size(8px; 11px);
+    background-image: url("../img/Arrow_form.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--Bosnia-and-Herzegovina {
+    &::before {
+      background-image: url("../img/Bosnia-and-Herzegovina1.png");
+    }
+  }
+
+  &--czech {
+    margin-top: 18px;
+
+    &::before {
+      background-image: url("../img/Czech@1px.png");
+    }
+  }
+
+  &--not-selected {
+    margin-top: 22px;
+    margin-left: 10px;
+    width: 220px;
+    border: 1px solid @input_border_color;
+    border-radius: 4px;
+
+    &::before {
+      display: none;
+    }
+
+
+    &::after {
+      top: 47px;
+      right: 47px;
+    }
+  }
+
+
+  &--add-country {
+    margin-top: 22px;
+    margin-left: 11px;
+    .size(220px; 42px);
+    background-color: @basic_blue_light;
+    border: 1px solid @input_border_color;
+    border-radius: 4px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
 .add-plane__selected-country {
+  margin-top: 4px;
+  margin-left: 5px;
   padding: 10px;
+  padding-right: 39px;
+  .size(168px; 42px);
+  font-family: "Blogger Sans", "Arial", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
@@ -178,56 +369,97 @@
   color: @basic_blue_light_color;
   border: 1px solid @input_border_color;
   border-radius: 4px;
+
+  &--not-selected {
+    margin-top: 0;
+    margin-left: 0;
+    padding-right: 10px;
+    height: 40px;
+    letter-spacing: 0.1em;
+    border: none;
+  }
 }
 
 .add-plane__open {
   position: relative;
-  top: -6px;
-  left: -21px;
-  .size(12px; 16px);
-
-  background-image: url("../img/arrow-back.svg");
-  background-repeat: no-repeat;
+  margin-top: 8px;
+  margin-left: -40px;
+  .size(38px; 32px);
   border: none;
-  background-color: transparent;
+  background-color: @basic-white;
   cursor: pointer;
-}
+  box-shadow: -4px 0 5px 0 @basic-white;
 
-.add-plane__country-flag {
-  position: relative;
-  top: 15px;
-  left: -27px;
-  display: inline-block;
-  width: 53px;
-  height: 42px;
-  background-image: url("../img/Bosnia-and-Herzegovina 1.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  border: 1px solid @input_border_color;
-  border-radius: 4px;
+  &::before {
+    position: absolute;
+    top: 9px;
+    left: 13px;
+    content: "";
+    .size(12px; 16px);
+    background-image: url("../img/arrow-back.svg");
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    position: absolute;
+    top: 13px;
+    right: -5px;
+    content: "";
+    .size(8px; 8px);
+    background-color: @basic_blue_light_special;
+    border-radius: 50%;
+  }
+
+  &--not-selected {
+    margin-top: 3px;
+    margin-left: 11px;
+
+    &::after {
+      left: -17px;
+      .size(7px; 7px);
+      background-color: transparent;
+      border: 1px solid @profile_border_color;
+    }
+  }
 }
 
 .add-plane__button-close {
   position: relative;
-  top: -27px;
-  left: -42px;
+  margin-top: -6px;
+  margin-left: 43px;
   .size(21px; 21px);
-  background-image: url("../img/icon_close.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: @basic_blue_light;
-  border-radius: 50%;
+  background-color: transparent;
   border: none;
   cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    .size(21px; 21px);
+    background-image: url("../img/icon_close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: @basic_blue_light;
+    border-radius: 50%;
+  }
+
+  &--not-selected {
+    margin-top: -51px;
+    margin-left: 208px;
+  }
 }
 
 .add-plane__country-input-field {
-  padding: 12px;
-  background-color: @basic_blue_light;
-  border: 1px solid @input_border_color;
-  border-radius: 4px;
+  margin-top: 2px;
+  padding: 5px 10px;
+  width: 160px;
+  background-color: transparent;
+  border: none;
 
   &[value] {
+    font-family: "Blogger Sans", "Arial", sans-serif;
     font-weight: 500;
     font-size: 14px;
     line-height: 18px;
@@ -239,26 +471,49 @@
 
 .add-plane__add-country {
   position: relative;
-  top: -5px;
-  right: 45px;
-  .size(14px; 14px);
-  padding: 13px;
-  background-image: url("../img/qty-plus.svg");
-  background-repeat: no-repeat;
+  margin-top: 5px;
+  margin-left: 21px;
+  .size(30px; 30px);
   background-color: transparent;
-  background-position: center;
   border: none;
   cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 9px;
+    right: 7px;
+    content: "";
+    .size(14px; 14px);
+    background-image: url("../img/qty-plus.svg");
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 11px;
+    left: -21px;
+    .size(7px; 7px);
+    background-color: transparent;
+    border: 1px solid @profile_border_color;
+    border-radius: 50%;
+  }
 }
 
 .add-plane__entertainment {
+  .reset();
   margin-bottom: 43px;
+  padding: 20px;
+  padding-bottom: 8px;
+  width: 270px;
   background-color: @basic-white;
-  border-radius: 20px;
+  border-radius: 10px;
   border: none;
 }
 
 .add-plane__entertainment-plane {
+  margin-left: 5px;
+  width: 195px;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
@@ -266,13 +521,57 @@
 }
 
 .add-plane__textarea-plane-label {
+  position: relative;
+  margin-top: 22px;
+  margin-left: 16px;
+  display: block;
   font-weight: 500;
   font-size: 18px;
   line-height: 18px;
   color: @basic_blue_light_color;
+
+  &::before {
+    position: absolute;
+    top: -12px;
+    right: -15px;
+    content: "";
+    .size(76px; 40px);
+    background-image: url("../img/Bosnia-and-Herzegovina1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: @basic-white;
+    box-shadow: -14px 0 5px 0 @basic-white-transparent-shadow;
+  }
+
+  &--czech {
+    margin-top: 21px;
+
+    &::before {
+      top: -14px;
+      background-image: url("../img/Czech@1px.png");
+    }
+  }
+
+  &--bosnia {
+    &::after {
+      position: absolute;
+      top: 6px;
+      left: -25px;
+      content: "";
+      .size(17px; 287px);
+      background-image: url("../img/line.svg");
+      background-repeat: no-repeat;
+      background-color: transparent;
+    }
+  }
 }
 
 .add-plane__textarea-plane {
+  margin-top: 16px;
+  margin-left: 5px;
+  padding: 8px 13px;
+  .size(220px; 220px);
+  font-family: "Blogger Sans", "Arial", sans-serif;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
@@ -285,5 +584,10 @@
     font-size: 16px;
     line-height: 22px;
     color: @special_grey_light;
+  }
+
+  &--czech {
+    margin-top: 15px;
+    padding-top: 10px;
   }
 }

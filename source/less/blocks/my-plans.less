@@ -1,10 +1,12 @@
 .my-plans {
-  background-color: @special_blue_light;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  margin-top: -17px;
+  padding-bottom: 60px;
+  background-color: @special_blue_light;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
 }
 
 .my-plans__wrapper {
@@ -24,6 +26,8 @@
 }
 
 .my-plans__heading {
+  .reset();
+  margin-top: 29px;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
@@ -32,6 +36,7 @@
 
 .my-plans__list {
   .reset_for_list();
+  margin-top: 28px;
   counter-reset: myCounter;
 }
 
@@ -39,14 +44,15 @@
   width: 270px;
   margin: auto;
   margin-bottom: 10px;
-  padding: 23px;
+  padding: 10px;
   background-color: @basic-white;
   border-radius: 10px;
 }
 
 .my-plans__item {
   position: relative;
-  padding-left: 15px;
+  margin-top: 14px;
+  margin-left: 15px;
 
   &::before {
     counter-increment: myCounter;
@@ -72,6 +78,8 @@
 }
 
 .my-plans__countries {
+  .reset();
+  padding-left: 17px;
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
@@ -80,6 +88,7 @@
 
 .my-plans__fellow-travelers,
 .my-plans__date {
+  .reset();
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
@@ -88,7 +97,19 @@
   color: @basic_blue_light_color;
 }
 
+.my-plans__fellow-travelers {
+  margin-top: 20px;
+}
+
+.my-plans__date {
+  margin-top: 5px;
+}
+
 .my-plans__button {
+  margin-top: 20px;
+  margin-bottom: 9px;
+  margin-left: 3px;
+  display: block;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.03em;
