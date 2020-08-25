@@ -193,9 +193,25 @@
   }
 
   @media (min-width: @tablet-width) {
+    position: relative;
     margin-top: 39px;
     margin-left: 18px;
     justify-content: space-between;
+
+    &::before {
+      position: absolute;
+      top: -5px;
+      left: 6px;
+      content: "";
+      .size(532px; 1px);
+      background-color: @profile_border_color;
+    }
+
+    &--companion {
+      &::before {
+        top: -22px;
+      }
+    }
   }
 }
 
@@ -233,7 +249,7 @@
 
   &--margin {
     margin-top: 21px;
-    margin-left: 66px;
+    margin-left: 62px;
   }
 
   @media (min-width: @tablet-width) {
@@ -453,6 +469,28 @@
 
 .add-plane__route-wrapper {
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      position: absolute;
+      top: 188px;
+      left: 27px;
+      content: "";
+      .size(532px; 1px);
+      background-color: @profile_border_color;
+    }
+
+    &--vertical-border {
+      &::after {
+        position: absolute;
+        right: 164px;
+        bottom: 95px;
+        content: "";
+        .size(1px; 400px);
+        background: linear-gradient(180deg, @profile_border_color 77%, @basic-white 100%);
+      }
+    }
+  }
 }
 
 .add-plane__route-wrapper .add-plane__previous-step {
@@ -679,6 +717,7 @@
       .size(14px; 14px);
       top: 10px;
       right: -50px;
+      z-index: 2;
     }
   }
 
@@ -689,7 +728,7 @@
     &::after {
       left: -17px;
       .size(7px; 7px);
-      background-color: transparent;
+      background-color: @basic-white;
       border: 1px solid @profile_border_color;
 
       @media (min-width: @tablet-width) {

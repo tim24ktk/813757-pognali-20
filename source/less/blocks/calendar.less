@@ -1,10 +1,38 @@
 .calendar__months-wrapper {
+  position: relative;
   margin-top: 38px;
   margin-left: 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   .size(221px; 42px);
+
+  &::before {
+    position: absolute;
+    top: -11px;
+    content: "";
+    .size(221px; 1px);
+    background-color: @calendar_border_color;
+
+    @media (min-width: @tablet-width) {
+      top: -27px;
+      width: 532px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 11px;
+    content: "";
+    .size(221px; 1px);
+    background-color: @calendar_border_color;
+
+    @media (min-width: @tablet-width) {
+      bottom: 27px;
+      width: 532px;
+    }
+  }
+
 
   @media (min-width: @tablet-width) {
     margin-top: 87px;
