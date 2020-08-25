@@ -30,6 +30,12 @@
       border-bottom-left-radius: @border_radius_60;
       border-bottom-right-radius: @border_radius_60;
     }
+
+
+    &--form-radius {
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -55,7 +61,7 @@
     background-color: @special_orange;
   }
 
-  &--form {
+  &--catalog {
     &::before {
       width: 214px;
     }
@@ -72,6 +78,16 @@
       bottom: -90px;
       left: 3px;
       .size(288px; 8px);
+    }
+
+
+    &--form {
+      margin-top: 115px;
+      margin-bottom: 87px;
+
+      &::before {
+        width: 354px;
+      }
     }
   }
 

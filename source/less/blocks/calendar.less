@@ -5,13 +5,26 @@
   flex-wrap: wrap;
   justify-content: space-between;
   .size(221px; 42px);
+
+  @media (min-width: @tablet-width) {
+    margin-top: 87px;
+    margin-left: 23px;
+    .size(532px; 86px);
+  }
 }
 
 .calendar__previous-month {
+  position: relative;
   .size(15px; 21px);
   background-image: url("../img/month-arrow-left.svg");
   background-color: transparent;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 12px;
+    .size(30px; 36px);
+    background-size: 30px 36px;
+  }
 }
 
 .calendar__next-month {
@@ -19,14 +32,24 @@
   background-image: url("../img/month-arrow-right.svg");
   background-color: transparent;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 12px;
+    .size(30px; 36px);
+    background-size: 30px 36px;
+  }
 }
 
 .calendar__calendar-table {
   margin-top: 4px;
   margin-left: 4px;
-  width: 221px;
-  height: 187px;
+  .size(221px; 187px);
   border-collapse: collapse;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 22px;
+    .size(531px; 441px);
+  }
 }
 
 .calendar__months-list {
@@ -35,6 +58,11 @@
   font-size: 20px;
   line-height: 20px;
   color: @basic_blue_light_special;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .calendar__day-of-week-item-letter {
@@ -48,6 +76,19 @@
 
   &--holiday {
     color: @holiday_color;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
+}
+
+.calendar__day-of-week-item-letter-second {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline-table;
+    text-transform: lowercase;
   }
 }
 
@@ -74,5 +115,10 @@
 
   &--current-day {
     border: 2px solid @holiday_color;
+  }
+
+  @media (min-width: @tablet-width) {
+    .size(70px; 69px);
+    font-size: 18px;
   }
 }

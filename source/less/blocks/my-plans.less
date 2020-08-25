@@ -7,6 +7,11 @@
   background-color: @special_blue_light;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -2px;
+    padding-bottom: 100px;
+  }
 }
 
 .my-plans__wrapper {
@@ -32,58 +37,90 @@
   font-size: 24px;
   line-height: 24px;
   color: @basic_blue_light_color;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 57px;
+    margin-left: 35px;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .my-plans__list {
   .reset_for_list();
   margin-top: 28px;
   counter-reset: myCounter;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 49px;
+    margin-left: 34px;
+  }
 }
 
-.my-plans__item-wrapper {
+.my-plans__item {
+  position: relative;
   width: 270px;
   margin: auto;
   margin-bottom: 10px;
   padding: 10px;
   background-color: @basic-white;
   border-radius: 10px;
-}
-
-.my-plans__item {
-  position: relative;
-  margin-top: 14px;
-  margin-left: 15px;
 
   &::before {
     counter-increment: myCounter;
     content: counter(myCounter) + ".";
     position: absolute;
-    left: 0;
+    top: 24px;
+    left: 24px;
     font-weight: 700;
     font-size: 16px;
     line-height: 16px;
     color: @basic_blue_light_color;
 
     @media (min-width: @tablet-width) {
-      right: 0;
+      top: 42px;
+      right: 31px;
       left: auto;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
     }
   }
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    margin-left: 0;
+    .size(618px; 151px);
+
+    &::after {
+      position: absolute;
+      bottom: 54px;
+      left: 0;
+      content: "";
+      .size(618px; 1px);
+      background-color: @input_border_color_30;
+    }
   }
 }
 
 .my-plans__countries {
   .reset();
-  padding-left: 17px;
+  margin-top: 14px;
+  margin-left: 31px;
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
   color: @basic_blue_light_color;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 550px;
+    margin-top: 29px;
+    margin-left: 27px;
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .my-plans__fellow-travelers,
@@ -95,24 +132,55 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: @basic_blue_light_color;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .my-plans__fellow-travelers {
   margin-top: 20px;
+  margin-left: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 54px;
+    margin-left: 24px;
+    letter-spacing: 0.1em;
+  }
 }
 
 .my-plans__date {
+  display: block;
   margin-top: 5px;
+  margin-left: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 54px;
+    margin-left: 42px;
+
+    &--margin {
+      margin-left: 61px;
+    }
+  }
 }
 
 .my-plans__button {
   margin-top: 20px;
   margin-bottom: 9px;
-  margin-left: 3px;
+  margin-left: 16px;
   display: block;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: @basick_black_fade;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 53px;
+    margin-left: 81px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
 }
