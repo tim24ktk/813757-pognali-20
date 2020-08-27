@@ -39,7 +39,7 @@
             <a class="header-feedback__authorization" href="authorization.html">Авторизация</a>
           </div>
         </div>
-        <div class="main-nav__wrapper--style main-nav__wrapper">
+        <div class="main-nav__wrapper--style main-nav__wrapper--style-form  main-nav__wrapper">
           <h1 class="main-nav__heading main-nav__heading--catalog main-nav__heading--form">Направления</h1>
           <p class="main-nav__level">80<br><span class="main-nav__level-word">level</p>
           <img class="main-nav__image" src="img/demin-desktop@1x.jpg" width="285" height="285" alt="Фото пользователя">
@@ -51,7 +51,7 @@
         <div class="user-profile__wrapper">
           <p class="user-profile__level">80<br><span class="user-profile__level-word">level</p>
           <img class="user-profile__image" src="img/demin-desktop@1x.jpg" width="285" height="285" alt="Фото пользователя">
-          <button class="user-profile__button" type="button">Сменить фото</button>
+          <button class="user-profile__button" type="button"><span class="user-profile__button-change">Сменить</span> фото</button>
           <form class="user-profile__form-hash-tags" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="user-profile__fieldset">
               <legend class="user-profile__legend">Тэги</legend>
@@ -109,15 +109,46 @@
         <div class="add-plane__wrapper">
           <div class="add-plane__heading-wrapper">
             <h2 class="add-plane__heading">Добавить план:</h2>
-            <button class="add-plane__button-one add-plane__button-one--selected" type="button"><span class="visually-hidden">Шаг 1</span></button>
-            <button class="add-plane__button-two" type="button"><span class="visually-hidden">Шаг 2</span></button>
-            <button class="add-plane__button-three" type="button"><span class="visually-hidden">Шаг 3</span></button>
+            <ul class="add-plane__buttons-list">
+              <li class="add-plane__buttons-item add-plane__buttons-item--active">
+                <a href="" class="add-plane__buttons-link">
+                  <span class="add-plane__buttons-link-text">Даты</span>
+                </a>
+              </li>
+              <li class="add-plane__buttons-item">
+                <a href="" class="add-plane__buttons-link">
+                  <span class="add-plane__buttons-link-text">Маршрут</span>
+                </a>
+              </li>
+              <li class="add-plane__buttons-item">
+                <a href="" class="add-plane__buttons-link">
+                  <span class="add-plane__buttons-link-text">Развлечения</span>
+                </a>
+              </li>
+            </ul>
           </div>
           <form class="add-plane__form" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="add-plane__date">
               <div class="add-plane__date-wrapper">
+                <ul class="add-plane__buttons-list add-plane__buttons-list--step add-plane__buttons-list--step-one">
+                  <li class="add-plane__buttons-item add-plane__buttons-item--active">
+                    <a href="" class="add-plane__buttons-link">
+                      <span class="add-plane__buttons-link-text add-plane__buttons-link-text--active">Даты</span>
+                    </a>
+                  </li>
+                  <li class="add-plane__buttons-item">
+                    <a href="" class="add-plane__buttons-link">
+                      <span class="add-plane__buttons-link-text">Маршрут</span>
+                    </a>
+                  </li>
+                  <li class="add-plane__buttons-item">
+                    <a href="" class="add-plane__buttons-link">
+                      <span class="add-plane__buttons-link-text">Развлечения</span>
+                    </a>
+                  </li>
+                </ul>
                 <legend class="add-plane__legend add-plane__legend--step-one">Шаг 1.<br> Даты пребывания</legend>
-                <p class="add-plane__preferences">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность</p>
+                <p class="add-plane__preferences add-plane__preferences--step-one">Укажите предпочтительное количество попутчиков, которых<br> вы хотели бы позвать в поездку и ее предполагаемую длительность</p>
                 <div class="add-plane__input-wrapper add-plane__input-wrapper--companion">
                   <label class="add-plane__label" for="people">Ищу попутчиков:</label>
                   <span class="add-plane__measure">Чел.</span>
@@ -164,7 +195,7 @@
                       <td class="calendar__day-of-week-item">26</td>
                       <td class="calendar__day-of-week-item">27</td>
                       <td class="calendar__day-of-week-item">28</td>
-                      <td class="calendar__day-of-week-item">1</td>
+                      <td class="calendar__day-of-week-item">1<span class="calendar__day-of-week-item-month">мар</span></td>
                     </tr>
                     <tr class="calendar__day-of-week-list">
                       <td class="calendar__day-of-week-item">2</td>
@@ -197,15 +228,15 @@
                       <td class="calendar__day-of-week-item">23</td>
                       <td class="calendar__day-of-week-item">24</td>
                       <td class="calendar__day-of-week-item">25</td>
-                      <td class="calendar__day-of-week-item calendar__day-of-week-item--selected calendar__day-of-week-item--current-day">26</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--selected calendar__day-of-week-item--current-day">26<span class="calendar__day-of-week-item-arrival">Заезд</span></td>
                       <td class="calendar__day-of-week-item calendar__day-of-week-item--selected">27</td>
-                      <td class="calendar__day-of-week-item calendar__day-of-week-item--selected">28</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--selected">28<span class="calendar__day-of-week-item-departure">Выезд</span></td>
                       <td class="calendar__day-of-week-item calendar__day-of-week-item--possible">29</td>
                     </tr>
                     <tr class="calendar__day-of-week-list">
                       <td class="calendar__day-of-week-item calendar__day-of-week-item--possible">30</td>
                       <td class="calendar__day-of-week-item calendar__day-of-week-item--possible">31</td>
-                      <td class="calendar__day-of-week-item calendar__day-of-week-item--possible">1</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--possible">1<span class="calendar__day-of-week-item-month">апр</span></td>
                       <td class="calendar__day-of-week-item calendar__day-of-week-item--possible">2</td>
                       <td class="calendar__day-of-week-item calendar__day-of-week-item--possible">3</td>
                       <td class="calendar__day-of-week-item calendar__day-of-week-item--possible">4</td>
@@ -216,9 +247,26 @@
                 <button class="add-plane__next-step card-button card-button--next-step" type="button">Следующий шаг</button>
               </div>
             </fieldset>
-            <fieldset class="add-plane__route">
+            <fieldset class="add-plane__route add-plane__route--step-two">
               <div class="add-plane__route-wrapper add-plane__route-wrapper--vertical-border">
-                <legend class="add-plane__legend add-plane__legend--step-two">Шаг 2.<br> Маршрут</legend>
+                <ul class="add-plane__buttons-list add-plane__buttons-list--step-two">
+                  <li class="add-plane__buttons-item">
+                    <a href="" class="add-plane__buttons-link">
+                      <span class="add-plane__buttons-link-text">Даты</span>
+                    </a>
+                  </li>
+                  <li class="add-plane__buttons-item add-plane__buttons-item--active">
+                    <a href="" class="add-plane__buttons-link">
+                      <span class="add-plane__buttons-link-text add-plane__buttons-link-text--active">Маршрут</span>
+                    </a>
+                  </li>
+                  <li class="add-plane__buttons-item">
+                    <a href="" class="add-plane__buttons-link">
+                      <span class="add-plane__buttons-link-text">Развлечения</span>
+                    </a>
+                  </li>
+                </ul>
+                <legend class="add-plane__legend add-plane__buttons-list--step add-plane__legend--step-two">Шаг 2.<br> Маршрут</legend>
                 <p class="add-plane__preferences add-plane__preferences--step-two">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
                 <div class="add-plane__selected-wrapper add-plane__selected-wrapper--Bosnia-and-Herzegovina">
                   <label class="visually-hidden" for="country">Выберите страну</label>
@@ -254,13 +302,30 @@
               </div>
             </fieldset>
             <fieldset class="add-plane__entertainment">
-              <div class="add-plane__route-wrapper">
+              <div class="add-plane__route-wrapper add-plane__route-wrapper--step-three">
+                <ul class="add-plane__buttons-list add-plane__buttons-list--step-three">
+                  <li class="add-plane__buttons-item">
+                    <a href="" class="add-plane__buttons-link">
+                      <span class="add-plane__buttons-link-text">Даты</span>
+                    </a>
+                  </li>
+                  <li class="add-plane__buttons-item">
+                    <a href="" class="add-plane__buttons-link">
+                      <span class="add-plane__buttons-link-text">Маршрут</span>
+                    </a>
+                  </li>
+                  <li class="add-plane__buttons-item add-plane__buttons-item--active">
+                    <a href="" class="add-plane__buttons-link">
+                      <span class="add-plane__buttons-link-text add-plane__buttons-link-text--active">Развлечения</span>
+                    </a>
+                  </li>
+                </ul>
                 <legend class="add-plane__legend add-plane__legend--step-three">Шаг 3.<br> Развлечения</legend>
                 <p class="add-plane__entertainment-plane">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
                 <label class="add-plane__textarea-plane-label add-plane__textarea-plane-label--bosnia" for="textarea-plane">Босния и Герцеговина</label>
                 <textarea class="add-plane__textarea-plane" id="textarea-plane" name="textarea-plane" rows="" cols="" placeholder="План действий"></textarea>
                 <label class="add-plane__textarea-plane-label add-plane__textarea-plane-label--czech" for="textarea-plane">Чехия</label>
-                <textarea class="add-plane__textarea-plane add-plane__textarea-plane--czech" id="textarea-plane" name="textarea-plane" rows="" cols="" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все</textarea>
+                <textarea class="add-plane__textarea-plane add-plane__textarea-plane--czech" id="textarea-plane" name="textarea-plane" rows="" cols="" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                 <button class="add-plane__next-step add-plane__next-step--step-three card-button card-button--submit card-button--next-step" type="submit">Отправить</button>
                 <button class="add-plane__previous-step add-plane__previous-step--step-three button-previous-step" type="button">На шаг назад</button>
                 </div>

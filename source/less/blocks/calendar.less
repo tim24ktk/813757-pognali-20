@@ -18,6 +18,10 @@
       top: -27px;
       width: 532px;
     }
+
+    @media (min-width: @desktop-width) {
+      width: 1016px;
+    }
   }
 
   &::after {
@@ -31,6 +35,10 @@
       bottom: 27px;
       width: 532px;
     }
+
+    @media (min-width: @desktop-width) {
+      width: 1016px;
+    }
   }
 
 
@@ -38,6 +46,12 @@
     margin-top: 87px;
     margin-left: 23px;
     .size(532px; 86px);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 60px;
+    margin-left: 134px;
+    width: 1016px;
   }
 }
 
@@ -53,6 +67,10 @@
     .size(30px; 36px);
     background-size: 30px 36px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .calendar__next-month {
@@ -66,6 +84,10 @@
     .size(30px; 36px);
     background-size: 30px 36px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 6px;
+  }
 }
 
 .calendar__calendar-table {
@@ -77,6 +99,12 @@
   @media (min-width: @tablet-width) {
     margin-left: 22px;
     .size(531px; 441px);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -18px;
+    margin-left: 139px;
+    .size(1000px; 441px);
   }
 }
 
@@ -108,6 +136,13 @@
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 9px 17px;
+    padding-bottom: 20px;
+    text-align: left;
+    vertical-align: baseline;
   }
 }
 
@@ -148,5 +183,41 @@
   @media (min-width: @tablet-width) {
     .size(70px; 69px);
     font-size: 18px;
+  }
+
+
+  @media (min-width: @desktop-width) {
+    padding: 11px 17px;
+    height: 71px;
+    text-align: left;
+    vertical-align: baseline;
+  }
+}
+
+.calendar__day-of-week-item-month {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline-flex;
+  }
+}
+
+.calendar__day-of-week-item-arrival {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 10px;
+    display: block;
+    width: 26px;
+  }
+}
+
+.calendar__day-of-week-item-departure {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 10px;
+    display: block;
+    width: 26px;
   }
 }

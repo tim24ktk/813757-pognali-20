@@ -12,6 +12,12 @@
     margin-top: -2px;
     padding-bottom: 100px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 5px;
+    border-top-left-radius: 62px;
+    border-top-right-radius: 62px;
+  }
 }
 
 .my-plans__wrapper {
@@ -44,6 +50,11 @@
     font-size: 36px;
     line-height: 36px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 54px;
+    margin-left: 71px;
+  }
 }
 
 .my-plans__list {
@@ -54,6 +65,11 @@
   @media (min-width: @tablet-width) {
     margin-top: 49px;
     margin-left: 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 50px;
+    margin-left: 64px;
   }
 }
 
@@ -85,6 +101,10 @@
       font-size: 20px;
       line-height: 20px;
     }
+
+    @media (min-width: @desktop-width) {
+      left: 43px;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -100,6 +120,15 @@
       content: "";
       .size(618px; 1px);
       background-color: @input_border_color_30;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 15px;
+    .size(1258px; 97px);
+
+    &::after {
+      display: none;
     }
   }
 }
@@ -120,6 +149,12 @@
     margin-left: 27px;
     font-size: 24px;
     line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 26px;
+    margin-left: 86px;
+    width: 500px;
   }
 }
 
@@ -148,6 +183,12 @@
     margin-left: 24px;
     letter-spacing: 0.1em;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 30px;
+    margin-left: 30px;
+    letter-spacing: 0.09em;
+  }
 }
 
 .my-plans__date {
@@ -161,6 +202,14 @@
 
     &--margin {
       margin-left: 61px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 30px;
+
+    &--margin {
+      margin-left: 54px;
     }
   }
 }
@@ -182,5 +231,11 @@
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.1em;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 31px;
+    margin-left: 127px;
+    letter-spacing: 0.08em;
   }
 }
