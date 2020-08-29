@@ -182,8 +182,7 @@
     top: 0;
     left: 0;
     content: "";
-    width: 25px;
-    height: 11px;
+    .size(25px; 11px);
     background-image: url("../img/icon_menu_mobile.svg");
     background-repeat: no-repeat;
   }
@@ -200,6 +199,8 @@
 }
 
 .main-nav__feedback {
+  display: none;
+
   @media (min-width: @desktop-width) {
     margin-top: 10px;
   }

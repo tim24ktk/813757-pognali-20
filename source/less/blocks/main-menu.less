@@ -1,8 +1,20 @@
 .main-menu {
+  position: absolute;
+  width: 100%;
   padding-top: 25px;
   padding-bottom: 29px;
   background-color: @basic-white;
   display: none;
+  z-index: 20;
+
+  &--no-js {
+    position: inherit;
+  }
+
+  &--scroll {
+    position: fixed;
+    padding-bottom: 25px;
+  }
 
   @media (min-width: @tablet-width) {
     padding-top: 25px;
@@ -48,6 +60,12 @@
   grid-row-start: 1;
   justify-self: start;
 
+  &--scroll {
+    @media (max-width: @mobile-width-only) {
+      display: none;
+    }
+  }
+
   @media (min-width: desktop-width) {
     order: 1;
   }
@@ -62,6 +80,18 @@
   border: none;
   background-color: transparent;
 
+  &--open-scroll {
+    &::before {
+      position: absolute;
+      top: 5px;
+      left: 0;
+      content: "";
+      .size(25px; 11px);
+      background-image: url("../img/icon_menu_mobile_scroll.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
   &--close {
     &::before {
       display: block;
@@ -73,6 +103,10 @@
       background-image: url("../img/icon_menu_mobile_close.svg");
       background-repeat: no-repeat;
     }
+  }
+
+  &--no-js {
+    display: none;
   }
 
   @media (min-width: @tablet-width) {
@@ -95,6 +129,10 @@
 
   @media (max-width: @mobile-width-only) {
     margin-top: 53px;
+
+    &--scroll {
+      display: none;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -111,6 +149,11 @@
 .main-menu__wrapper .main-menu__buttons-list {
   @media (max-width: @mobile-width-only) {
     margin-top: 67px;
+    padding: 0;
+
+    &--scroll {
+      display: none;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -137,6 +180,10 @@
 
   @media (max-width: @mobile-width-only) {
     margin-top: 51px;
+
+    &--scroll {
+      display: none;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -155,7 +202,10 @@
 
   @media (max-width: @mobile-width-only) {
     margin: auto;
-    margin-top: 29px;
+
+    &--scroll {
+      display: none;
+    }
   }
 
   @media (min-width: @tablet-width) {
