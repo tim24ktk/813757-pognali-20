@@ -18,12 +18,20 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 25px;
-    padding-bottom: 82px;
+    padding-bottom: 72px;
+
+    &--scroll {
+      padding-bottom: 40px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 18px;
     padding-bottom: 18px;
+
+    &--no-js {
+      position: fixed;
+    }
   }
 }
 
@@ -147,13 +155,15 @@
 }
 
 .main-menu__wrapper .main-menu__buttons-list {
+  .reset();
+
+  &--scroll {
+    display: none;
+  }
+
   @media (max-width: @mobile-width-only) {
     margin-top: 67px;
     padding: 0;
-
-    &--scroll {
-      display: none;
-    }
   }
 
   @media (min-width: @tablet-width) {
@@ -166,10 +176,18 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 15px;
-    margin-right: 153px;
+    position: relative;
+    margin-top: 7px;
+    margin-right: 70px;
     margin-bottom: 0;
     order: 2;
+
+    &::before {
+      top: 17px;
+      left: -89px;
+      .size(44px; 2px);
+      background-color: @special_background_light;
+    }
   }
 }
 
@@ -178,12 +196,13 @@
   grid-row-start: 4;
   justify-self: start;
 
+
+  &--scroll {
+    display: none;
+  }
+
   @media (max-width: @mobile-width-only) {
     margin-top: 51px;
-
-    &--scroll {
-      display: none;
-    }
   }
 
   @media (min-width: @tablet-width) {
@@ -200,16 +219,16 @@
   grid-row-start: 5;
   justify-self: center;
 
+  &--scroll {
+    display: none;
+  }
+
   @media (max-width: @mobile-width-only) {
     margin: auto;
-
-    &--scroll {
-      display: none;
-    }
   }
 
   @media (min-width: @tablet-width) {
-    margin-top: 122px;
+    margin-top: 86px;
   }
 
   @media (min-width: @desktop-width) {

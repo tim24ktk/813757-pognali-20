@@ -246,7 +246,7 @@
                     </tr>
                   </table>
                 </section>
-                <button class="add-plane__next-step card-button card-button--next-step" type="button">Следующий шаг</button>
+                <button class="add-plane__next-step add-plane__next-step--step-one  card-button card-button--next-step" type="button">Следующий шаг</button>
               </div>
             </fieldset>
             <fieldset class="add-plane__route add-plane__route--step-two">
@@ -915,8 +915,10 @@
                   <label class="visually-hidden" for="add-country">Добавить страну</label>
                   <button class="add-plane__add-country" type="button"><span class="visually-hidden">Добавить страну</span></button>
                 </div>
-                <button class="add-plane__next-step add-plane__next-step--step-two card-button card-button--next-step" type="button">Следующий шаг</button>
-                <button class="add-plane__previous-step button-previous-step" type="button">На шаг назад</button>
+                <div class="add-plane__steps-button-wrapper">
+                  <button class="add-plane__next-step add-plane__next-step--step-two card-button card-button--next-step" type="button">Следующий шаг</button>
+                  <button class="add-plane__previous-step button-previous-step" type="button">На шаг назад</button>
+                </div>
               </div>
             </fieldset>
             <fieldset class="add-plane__entertainment">
@@ -944,9 +946,11 @@
                 <textarea class="add-plane__textarea-plane" id="textarea-plane" name="textarea-plane" rows="" cols="" placeholder="План действий"></textarea>
                 <label class="add-plane__textarea-plane-label add-plane__textarea-plane-label--czech" for="textarea-plane">Чехия</label>
                 <textarea class="add-plane__textarea-plane add-plane__textarea-plane--czech" id="textarea-plane" name="textarea-plane" rows="" cols="" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
-                <button class="add-plane__next-step add-plane__next-step--step-three card-button card-button--submit card-button--next-step" type="submit">Отправить</button>
-                <button class="add-plane__previous-step add-plane__previous-step--step-three button-previous-step" type="button">На шаг назад</button>
+                <div class="add-plane__steps-button-wrapper">
+                  <button class="add-plane__next-step add-plane__next-step--step-three card-button card-button--submit card-button--next-step" type="submit">Отправить</button>
+                  <button class="add-plane__previous-step add-plane__previous-step--step-three button-previous-step" type="button">На шаг назад</button>
                 </div>
+              </div>
             </fieldset>
           </form>
         </div>

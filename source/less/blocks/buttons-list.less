@@ -13,8 +13,6 @@
 
     &::before {
       position: absolute;
-      top: 10px;
-      left: 0;
       content: "";
       .size(60px; 2px);
       background-color: @basic-white;
@@ -22,15 +20,6 @@
       @media (min-width: @desktop-width) {
         top: 16px;
         left: -25px;
-      }
-    }
-
-    &--line {
-      &::before {
-        top: 8px;
-        left: -8px;
-        .size(44px; 2px);
-        background-color: @special_background_light;
       }
     }
   }

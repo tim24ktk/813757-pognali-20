@@ -10,6 +10,10 @@
   border-radius: 20px;
   padding-bottom: 21px;
 
+  &--diff-padding {
+    padding-bottom: 27px;
+  }
+
   &:not(:first-child) {
     margin-top: 11px;
 
@@ -36,13 +40,15 @@
   @media (min-width: @desktop-width) {
     grid-template-columns: 285px 1fr 1fr;
     grid-auto-rows: auto;
-    margin-top: 74px;
+    margin-top: 72px;
+    margin-left: 4px;
     padding: 0;
-    width: 951px;
+    width: 949px;
   }
 }
 
-.catalog-traveler-card__image {
+.catalog-traveler-card__image-link {
+  .reset();
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
@@ -53,9 +59,9 @@
   @media (min-width: @tablet-width) {
     grid-row-start: 1;
     grid-row-end: 4;
-    .size(190px; 190px);
+    margin-top: 2px;
+    .size(190px; 189px);
     border-radius: 20%;
-    object-fit: cover;
   }
 
   @media (min-width: @desktop-width) {
@@ -63,12 +69,30 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 4;
+    margin-top: 0;
     margin-left: 0;
     .size(285px; 285px);
     border-radius: 0;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    object-fit: cover;
+  }
+}
+
+.catalog-traveler-card__image {
+  border-radius: 50%;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    .size(190px; 190px);
+    border-radius: 11%;
+  }
+
+  @media (min-width: @desktop-width) {
+    .size(285px; 285px);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 0;
   }
 }
 
@@ -132,7 +156,7 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 46px;
-    margin-left: 65px;
+    margin-left: 63px;
   }
 }
 
@@ -142,7 +166,6 @@
   grid-row-start: 2;
   grid-row-end: 3;
   position: relative;
-  margin-top: 5px;
   margin-left: 12px;
   font-weight: 700;
   font-size: 14px;
@@ -217,7 +240,7 @@
   grid-column-end: -1;
   grid-row-start: 3;
   grid-row-end: 4;
-  margin-top: 14px;
+  margin-top: 7px;
   margin-left: 10px;
   width: 190px;
   font-size: 15px;
@@ -225,7 +248,7 @@
   color: @special_grey;
 
   &--margin {
-    margin-top: 17px;
+    margin-top: 9px;
   }
 
   @media (min-width: @tablet-width) {
@@ -448,7 +471,7 @@
   color: @special_grey;
 
   &--margin {
-    margin-top: 19px;
+    margin-top: 21px;
   }
 
   &::before {
@@ -540,7 +563,7 @@
   color: @special_grey;
 
   &--margin {
-    margin-top: 18px;
+    margin-top: 21px;
   }
 
   &::after {
@@ -720,7 +743,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 35px;
-    margin-left: 57px;
+    margin-bottom: 37px;
+    margin-left: 54px;
   }
 }
