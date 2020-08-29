@@ -145,6 +145,7 @@
     }
   }
 
+  /*стилизует активное поле выбора страны*/
   &--active {
     &::before {
       background-color: @basic_blue_light_color;
@@ -962,6 +963,21 @@
     letter-spacing: 0.1em;
   }
 
+  /*стилизует активное поле вывода страны*/
+  &--active {
+    position: relative;
+    margin-top: -2px;
+    margin-left: -1px;
+    .size(223px; 44px);
+    padding: 16px;
+    color: @basic-white;
+    letter-spacing: 0.02em;
+    background-color: @basic_blue_light_special;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    z-index: 12;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 12px 24px;
     .size(369px; 70px);
@@ -977,10 +993,20 @@
       margin-top: 0;
       margin-left: 0;
     }
+
+    &--active {
+      margin-top: -2px;
+      .size(371px; 71px);
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 730px;
+
+    &--active {
+      margin-top: -1px;
+      margin-left: -3px;
+    }
   }
 }
 
@@ -1038,6 +1064,16 @@
     }
   }
 
+  /*стилизует кнопку в активном состоянии input*/
+  @media (min-width: @tablet-width) {
+    &--active-input {
+      &::after {
+        display: block;
+      }
+    }
+  }
+
+
   &--not-selected {
     margin-top: 3px;
     margin-left: -40px;
@@ -1050,13 +1086,46 @@
 
       @media (min-width: @tablet-width) {
         top: 11px;
-        right: -53px;
+        right: -51px;
         left: auto;
         .size(14px; 14px);
       }
 
       @media (min-width: @desktop-width) {
-        right: -69px;
+        right: -68px;
+      }
+    }
+  }
+
+  &--active-input {
+    position: relative;
+    margin-top: 5px;
+    margin-left: -39px;
+    background-color: transparent;
+    box-shadow: none;
+    z-index: 12;
+
+    &::before {
+      .size(9px; 10px);
+      background-image: url("../img/icon_close_white.svg");
+      background-size: 9px 10px;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    @media (min-width: @tablet-width) {
+      &::before {
+        .size(22px; 21px);
+        background-size: 22px 21px;
+        opacity: 0.3;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      &::before {
+        top: 10px;
       }
     }
   }
@@ -1088,6 +1157,14 @@
   &--not-selected {
     margin-top: -10px;
     margin-left: -9px;
+  }
+
+  &--active-input {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
   }
 
   &::before {
