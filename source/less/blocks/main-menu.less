@@ -33,6 +33,7 @@
     &--scroll {
       display: block;
       position: fixed;
+      padding-bottom: 10px;
     }
   }
 }
@@ -78,6 +79,18 @@
 
   @media (min-width: desktop-width) {
     order: 1;
+  }
+}
+
+.main-menu__logo-image {
+  .size(100px; auto);
+
+  @media (min-width: @tablet-width) {
+    .size(166px; auto);
+  }
+
+  @media (min-width: @desktop-width) {
+    .size(200px; auto);
   }
 }
 
@@ -180,7 +193,7 @@
   @media (min-width: @desktop-width) {
     position: relative;
     margin-top: 7px;
-    margin-right: 70px;
+    margin-right: 171px;
     margin-bottom: 0;
     order: 2;
 

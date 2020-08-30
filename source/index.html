@@ -10,10 +10,14 @@
     <header class="header header--index-background">
       <section class="main-menu main-menu--no-js">
         <div class="main-menu__wrapper">
-          <picture class="main-menu__logo">
-            <img src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Сервис поиска попутчиков погнали">
-          </picture>
-          <button class="main-menu__button main-menu__button--no-js" type="button"><span class="visually-hidden">Закрыть меню</span></button>
+          <a class="main-menu__logo-link" href="#">
+            <picture class="main-menu__logo">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png" alt="Сервис поиска попутчиков погнали">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png" alt="Сервис поиска попутчиков погнали">
+              <img class="main-menu__logo-image" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Сервис поиска попутчиков погнали">
+            </picture>
+          </a>
+          <button class="main-menu__button main-menu__button--close" type="button"><span class="visually-hidden">Закрыть меню</span></button>
           <div class="main-menu__feedback main-menu__feedback--display header-feedback">
             <a class="header-feedback__phone header-feedback__phone--main-menu-block" href="tel:88005558628" aria-label="Позвоните нам">
               <span class="visually-hidden">88005558628</span>
@@ -332,17 +336,21 @@
         </div>
         <div class="adress__img-wrapper">
           <picture class="adress__picture">
-            <source media="(min-width: 1440px)" srcset="img/block_map_desktop.png" width="1440" height="584" alt="Карта с маркером нашего местонахождения">
-            <source media="(min-width: 768px)" srcset="img/block_map_tablet@1px.png" width="768" height="581" alt="Карта с маркером нашего местонахождения">
+            <source media="(min-width: 1440px)" srcset="img/block_map_desktop.png" alt="Карта с маркером нашего местонахождения">
+            <source media="(min-width: 768px)" srcset="img/block_map_tablet@1px.png" alt="Карта с маркером нашего местонахождения">
             <img class="address__map" src="img/background_map.png" width="320" height="424" alt="Карта с маркером нашего местонахождения">
           </picture>
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer footer--index-margin">
       <div class="footer__wrapper">
         <a class="footer__logo" href="#" aria-label="Логотип: Погнали">
-          <img src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Сервис поиска попутчиков погнали">
+          <picture class="footer__logo-picture">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png" alt="Сервис поиска попутчиков погнали">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png" alt="Сервис поиска попутчиков погнали">
+            <img class="footer__logo-image" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Сервис поиска попутчиков погнали">
+          </picture>
         </a>
         <ul class="footer__social-list socials-list socials-list--tablet-footer">
           <li class="socials-list__item socials-list__item--tablet-footer">
