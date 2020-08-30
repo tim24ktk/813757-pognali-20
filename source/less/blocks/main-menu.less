@@ -4,7 +4,7 @@
   padding-top: 25px;
   padding-bottom: 29px;
   background-color: @basic-white;
-  display: none;
+  display: block;
   z-index: 20;
 
   &--no-js {
@@ -28,8 +28,10 @@
   @media (min-width: @desktop-width) {
     padding-top: 18px;
     padding-bottom: 18px;
+    display: none;
 
-    &--no-js {
+    &--scroll {
+      display: block;
       position: fixed;
     }
   }
