@@ -1,8 +1,10 @@
 .card-button {
+  position: relative;
   display: block;
   padding: 14px;
   width: 230px;
   .size(230px; 40px);
+  font-family: "Blogger Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 17px;
@@ -12,6 +14,7 @@
   background-color: @basic_yellow;
   border-radius: 25px;
   border: none;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     &--catalog-article {
@@ -20,6 +23,30 @@
       font-size: 20px;
       line-height: 20px;
       border-radius: 25px;
+    }
+
+    &--next-step {
+      padding-right: 56px;
+      .size(284px; 80px);
+      font-size: 24px;
+      line-height: 24px;
+      text-transform: inherit;
+      border-radius: 20px;
+
+      &::before {
+        position: absolute;
+        top: 32px;
+        right: 34px;
+        content: "";
+        .size(14px; 14px);
+        background-image: url("../img/triangle.svg");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--submit {
+      padding-left: 33px;
+      text-align: left;
     }
   }
 }

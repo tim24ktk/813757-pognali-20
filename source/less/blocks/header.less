@@ -3,7 +3,6 @@
   display: grid;
   grid-template-columns: 1fr;
   color: @basic-white;
-  background-color: @basic_blue;
   border-bottom-left-radius: @border_radius_30;
   border-bottom-right-radius: @border_radius_30;
   z-index: 7;
@@ -13,13 +12,29 @@
     border-bottom-right-radius: 20px;
   }
 
-  @media (min-width: @tablet-width) {
+  &--form-radius {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  &--index-background {
+    background-color: @basic_blue;
+  }
+
+  &--catalog-background {
     background-color: @special_blue_background;
+  }
+
+  @media (min-width: @tablet-width) {
     border-bottom-left-radius: @border_radius_60;
     border-bottom-right-radius: @border_radius_60;
 
     &--radius-catalog {
       padding-bottom: 85px;
+    }
+
+    &--index-background {
+      background-color: @special_blue_background;
     }
   }
 
@@ -28,6 +43,14 @@
 
     &--radius-catalog {
       padding-bottom: 71px;
+    }
+
+    &--index-background {
+      background-color: @special_background_light;
+    }
+
+    &--catalog-background {
+      background-color: @special_background_light;
     }
   }
 }

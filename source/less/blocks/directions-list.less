@@ -20,11 +20,11 @@
 
     &::after {
       position: absolute;
-      bottom: -2px;
+      bottom: 0;
       content: "";
-      .size(617px; 94px);
-      background-image: url("..//img/fade_1.svg");/*тень падает только на фото, а не на весь блок!!!*/
-      background-repeat: no-repeat;
+      .size(617px; 130px);
+      background-image: linear-gradient(transparent 50%, @basic_blue_light_90);
+      z-index: 1;
     }
   }
 
@@ -43,10 +43,16 @@
       top: -73px;
       left: -72px;
     }
+
+    &::after {
+      bottom: 91px;
+      width: 560px;
+    }
   }
 }
 
 .directions-list__item {
+  position: relative;
   width: 270px;
 
   &:not(:first-child) {
@@ -83,7 +89,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    .size(186px; 142px);
+    .size(186px; 140px);
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
     order: 2;

@@ -4,25 +4,68 @@
   flex-wrap: wrap;
   .reset_for_list();
   .size(220px; 205px);
+  z-index: 10;
+
+  /*скрывает модальное окно в формах*/
+  &--form {
+    position: absolute;
+    display: none;
+  }
 
   @media (max-width: @mobile-width-only) {
     margin-bottom: 284px;
+
+    &--form {
+      top: 41px;
+      padding-bottom: 520px;
+      background-color: @basic-white;
+      box-shadow: 0 2px 16px @box-shadow_form;
+    }
   }
 
   @media (min-width: @tablet-width) {
     .size(381px; auto);
     border: none;
+
+    &--form {
+      top: 70px;
+      padding-top: 35px;
+      padding-right: 286px;
+      padding-bottom: 35px;
+      padding-left: 27px;
+      .size(575px; auto);
+      border: none;
+      background-color: @basic-white;
+      box-shadow: 0 2px 16px @box-shadow_form;
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 1320px;
+
+    &--form {
+      margin-left: -5px;
+      .size(731px; 476px);
+
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 240px;
+        content: "";
+        .size(1px; 476px);
+        background-color: @calendar_border_color;
+      }
+    }
   }
 }
 
-.alphabet__counries-list {
-  display: none;
+.alphabet__countries-list {
   .reset_for_list();
   padding: 10px;
+
+  &--catalog {
+    display: none;
+  }
 
   &--active {
     position: absolute;
@@ -40,10 +83,47 @@
     }
   }
 
+  /*скрывает списки стран*/
+  &--form {
+    display: none;
+  }
+
+  /*стилизует списки стран в модальном окне в формах*/
+  &--form-active {
+    position: absolute;
+    top: 205px;
+    left: 0;
+    padding-top: 19px;
+    width: 221px;
+    background-color: @basic-white;
+    border-right: 1px solid @input_border_color;
+    border-bottom: 1px solid @input_border_color;
+    border-left: 1px solid @input_border_color;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    height: 316px;
+    overflow: auto;
+
+    @media (min-width: @tablet-width) {
+      top: 0;
+      right: -1px;
+      left: auto;
+      margin-top: 13px;
+      .size(198px; 396px);
+      border: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 34px;
+    }
+  }
+
   @media (min-width: @desktop-width) {
-    position: inherit;
-    display: block;
-    margin-left: 4px;
+    &--catalog {
+      position: inherit;
+      display: block;
+      margin-left: 4px;
+    }
   }
 }
 
@@ -57,6 +137,10 @@
     background-color: @basic_blue_light_special;
   }
 
+  &--form {
+    background-color: @basic-white;
+  }
+
   @media (min-width: @tablet-width) {
     &:not(:nth-child(5n)) {
       margin-right: 16px;
@@ -65,6 +149,18 @@
     width: 60px;
     border: none;
     background-color: transparent;
+
+    &--form {
+      margin-top: -1px;
+      margin-right: -1px;
+      margin-bottom: 0;
+      margin-left: 0;
+      width: 53px;
+
+      &:nth-child(n) {
+        margin-right: -1px;
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -78,12 +174,22 @@
     &--diff-margin {
       margin-top: 40px;
     }
+
+    &--form {
+      &:not(:nth-child(5n)) {
+        margin-right: 16px;
+      }
+      margin-bottom: 16px;
+
+      .size(60px; 70px);
+    }
   }
 }
 
 .alphabet__item-link {
   display: block;
   .size(45px; 42px);
+  .reset();
   padding: 15px;
   font-weight: 500;
   font-size: 14px;
@@ -100,6 +206,10 @@
     border: 1px solid @input_border_color;
   }
 
+  &--active-form {
+    background-color: @basic_blue_light;
+  }
+
   @media (min-width: @tablet-width) {
     font-weight: 700;
     font-size: 60px;
@@ -109,20 +219,58 @@
     &--active {
       color: @special_background_light;
     }
+
+    &--form {
+      padding: 21px;
+      padding-top: 25px;
+      .size(53px; 70px);
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
+      color: @basic_blue_light_color;
+      border: 1px solid @input_border_color;
+    }
+
+    &--active-form {
+      color: @basic-white;
+      background-color: @basic_blue_light_special;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 53px;
     color: @special_background_light;
     text-align: left;
+
+    &--form {
+      margin-bottom: 14px;
+      .size(60px; 70px);
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    &--active-form {
+      color: @basic-white;
+    }
   }
 }
 
-.alphabet__counries-item {
+.alphabet__countries-item {
+  .reset();
   text-align: left;
+
+  &--form {
+    margin-bottom: 4px;
+    margin-left: 8px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
+  }
 }
 
-.alphabet__counries-item-link {
+.alphabet__countries-item-link {
+  .reset();
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;

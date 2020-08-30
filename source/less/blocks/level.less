@@ -94,58 +94,75 @@
   position: relative;
   display: flex;
   margin-top: 12px;
-  padding: 5px;
-  width: 220px;
   height: 35px;
-  border: 1px solid @input_border_color;
   border-radius: 4px;
   background-color: @basic-white;
 
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 109px;
-    content: "";
-    .size(1px; 11px);
-    background-color: @input_border_color;
-
-    @media (min-width: @tablet-width) {
-      left: 73px;
-      .size(1px;15px);
-    }
-  }
-
-  &::after {
-    position: absolute;
-    bottom: 0;
-    left: 109px;
-    content: "";
-    .size(1px; 11px);
-    background-color: @input_border_color;
-
-    @media (min-width: @tablet-width) {
-      left: 73px;
-      .size(1px;15px);
-    }
-  }
-
   @media (min-width: @tablet-width) {
     margin-right: 16px;
-    .size(148px; 46px);
+    height: 46px;
     order: 3;
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 17px;
     margin-left: 2px;
-    .size(192px; 46px);
     order: 2;
+  }
+
+  &::before {
+    position: absolute;
+    top: 16px;
+    left: 102px;
+    content: "";
+    .size(16px; 2px);
+    background-image: url("../img/level-input-hyphen.svg");
+    background-size: 16px 2px;
+    z-index: 1;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      top: 21px;
+      left: 63px;
+      .size(21px; 2px);
+      background-size: 21px 3px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 12px;
+    left: 102px;
+    content: "";
+    .size(17px; 10px);
+    background-color: @basic-white;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      top: 16px;
+      left: 63px;
+      .size(22px; 13px);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      left: 84px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      left: 84px;
+    }
   }
 }
 
 .level__input-min,
 .level__input-max {
-  width: 102px;
+  width: 111px;
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -153,21 +170,28 @@
   letter-spacing: 0.06em;
   text-align: center;
   color: @basic_blue_light_color;
-  border: none;
+  border: 1px solid @input_border_color;
 
   @media (min-width: @tablet-width) {
-    width: 68px;
+    width: 74px;
     font-size: 20px;
     line-height: 20px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 90px;
+    width: 96px;
   }
 }
 
+.level__input-max {
+  margin-left: -1px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
 .level__input-min {
-  position: relative;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 
 .level__range-controls {

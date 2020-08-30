@@ -1,4 +1,6 @@
 .button-previous-step {
+  position: relative;
+  font-family: "Blogger Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
@@ -7,4 +9,28 @@
   color: @basic_blue_light_color;
   background-color: transparent;
   border: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 45px;
+    height: 56px;
+    font-size: 24px;
+    line-height: 22px;
+    text-transform: inherit;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 17px;
+      left: 9px;
+      .size(16px; 16px);
+      background-image: url("../img/triangle.svg");
+      background-size: 16px 16px;
+      background-repeat: no-repeat;
+      transform: rotate(180deg);
+    }
+  }
 }
