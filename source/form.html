@@ -44,7 +44,7 @@
         <div class="main-nav__wrapper--style main-nav__wrapper--style-form  main-nav__wrapper">
           <h1 class="main-nav__heading main-nav__heading--catalog main-nav__heading--form">Направления</h1>
           <p class="main-nav__level">80<br><span class="main-nav__level-word">level</p>
-          <img class="main-nav__image" src="img/demin-desktop@1x.jpg" width="285" height="285" alt="Фото пользователя">
+          <img class="main-nav__image" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2x" width="285" height="285" alt="Фото пользователя">
         </div>
       </nav>
     </header>
@@ -52,7 +52,10 @@
       <section class="user-profile">
         <div class="user-profile__wrapper">
           <p class="user-profile__level">80<br><span class="user-profile__level-word">level</p>
-          <img class="user-profile__image" src="img/demin-desktop@1x.jpg" width="285" height="285" alt="Фото пользователя">
+          <picture class="user-profile__image-wrapper">
+            <sourse media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.jpg 1x, photo-account-tablet@2x.jpg 2x">
+            <img class="user-profile__image" src="img/photo-account-mobile@1x.jpg" srcset="img/photo-account-mobile@2x.jpg 2x" width="70" height="70" alt="Фото пользователя">
+          </picture>
           <button class="user-profile__button" type="button"><span class="user-profile__button-change">Сменить</span> фото</button>
           <form class="user-profile__form-hash-tags" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="user-profile__fieldset">
