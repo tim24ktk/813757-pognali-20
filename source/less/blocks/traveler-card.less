@@ -7,6 +7,25 @@
     width: 285px;
     margin-top: 37px;
   }
+
+  &:hover {
+    .traveler-card__image {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.traveler-card__zoom-wrapper {
+  .size(270px; 270px);
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    .size(285px; 285px);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
 }
 
 .traveler-card__image {
@@ -86,17 +105,19 @@
 }
 
 .traveler-card__user-name-wrapper {
+  position: relative;
   flex-direction: column;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: -7px;
+  margin-top: 1px;
   background-color: @basic-white;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  z-index: 20;
 
   @media (min-width: @tablet-width) {
-    margin-top: -8px;
+    margin-top: 1px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
@@ -195,7 +216,7 @@
 }
 
 .traveler-card__shaw-all {
-  margin-top: 18px;
+  margin-top: 21px;
 
   @media (min-width: @tablet-width) {
     margin-top: 81px;

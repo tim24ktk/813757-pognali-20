@@ -8,7 +8,7 @@
   </head>
   <body class="page__body">
     <header class="header header--index-background">
-      <section class="main-menu main-menu--no-js">
+      <section class="main-menu main-menu--no-js" style="display: none;">
         <div class="main-menu__wrapper">
           <a class="main-menu__logo-link" href="#">
             <picture class="main-menu__logo">
@@ -74,13 +74,13 @@
             <img class="main-nav__logo-image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Сервис поиска попутчиков погнали">
           </picture>
           <ul class="main-nav__list buttons-list">
-            <li class="buttons-list__item">
+            <li class="buttons-list__item buttons-list__item--main-nav">
               <a class="buttons-list__link buttons-list__link--about-service" href="#">О сервисе</a>
             </li>
-            <li class="buttons-list__item">
+            <li class="buttons-list__item buttons-list__item--main-nav">
               <a class="buttons-list__link buttons-list__link--direction" href="form.html" >Направления</a>
             </li>
-            <li class="buttons-list__item">
+            <li class="buttons-list__item buttons-list__item--main-nav">
               <a class="buttons-list__link buttons-list__link--companion" href="catalog.html" >Попутчики</a>
             </li>
           </ul>
@@ -197,11 +197,13 @@
           </div>
           <div class="fellow-travelers__cards-wrapper">
             <article class="fellow-travelers__traveler-card traveler-card">
-              <picture class="traveler-card__image-wrapper">
-                <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
-                <img class="traveler-card__image" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-desktop@2x.jpg 2x" width="285" height="285" alt="Фото пользователя">
-              </picture>
+              <div class="traveler-card__zoom-wrapper">
+                <picture class="traveler-card__image-wrapper">
+                  <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
+                  <img class="traveler-card__image" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-desktop@2x.jpg 2x" width="285" height="285" alt="Фото пользователя">
+                </picture>
+              </div>
               <p class="traveler-card__level traveler-card__level--best">99<br><span class="treveler-card__level-word">level</span></p>
               <div class="traveler-card__user-name-wrapper">
                 <ul class="traveler-card__countries-list">
@@ -239,11 +241,13 @@
               </div>
             </article>
             <article class="traveler-card">
-              <picture class="traveler-card__image-wrapper">
-                <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
-                <img class="traveler-card__image" src="img/demin-desktop@1x.jpg" srcset="demin-desktop@2x.jpg 2x" width="285" height="285" alt="Фото пользователя">
-              </picture>
+              <div class="traveler-card__zoom-wrapper">
+                <picture class="traveler-card__image-wrapper">
+                  <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+                  <img class="traveler-card__image" src="img/demin-desktop@1x.jpg" srcset="demin-desktop@2x.jpg 2x" width="285" height="285" alt="Фото пользователя">
+                </picture>
+              </div>
               <p class="traveler-card__level traveler-card__level--lest-best">80<br><span class="treveler-card__level-word">level</span></p>
               <div class="traveler-card__user-name-wrapper">
                 <ul class="traveler-card__countries-list">
