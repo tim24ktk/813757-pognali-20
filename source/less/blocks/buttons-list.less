@@ -65,10 +65,27 @@
   &::before {
     position: absolute;
     top: 100%;
-    content: attr(data-hover);
     font-weight: 500;
     color: @basic_yellow_fade_30;
     transform: translate3d(0, 0, 0);
+  }
+
+  &--about-service {
+    &::before {
+      content: "О сервисе";
+    }
+  }
+
+  &--direction {
+    &::before {
+      content: "Направления";
+    }
+  }
+
+  &--companion {
+    &::before {
+      content: "Попутчики";
+    }
   }
 
   @media (max-width: @mobile-width-only) {
