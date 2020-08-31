@@ -43,6 +43,11 @@
     background-repeat: no-repeat;
     background-size: contain;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/rates@2x.png");
+      background-size: 100px 100px;
+    }
+
     @media (min-width: @tablet-width) {
       top: auto;
       bottom: 7px;
@@ -54,6 +59,10 @@
       top: 347px;
       right: 133px;
       .size(198px; 198px);
+
+      @media (min-resolution: 2dppx) {
+        background-size: 198px 198px;
+      }
     }
   }
 

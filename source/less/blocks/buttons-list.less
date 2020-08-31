@@ -27,27 +27,64 @@
 
 .buttons-list__item {
   .reset();
+  overflow: hidden;
+  padding: 0 4px;
+  height: 1em;
+  font-size: 30px;
+  line-height: 35px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 71px;
+  }
 
   @media (min-width: @desktop-width) {
     margin-top: 10px;
     margin-right: 35px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: @basic-white;
+  }
+
+  &:hover .buttons-list__link {
+    transform: translateY(-100%);
   }
 }
 
 .buttons-list__link {
+  position: relative;
+  display: inline-block;
   .reset();
-  font-size: 30px;
-  line-height: 35px;
   text-align: center;
   text-transform: uppercase;
   color: @special_background_light;
+  transition: transform 0.3s;
+
+  &::before {
+    position: absolute;
+    top: 100%;
+    content: attr(data-hover);
+    font-weight: 500;
+    color: @basic_yellow_fade_30;
+    transform: translate3d(0, 0, 0);
+  }
+
+  @media (max-width: @mobile-width-only) {
+    &::before {
+      font-weight: 400;
+    }
+  }
+
+  &:hover {
+    color: @basic_yellow;
+  }
 
   @media (min-width: @tablet-width) {
     &--main-menu {
       font-weight: 500;
     }
-    font-size: 60px;
-    line-height: 71px;
   }
 
   @media (min-width: @desktop-width) {

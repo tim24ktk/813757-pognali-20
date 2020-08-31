@@ -12,20 +12,20 @@
         <div class="main-nav__wrapper">
           <a class="main-nav__logo-link" href="index.html">
             <picture class="main-nav__logo main-nav__logo--catalog">
-              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png" alt="Сервис поиска попутчиков погнали">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png" alt="Сервис поиска попутчиков погнали">
-              <img class="main-nav__logo-image" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Сервис поиска попутчиков погнали">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x" alt="Сервис поиска попутчиков погнали">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x" alt="Сервис поиска попутчиков погнали">
+              <img class="main-nav__logo-image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Сервис поиска попутчиков погнали">
             </picture>
           </a>
           <ul class="main-nav__list buttons-list">
             <li class="buttons-list__item">
-              <a class="buttons-list__link" href="index.html">О сервисе</a>
+              <a class="buttons-list__link" href="index.html" data-hover="О сервисе">О сервисе</a>
             </li>
             <li class="buttons-list__item">
-              <a class="buttons-list__link" href="form.html">Направления</a>
+              <a class="buttons-list__link" href="form.html" data-hover="Направления">Направления</a>
             </li>
             <li class="buttons-list__item">
-              <a class="buttons-list__link" href="catalog.html">Попутчики</a>
+              <a class="buttons-list__link" href="catalog.html" data-hover="Попутчики">Попутчики</a>
             </li>
           </ul>
           <button class="main-nav__toggle main-nav__toggle--catalog-margin" type="button">
@@ -786,7 +786,11 @@
         <section class="travelers-catalog">
           <article class="catalog-traveler-card">
             <a class="catalog-traveler-card__image-link" href="">
-              <img class="catalog-traveler-card__image" src="img/firsova-mobile@1x.jpg" width="70" height="70" alt="Фото пользователя">
+              <picture class="catalog-traveler-card__image-wrapper">
+                <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
+                <img class="catalog-traveler-card__image" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Фото пользователя">
+              </picture>
             </a>
             <a class="catalog-traveler-card__traveler-name catalog-traveler-card__traveler-name--offline" href="">Таня Фирсова</a>
             <span class="catalog-traveler-card__likes catalog-traveler-card__likes--heart-active">1,5 м</span>
@@ -824,7 +828,11 @@
           </article>
           <article class="catalog-traveler-card">
             <a class="catalog-traveler-card__image-link" href="">
-              <img class="catalog-traveler-card__image" src="img/demin-mobile@1x.jpg" width="70" height="70" alt="Фото пользователя">
+              <picture class="catalog-traveler-card__image-wrapper">
+                <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+                <img class="catalog-traveler-card__image" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="70" height="70" alt="Фото пользователя">
+              </picture>
             </a>
             <a class="catalog-traveler-card__traveler-name catalog-traveler-card__traveler-name--offline" href="">Петя Демин</a>
             <span class="catalog-traveler-card__likes catalog-traveler-card__likes--heart">1500</span>
@@ -859,7 +867,11 @@
           </article>
           <article class="catalog-traveler-card">
             <a class="catalog-traveler-card__image-link" href="">
-              <img class="catalog-traveler-card__image" src="img/smolov-mobile@1x.jpg" width="70" height="70" alt="Фото пользователя">
+              <picture class="catalog-traveler-card__image-wrapper">
+                <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
+                <img class="catalog-traveler-card__image" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="Фото пользователя">
+              </picture>
             </a>
             <a class="catalog-traveler-card__traveler-name catalog-traveler-card__traveler-name--offline" href="">Марк Смолов</a>
             <span class="catalog-traveler-card__likes catalog-traveler-card__likes--heart">170</span>
@@ -897,7 +909,11 @@
           </article>
           <article class="catalog-traveler-card catalog-traveler-card--diff-padding">
             <a class="catalog-traveler-card__image-link" href="">
-              <img class="catalog-traveler-card__image" src="img/rogovaya-mobile@1x.jpg" width="70" height="70" alt="Фото пользователя">
+              <picture class="catalog-traveler-card__image-wrapper">
+                <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
+                <img class="catalog-traveler-card__image" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Фото пользователя">
+              </picture>
             </a>
             <a class="catalog-traveler-card__traveler-name catalog-traveler-card__traveler-name--online" href="">Лариса Роговая</a>
             <span class="catalog-traveler-card__likes catalog-traveler-card__likes--heart">23</span>
@@ -958,13 +974,13 @@
         </section>
       </div>
     </main>
-    <footer class="footer">
+    <footer class="footer footer--catalog">
       <div class="footer__wrapper">
         <a class="footer__logo" href="#" aria-label="Логотип: Погнали">
-          <picture class="footer_logo-picture">
-            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png" alt="Сервис поиска попутчиков погнали">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png" alt="Сервис поиска попутчиков погнали">
-            <img class="footer__logo-image" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Сервис поиска попутчиков погнали">
+          <picture class="footer__logo-picture">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x" alt="Сервис поиска попутчиков погнали">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x" alt="Сервис поиска попутчиков погнали">
+            <img class="footer__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Сервис поиска попутчиков погнали">
           </picture>
         </a>
         <ul class="footer__social-list socials-list socials-list--tablet-footer">
