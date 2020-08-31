@@ -5,6 +5,11 @@
     background-image: linear-gradient(to top, @basic_blue 20.5%, transparent 20.5%), url("../img/globe-back-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position: center -53px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(to top, @basic_blue 20.5%, transparent 20.5%), url("../img/globe-back-mobile@2x.jpg");
+      background-size: 320px auto;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -12,6 +17,11 @@
     background-repeat: no-repeat;
     background-position: center 291px;
     background-color: @special_blue_background;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/globe-back-tablet@2x.jpg");
+      background-size: 1479px auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -19,6 +29,11 @@
     background-repeat: no-repeat;
     background-position: center -101px;
     background-color: @basic_blue;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/globe-back-desktop@2x.jpg");
+      background-size: 1800px auto;
+    }
   }
 }
 
@@ -31,6 +46,11 @@
     background-image: url("../img/traveller-illustration-mobile@1x.png");
     background-repeat: no-repeat;
     background-position: 80px 127px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/traveller-illustration-mobile@2x.png");
+      background-size: 192px auto;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -41,6 +61,11 @@
     background-repeat: no-repeat;
     background-position: 285px 243px;
     background-size: 372px 450px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/traveller-illustration-tablet@2x.png");
+      background-size: 372px auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -53,6 +78,11 @@
     background-repeat: no-repeat;
     background-size: 431px 640px;
     background-position: 603px 9px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/traveller-illustration-desktop@2x.png");
+      background-size: 431px auto;
+    }
   }
 }
 
