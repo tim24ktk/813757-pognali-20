@@ -48,6 +48,12 @@
     color: @basic-white;
   }
 
+  &--main-nav {
+    @media (min-width: @desktop-width) {
+      margin-right: 24px;
+    }
+  }
+
   &:hover .buttons-list__link {
     transform: translateY(-100%);
   }
@@ -78,7 +84,9 @@
   }
 
   &:hover {
-    color: @basic_yellow;
+    &::before {
+      color: @basic_yellow;
+    }
   }
 
   @media (min-width: @tablet-width) {
