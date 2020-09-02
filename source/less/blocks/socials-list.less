@@ -26,6 +26,10 @@
   &--footer {
     margin-left: 0;
   }
+
+  &:hover {
+    background-color: @special_yellow_dark;
+  }
 }
 
 .socials-list__link {
@@ -38,6 +42,12 @@
     position: absolute;
     content: "";
     transform: translate(-50%, -50%);
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.2;
+    }
   }
 
   &--facebook {
