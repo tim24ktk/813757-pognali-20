@@ -52,6 +52,14 @@
     margin-top: 59px;
     order: 0;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .level__button {
@@ -88,6 +96,18 @@
     margin-right: 21px;
     display: block;
   }
+
+  &:hover {
+    &::before {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.3;
+    }
+  }
 }
 
 .level__price-controls {
@@ -118,7 +138,7 @@
     .size(16px; 2px);
     background-image: url("../img/level-input-hyphen.svg");
     background-size: 16px 2px;
-    z-index: 1;
+    z-index: 5;
   }
 
   @media (min-width: @tablet-width) {
@@ -137,6 +157,7 @@
     content: "";
     .size(17px; 10px);
     background-color: @basic-white;
+    z-index: 4;
   }
 
   @media (min-width: @tablet-width) {
@@ -163,6 +184,7 @@
 .level__input-min,
 .level__input-max {
   width: 111px;
+  padding: 5px 25px;
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -181,6 +203,18 @@
   @media (min-width: @desktop-width) {
     width: 96px;
   }
+
+  &:hover {
+    position: relative;
+    border: 1px solid @border_hover_color;
+    z-index: 3;
+  }
+
+  &:focus {
+    position: relative;
+    border: 1px solid @basic_blue;
+    z-index: 3;
+  }
 }
 
 .level__input-max {
@@ -195,6 +229,7 @@
 }
 
 .level__range-controls {
+  position: relative;
   width: 220px;
   margin-top: 24px;
 
@@ -245,6 +280,7 @@
   .size(10px; 10px);
   border-radius: 50%;
   background-color: @basic_blue_light_color;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     top: -9px;
@@ -253,6 +289,14 @@
 
   @media (min-width: @desktop-width) {
     left: 55px;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    box-shadow: 0 3px 7px @basic_black_shadow;
   }
 }
 
@@ -263,6 +307,7 @@
   .size(10px; 10px);
   border-radius: 50%;
   background-color: @basic_blue_light_color;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     top: -22px;
@@ -272,6 +317,14 @@
 
   @media (min-width: @desktop-width) {
     left: 174px;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    box-shadow: 0 3px 7px @basic_black_shadow;
   }
 }
 
@@ -306,5 +359,14 @@
     margin-bottom: 26px;
     margin-left: 8px;
     .size(194px; 49px);
+  }
+
+  &:hover {
+    box-shadow: 0 3px 6px @basic-black-shadow14;
+  }
+
+  &:active {
+    color: @basic_blue_special;
+    background-color: @level_border;
   }
 }

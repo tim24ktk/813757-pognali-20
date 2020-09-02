@@ -196,6 +196,14 @@
       margin-right: 94px;
     }
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .filtering-by-country__button-description {
@@ -261,7 +269,6 @@
   .reset_for_list();
   margin-top: 20px;
   margin-left: 25px;
-  color: @special_background_light_opacity;
 
   /*фильтр в закрытом состоянии*/
   &--closed {
@@ -306,6 +313,7 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  color: @special_background_light_opacity;
 
   @media (max-width: @mobile-width-only) {
     &:not(:first-child) {
@@ -314,6 +322,14 @@
   }
 
   &--selected {
+    color: @special_background_light;
+  }
+
+  &:hover {
+    color: @special_background_opacity;
+  }
+
+  &:active {
     color: @special_background_light;
   }
 
@@ -387,6 +403,20 @@
     margin-top: 31px;
     margin-right: 25px;
     margin-left: auto;
+    letter-spacing: normal;
+  }
+
+  &:hover {
+    background-color: @roll_up_hover;
+  }
+
+
+  &:active {
+    color: @special_background_light_opacity;
+
+    &::before {
+      opacity: 0.3;
+    }
   }
 }
 
