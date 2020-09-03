@@ -442,12 +442,13 @@
 
 .add-plane__people,
 .add-plane__duration {
-  padding: 13px;
+  padding: 13px 70px;
   text-align: center;
-  border: none;
+  border: 1px solid @input_border_color;
+  border-radius: 4px;
 
   &[value] {
-    width: 165px;
+    width: 220px;
     font-weight: 500;
     font-size: 15px;
     line-height: 14px;
@@ -455,13 +456,24 @@
     color: @basic_blue_light_color;
 
     @media (min-width: @tablet-width) {
+      padding: 13px 100px;
+      width: 531px;
       font-size: 20px;
       line-height: 18px;
     }
 
     @media (min-width: @desktop-width) {
-      width: 97px;
+      padding: 13px 55px;
+      width: 181px;
     }
+  }
+
+  &:hover {
+    border-color: @border_hover_color;
+  }
+
+  &:focus {
+    border-color: @basic_blue;
   }
 }
 
@@ -470,7 +482,6 @@
   margin-top: 8px;
   margin-left: 5px;
   .size(220px; 43px);
-  border: 1px solid @input_border_color;
   border-radius: 4px;
 
   @media (min-width: @tablet-width) {
@@ -498,6 +509,7 @@
 
 .add-plane__button-reduce {
   position: relative;
+  margin-right: -26px;
   padding: 13px;
   background-color: transparent;
   border: none;
@@ -512,6 +524,7 @@
     background-image: url("../img/qty-minus.svg");
     background-repeat: no-repeat;
     background-size: 14px 2px;
+    opacity: 0.3;
 
     @media (min-width: @tablet-width) {
       top: 33px;
@@ -525,7 +538,20 @@
     }
   }
 
+  &:hover {
+    &::before {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 1;
+    }
+  }
+
   @media (min-width: @tablet-width) {
+    margin-right: -69px;
     width: 69px;
   }
 
@@ -536,6 +562,7 @@
 
 .add-plane__button-add {
   position: relative;
+  margin-left: -26px;
   padding: 13px;
   background-color: transparent;
   border: none;
@@ -550,6 +577,7 @@
     background-image: url("../img/qty-plus.svg");
     background-repeat: no-repeat;
     background-position: center;
+    opacity: 0.3;
 
     @media (min-width: @tablet-width) {
       top: 25px;
@@ -559,7 +587,20 @@
     }
   }
 
+  &:hover {
+    &::before {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 1;
+    }
+  }
+
   @media (min-width: @tablet-width) {
+    margin-left: -69px;
     width: 69px;
   }
 
@@ -568,32 +609,13 @@
   }
 }
 
-.add-plane__children-label {
-  position: relative;
+.add-plane__children-wrapper {
   margin-top: 28px;
   margin-left: 10px;
+  position: relative;
   padding-left: 35px;
   font-size: 15px;
   line-height: 15px;
-  cursor: pointer;
-  user-select: none;
-
-  &::before {
-    position: absolute;
-    top: -8px;
-    left: -5px;
-    content: "";
-    .size(24px; 24px);
-    background-color: @basic-white;
-    border: 1px solid @input_border_color;
-    border-radius: 5px;
-
-    @media (min-width: @tablet-width) {
-      top: -9px;
-      left: -23px;
-      .size(34px; 34px);
-    }
-  }
 
   @media (min-width: @tablet-width) {
     margin-top: 34px;
@@ -610,6 +632,43 @@
     position: absolute;
     top: 273px;
     right: 138px;
+    z-index: 30;
+  }
+}
+
+.add-plane__children-label {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    position: absolute;
+    top: -8px;
+    left: -40px;
+    content: "";
+    .size(24px; 24px);
+    background-color: @basic-white;
+    border: 1px solid @input_border_color;
+    border-radius: 5px;
+
+    @media (min-width: @tablet-width) {
+      top: -9px;
+      left: -58px;
+      .size(34px; 34px);
+    }
+  }
+
+  &:hover {
+    &::before {
+      border-color: @border_hover_color;
+    }
+  }
+
+  &:active {
+    &::before {
+      border: none;
+      background-color: @transport_active;
+    }
   }
 }
 
@@ -622,8 +681,8 @@
 .add-plane__children:checked + .add-plane__children-label {
   &::after {
     position: absolute;
-    top: 0;
-    left: 1px;
+    top: -2px;
+    left: -33px;
     content: "";
     .size(14px; 13px);
     background-image: url("../img/icon-check-mark.svg");
@@ -631,9 +690,22 @@
 
     @media (min-width: @tablet-width) {
       top: 1px;
-      left: -14px;
+      left: -49px;
       .size(18px; 17px);
       background-size: 18px 17px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 1px;
+      left: -49px;
+      .size(18px; 17px);
+      background-size: 18px 17px;
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: 0.3;
     }
   }
 }
@@ -1083,7 +1155,6 @@
     }
   }
 
-
   &--not-selected {
     margin-top: 3px;
     margin-left: -40px;
@@ -1138,6 +1209,18 @@
         top: 10px;
       }
     }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      &::before {
+        opacity: 0.1;
+      }
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -1187,6 +1270,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-color: @basic_blue_light;
+    background-size: 9px 9px;
     border-radius: 50%;
 
     @media (min-width: @tablet-width) {
@@ -1208,6 +1292,18 @@
 
   @media (min-width: @desktop-width) {
     margin-left: 260px;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.1;
+    }
   }
 }
 
@@ -1261,12 +1357,27 @@
     .size(14px; 14px);
     background-image: url("../img/qty-plus.svg");
     background-repeat: no-repeat;
+    background-size: 14px 14px;
+    opacity: 0.3;
 
     @media (min-width: @tablet-width) {
       top: 25px;
       right: 24px;
       .size(21px; 21px);
       background-size: 21px 21px;
+    }
+  }
+
+
+  &:hover {
+    &::before {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 1;
     }
   }
 
@@ -1476,6 +1587,14 @@
     }
   }
 
+  &:hover {
+    border-color: @border_hover_color;
+  }
+
+  &:focus {
+    border-color: @basic_black;
+  }
+
   &--czech {
     margin-top: 15px;
     padding-top: 10px;
@@ -1496,5 +1615,9 @@
     padding: 25px 24px;
     padding-right: 19px;
     .size(730px; 142px);
+  }
+
+  &--error {
+    border-color: @special_red;
   }
 }

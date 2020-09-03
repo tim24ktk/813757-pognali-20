@@ -69,7 +69,7 @@
             <fieldset class="user-profile__fieldset">
               <legend class="user-profile__legend">Тэги</legend>
               <label class="visually-hidden" for="preference">Введите свои увлечения</label>
-              <textarea class="user-profile__preference" id="preference" name="preference" rows="" cols="" value="">&#35;бургер &#35;бар &#35;футбол &#35;концерт &#35;крафт</textarea>
+              <textarea class="user-profile__preference" id="preference" name="preference" rows="" cols="" placeholder="&#35;бургер &#35;бар &#35;футбол &#35;концерт &#35;крафт"></textarea>
             </fieldset>
             <button class="visually-hidden" type="submit">Отправить</button>
           </form>
@@ -180,8 +180,10 @@
                     <button class="add-plane__button-add" type="button"><span class="visually-hidden">Увеличить количество дней</span></button>
                   </div>
                 </div>
-                <input class="add-plane__children visually-hidden" type="checkbox" name="children" id="children" checked>
-                <label class="add-plane__children-label" for="children" checked>Можно с детьми</label>
+                <div class="add-plane__children-wrapper">
+                  <input class="add-plane__children visually-hidden" type="checkbox" name="children" id="children" checked>
+                  <label class="add-plane__children-label" for="children" checked>Можно с детьми</label>
+                </div>
                 <section class="add-plane__calendar calendar">
                   <div class="calendar__months-wrapper">
                     <button class="calendar__previous-month" type="button"><span class="visually-hidden">Предыдущий месяц</span></button>

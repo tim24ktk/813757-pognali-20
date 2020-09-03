@@ -60,7 +60,11 @@
   .size(15px; 21px);
   background-image: url("../img/month-arrow-left.svg");
   background-color: transparent;
+  background-size: 9px 18px;
+  background-repeat: no-repeat;
   border: none;
+  opacity: 0.3;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     margin-left: 12px;
@@ -71,13 +75,26 @@
   @media (min-width: @desktop-width) {
     margin-left: 0;
   }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .calendar__next-month {
+  margin-right: -4px;
   .size(15px; 21px);
   background-image: url("../img/month-arrow-right.svg");
   background-color: transparent;
+  background-size: 9px 18px;
+  background-repeat: no-repeat;
   border: none;
+  opacity: 0.3;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     margin-right: 12px;
@@ -87,6 +104,14 @@
 
   @media (min-width: @desktop-width) {
     margin-right: 6px;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
   }
 }
 
@@ -177,7 +202,21 @@
   }
 
   &--current-day {
-    border: 2px solid @holiday_color;
+    box-shadow: inset 0 0 0 2px @holiday_color;
+
+    @media (min-width: @tablet-width) {
+      box-shadow: inset 0 0 0 4px @holiday_color;
+    }
+  }
+
+  &:hover {
+    color: @basic-white;
+    background-color: @basic_blue_light_color;
+    box-shadow: inset 0 0 0 2px @holiday_color;
+
+    @media (min-width: @tablet-width) {
+      box-shadow: inset 0 0 0 4px @holiday_color;
+    }
   }
 
   @media (min-width: @tablet-width) {

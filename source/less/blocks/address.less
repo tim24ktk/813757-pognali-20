@@ -123,6 +123,7 @@
 }
 
 .adress__img-wrapper {
+  display: none;
   margin: auto;
   .size(320px; auto);
   margin-top: -50px;
@@ -174,5 +175,19 @@
 
   @media (min-width: @desktop-width) {
     .size(1440px; 584px);
+  }
+}
+
+.address__interactive-map {
+  margin-top: -50px;
+  .size(100%; 424px);
+
+  @media (min-width: @tablet-width) {
+    .size(100%; 581px);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -121px;
+    .size(100%; 584px);
   }
 }

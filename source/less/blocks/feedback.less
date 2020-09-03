@@ -125,6 +125,7 @@
 }
 
 .feedback__registration-form {
+  position: relative;/*если не получиться удалить*/
   margin-top: 28px;
   width: 270px;
   display: flex;
@@ -183,6 +184,32 @@
 
     @media (min-width: @desktop-width) {
       .size(858px; 80px);
+    }
+  }
+
+  /*использовать класс для вывода ошибки input*/
+  &--error {
+    &::before {
+      position: absolute;
+      top: 21px;
+      left: 26px;
+      content: "Введите ваш e-mail";
+      font-family: "Blogger Sans", "Arial", sans-serif;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 18px;
+      color: @basic_red;
+
+      @media (min-width: @tablet-width) {
+        top: 30px;
+        left: 36px;
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+
+    & input::placeholder {
+      opacity: 0;
     }
   }
 
