@@ -19,6 +19,12 @@
       margin-left: 2px;
     }
   }
+
+  &:hover {
+    .transport-list-form__tooltip {
+      display: block;
+    }
+  }
 }
 
 .transport-list-form__tansport-checkbox-label {
@@ -146,5 +152,32 @@
     &::after {
       opacity: 0.3;
     }
+  }
+}
+
+.transport-list-form__tooltip {
+  position: absolute;
+  width: max-content;
+  top: 44px;
+  left: 60%;
+  display: none;
+  padding: 18px 20px;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: @basic-white;
+  background-color: @tooltip_background;
+  border-radius: 4px;
+  z-index: 100;
+  transform: translate(-60%);
+
+  &::before {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    content: "";
+    border: 9px solid transparent;
+    border-bottom: 10px solid @tooltip_background;
+    transform: translate(-50%);
   }
 }
