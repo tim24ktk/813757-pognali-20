@@ -124,6 +124,7 @@
   background-color: @special_blue_light;
   border: none;
   border-radius: 20px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     margin-top: 42px;
@@ -144,6 +145,15 @@
     border-top-left-radius: 0;
     order: 1;
   }
+
+  &:hover {
+    background-color: @photo_hover;
+  }
+
+  &:active {
+    color: @basic_blue_special;
+    background-color: @special_blue_light;
+  }
 }
 
 .user-profile__button-change {
@@ -163,17 +173,14 @@
 }
 
 .user-profile__fieldset {
+  .reset();
   margin-top: 24px;
-  padding: 15px 20px;
   .size(270px; 98px);
-  border: 1px solid @input_border_color;
-  border-radius: 10px;
+  border: none;
 
   @media (min-width: @tablet-width) {
-    margin-top: 52px;
-    margin-left: 34px;
-    padding: 6px 20px;
-    .size(618px; 105px);
+    margin-top: 60px;
+    margin-left: 35px;
     transform: rotate(180deg);
   }
 
@@ -182,19 +189,27 @@
     margin-left: 64px;
     .size(732px; 105px);
   }
+
+  &:hover {
+    border-color: @textarea_hover;
+  }
 }
 
 .user-profile__legend {
-  margin-left: 77px;
+  position: relative;
+  margin-left: 99px;
   padding: 0 18px;
+  width: 72px;
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: @basic_blue_light_color;
+  background-color: @basic_blue_light;
+  z-index: 25;
 
   @media (min-width: @tablet-width) {
-    margin-left: 244px;
+    margin-left: 283px;
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.1em;
@@ -203,18 +218,21 @@
 
 
   @media (min-width: @desktop-width) {
-    margin-left: 604px;
+    margin-left: 630px;
+    width: 82px;
     letter-spacing: 0.07em;
   }
 
   &--transport {
     margin-left: 65px;
     padding: 0 14px;
+    width: 110px;
 
     @media (min-width: @tablet-width) {
       margin-left: 65px;
       padding: 0 19px;
       display: block;
+      width: 151px;
       font-weight: 500;
       font-size: 20px;
       line-height: 20px;
@@ -229,11 +247,29 @@
 }
 
 .user-profile__preference {
-  width: 220px;
+  margin-top: -9px;
+  padding-top: 27px;
+  padding-right: 28px;
+  padding-bottom: 27px;
+  padding-left: 25px;
+  .size(270px; 90px);
   background-color: transparent;
-  border: none;
+  border: 1px solid @input_border_color;
+  border-radius: 10px;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: @special_grey;
 
-  &[value] {
+  @media (min-width: @tablet-width) {
+    padding-top: 34px;
+    padding-left: 39px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  &::placeholder {
     font-family: "Blogger Sans", "Arial", sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -247,12 +283,21 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 557px;
+    .size(618px; 95px);
     transform: rotate(180deg);
   }
 
   @media (min-width: @desktop-width) {
-    width: 671px;
+    margin-top: -11px;
+    width: 732px;
+  }
+
+  &:hover {
+    border-color: @textarea_hover;
+  }
+
+  &:focus {
+    border-color: @basic_blue;
   }
 }
 
@@ -277,12 +322,13 @@
   margin-left: 57px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 42px;
+    margin-top: 10px;
     margin-right: 57px;
     transform: rotate(180deg);
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: 10px;
     margin-right: 97px;
   }
 }

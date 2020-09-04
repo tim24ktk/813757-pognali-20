@@ -12,6 +12,9 @@
         <div class="main-nav__wrapper">
           <a class="main-nav__logo-link" href="index.html">
             <picture class="main-nav__logo main-nav__logo--form-margin">
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@1x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
+              <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x" alt="Сервис поиска попутчиков погнали">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x" alt="Сервис поиска попутчиков погнали">
               <img class="main-nav__logo-image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Сервис поиска попутчиков погнали">
@@ -44,7 +47,10 @@
         <div class="main-nav__wrapper--style main-nav__wrapper--style-form  main-nav__wrapper--form-margin  main-nav__wrapper">
           <h1 class="main-nav__heading main-nav__heading--catalog main-nav__heading--form">Направления</h1>
           <p class="main-nav__level">80<br><span class="main-nav__level-word">level</p>
-          <img class="main-nav__image" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2x" width="285" height="285" alt="Фото пользователя">
+          <picture class="main-nav__image-wrapper">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
+            <img class="main-nav__image" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2x" width="285" height="285" alt="Фото пользователя">
+          </picture>
         </div>
       </nav>
     </header>
@@ -53,6 +59,8 @@
         <div class="user-profile__wrapper">
           <p class="user-profile__level">80<br><span class="user-profile__level-word">level</p>
           <picture class="user-profile__image-wrapper">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.webp 1x, img/photo-account-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/photo-account-mobile@1x.webp 1x, img/photo-account-mobile@2x.webp 2x">
             <sourse media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.jpg 1x, photo-account-tablet@2x.jpg 2x">
             <img class="user-profile__image" src="img/photo-account-mobile@1x.jpg" srcset="img/photo-account-mobile@2x.jpg 2x" width="70" height="70" alt="Фото пользователя">
           </picture>
@@ -61,7 +69,7 @@
             <fieldset class="user-profile__fieldset">
               <legend class="user-profile__legend">Тэги</legend>
               <label class="visually-hidden" for="preference">Введите свои увлечения</label>
-              <textarea class="user-profile__preference" id="preference" name="preference" rows="" cols="" value="">&#35;бургер &#35;бар &#35;футбол &#35;концерт &#35;крафт</textarea>
+              <textarea class="user-profile__preference" id="preference" name="preference" rows="" cols="" placeholder="&#35;бургер &#35;бар &#35;футбол &#35;концерт &#35;крафт"></textarea>
             </fieldset>
             <button class="visually-hidden" type="submit">Отправить</button>
           </form>
@@ -172,8 +180,10 @@
                     <button class="add-plane__button-add" type="button"><span class="visually-hidden">Увеличить количество дней</span></button>
                   </div>
                 </div>
-                <input class="add-plane__children visually-hidden" type="checkbox" name="children" id="children" checked>
-                <label class="add-plane__children-label" for="children" checked>Можно с детьми</label>
+                <div class="add-plane__children-wrapper">
+                  <input class="add-plane__children visually-hidden" type="checkbox" name="children" id="children" checked>
+                  <label class="add-plane__children-label" for="children" checked>Можно с детьми</label>
+                </div>
                 <section class="add-plane__calendar calendar">
                   <div class="calendar__months-wrapper">
                     <button class="calendar__previous-month" type="button"><span class="visually-hidden">Предыдущий месяц</span></button>
@@ -194,45 +204,45 @@
                       <th class="calendar__day-of-week-item-letter calendar__day-of-week-item-letter--holiday">в<span class="calendar__day-of-week-item-letter-second">с</span></th>
                     </tr>
                     <tr class="calendar__day-of-week-list">
-                      <td class="calendar__day-of-week-item">23</td>
-                      <td class="calendar__day-of-week-item">24</td>
-                      <td class="calendar__day-of-week-item">25</td>
-                      <td class="calendar__day-of-week-item">26</td>
-                      <td class="calendar__day-of-week-item">27</td>
-                      <td class="calendar__day-of-week-item">28</td>
-                      <td class="calendar__day-of-week-item">1<span class="calendar__day-of-week-item-month">мар</span></td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">23</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">24</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">25</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">26</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">27</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">28</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">1<span class="calendar__day-of-week-item-month">мар</span></td>
                     </tr>
                     <tr class="calendar__day-of-week-list">
-                      <td class="calendar__day-of-week-item">2</td>
-                      <td class="calendar__day-of-week-item">3</td>
-                      <td class="calendar__day-of-week-item">4</td>
-                      <td class="calendar__day-of-week-item">5</td>
-                      <td class="calendar__day-of-week-item">6</td>
-                      <td class="calendar__day-of-week-item">7</td>
-                      <td class="calendar__day-of-week-item">8</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">2</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">3</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">4</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">5</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">6</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">7</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">8</td>
                     </tr>
                     <tr class="calendar__day-of-week-list">
-                      <td class="calendar__day-of-week-item">9</td>
-                      <td class="calendar__day-of-week-item">10</td>
-                      <td class="calendar__day-of-week-item">11</td>
-                      <td class="calendar__day-of-week-item">12</td>
-                      <td class="calendar__day-of-week-item">13</td>
-                      <td class="calendar__day-of-week-item">14</td>
-                      <td class="calendar__day-of-week-item">15</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">9</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">10</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">11</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">12</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">13</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">14</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">15</td>
                     </tr>
                     <tr class="calendar__day-of-week-list">
-                      <td class="calendar__day-of-week-item">16</td>
-                      <td class="calendar__day-of-week-item">17</td>
-                      <td class="calendar__day-of-week-item">18</td>
-                      <td class="calendar__day-of-week-item">19</td>
-                      <td class="calendar__day-of-week-item">20</td>
-                      <td class="calendar__day-of-week-item">21</td>
-                      <td class="calendar__day-of-week-item">22</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">16</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">17</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">18</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">19</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">20</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">21</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">22</td>
                     </tr>
                     <tr class="calendar__day-of-week-list">
-                      <td class="calendar__day-of-week-item">23</td>
-                      <td class="calendar__day-of-week-item">24</td>
-                      <td class="calendar__day-of-week-item">25</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">23</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">24</td>
+                      <td class="calendar__day-of-week-item calendar__day-of-week-item--disabled">25</td>
                       <td class="calendar__day-of-week-item calendar__day-of-week-item--selected calendar__day-of-week-item--current-day">26<span class="calendar__day-of-week-item-arrival">Заезд</span></td>
                       <td class="calendar__day-of-week-item calendar__day-of-week-item--selected">27</td>
                       <td class="calendar__day-of-week-item calendar__day-of-week-item--selected">28<span class="calendar__day-of-week-item-departure">Выезд</span></td>
@@ -963,6 +973,9 @@
       <div class="footer__wrapper">
         <a class="footer__logo" href="#" aria-label="Логотип: Погнали">
           <picture class="footer__logo-picture">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
+            <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x" alt="Сервис поиска попутчиков погнали">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x" alt="Сервис поиска попутчиков погнали">
             <img class="footer__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Сервис поиска попутчиков погнали">

@@ -45,6 +45,13 @@
     padding: 0;
     width: 949px;
   }
+
+  &:hover {
+    .catalog-traveler-card__image {
+      transform: scale(1.2);
+    }
+    box-shadow: 0 4px 9px 0 @basic-black-shadow;
+  }
 }
 
 .catalog-traveler-card__image-link {
@@ -55,13 +62,16 @@
   grid-row-end: 3;
   margin-left: 3px;
   border-radius: 50%;
+  display: block;
+  .size(70px; 70px);
+  overflow: hidden;
 
   @media (min-width: @tablet-width) {
     grid-row-start: 1;
     grid-row-end: 4;
     margin-top: 2px;
     .size(190px; 189px);
-    border-radius: 20%;
+    border-radius: 10%;
   }
 
   @media (min-width: @desktop-width) {
@@ -80,11 +90,10 @@
 
 .catalog-traveler-card__image {
   border-radius: 50%;
-  object-fit: cover;
 
   @media (min-width: @tablet-width) {
     .size(190px; 190px);
-    border-radius: 11%;
+    border-radius: 10%;
   }
 
   @media (min-width: @desktop-width) {
@@ -158,6 +167,14 @@
     margin-top: 46px;
     margin-left: 63px;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .catalog-traveler-card__likes {
@@ -173,9 +190,10 @@
   text-transform: uppercase;
   color: @basic_blue;
 
+
   &::before {
     position: absolute;
-    top: -10px;
+    top: -7px;
     left: -36px;
     content: "";
     .size(31px; 31px);
@@ -190,30 +208,93 @@
     }
   }
 
+  &::after {
+    position: absolute;
+    content: "";
+    .size(31px; 31px);
+  }
+
   &--heart-active {
     &::before {
-      background-image: url("../img/heart-active.svg");
-      background-position: 9px 10px;
       background-color: @light_red_background;
 
+      @media (min-width: @desktop-width) {
+        left: -59px;
+      }
+    }
+
+    &:hover {
+      &::before {
+        background-color: @red_hover;
+      }
+    }
+
+    &::after {
+      top: 3px;
+      left: -26px;
+      background-image: url("../img/heart-active.svg");
+      background-size: 13px 11px;
+      background-repeat: no-repeat;
+
       @media (min-width: @tablet-width) {
-        background-position: center;
+        top: -7px;
+        left: -45px;
         background-size: 20px 20px;
+        background-position: center;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: -9px;
+        left: -48px;
+      }
+    }
+
+    &:active {
+      &::after {
+        opacity: 0.3;
       }
     }
   }
 
   &--heart {
-    width: 48px;
+    margin-right: 5px;
 
     &::before {
-      background-image: url("../img/heart.svg");
-      background-position: 10px 10px;
+      top: -9px;
+      left: -38px;
       background-color: @heart_background;
 
       @media (min-width: @tablet-width) {
+        top: -17px;
+        left: -56px;
+      }
+    }
+
+    &::after {
+      top: 2px;
+      left: -28px;
+      background-image: url("../img/heart.svg");
+      background-size: 13px 11px;
+      background-repeat: no-repeat;
+      opacity: 0.3;
+
+      @media (min-width: @tablet-width) {
+        top: -6px;
+        left: -46px;
         background-position: center;
         background-size: 20px 20px;
+      }
+    }
+
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      &::after {
+        opacity: 0.1;
       }
     }
   }
@@ -226,21 +307,42 @@
     font-size: 20px;
     line-height: 20px;
     margin-top: 16px;
+
+    &--diff-margin-first {
+      margin-right: 15px;
+    }
+
+    &--diff-margin-second {
+      margin-right: 26px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin-top: auto;
     margin-right: 21px;
     margin-bottom: 60px;
+
+    &--diff-margin {
+      margin-right: 29px;
+    }
+
+    &--diff-margin-first {
+      margin-right: 39px;
+    }
+
+    &--diff-margin-second {
+      margin-right: 49px;
+    }
   }
 }
 
 .catalog-traveler-card__hobbies {
+  .reset();
   grid-column-start: 1;
   grid-column-end: -1;
   grid-row-start: 3;
   grid-row-end: 4;
-  margin-top: 7px;
+  margin-top: 14px;
   margin-left: 10px;
   width: 190px;
   font-size: 15px;
@@ -248,7 +350,7 @@
   color: @special_grey;
 
   &--margin {
-    margin-top: 9px;
+    margin-top: 15px;
   }
 
   @media (min-width: @tablet-width) {
@@ -256,7 +358,8 @@
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
-    margin-top: 10px;
+    margin-top: 0;
+    margin-bottom: 12px;
     margin-left: 15px;
     width: 227px;
     font-size: 20px;
@@ -277,6 +380,7 @@
   grid-row-start: 4;
   grid-row-end: 5;
   .reset();
+  margin-top: 13px;
   margin-left: 10px;
   font-size: 15px;
   line-height: 16px;
@@ -329,10 +433,10 @@
   grid-row-start: 4;
   grid-row-end: 5;
   .reset_for_list();
-  margin-top: 37px;
+  margin-top: 52px;
 
   &--margin {
-    margin-top: 33px;
+    margin-top: 48px;
   }
 
   @media (min-width: @tablet-width) {
@@ -471,7 +575,7 @@
   color: @special_grey;
 
   &--margin {
-    margin-top: 21px;
+    margin-top: 18px;
   }
 
   &::before {
@@ -557,13 +661,13 @@
   grid-row-start: 5;
   grid-row-end: 6;
   justify-self: end;
-  margin-right: 11px;
+  margin-right: 8px;
   font-size: 15px;
-  line-height: 16px;
+  line-height: 13px;
   color: @special_grey;
 
   &--margin {
-    margin-top: 21px;
+    margin-top: 19px;
   }
 
   &::after {
@@ -661,7 +765,7 @@
   }
 
   &--fifty {
-    margin-top: 55px;
+    margin-top: 57px;
 
     &::before {
       top: -14px;
@@ -729,7 +833,7 @@
   margin-left: 5px;
 
   &--margin {
-    margin-top: 17px;
+    margin-top: 18px;
   }
 
   @media (min-width: @tablet-width) {

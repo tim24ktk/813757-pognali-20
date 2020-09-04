@@ -110,6 +110,14 @@
   text-decoration: underline;
   color: @basic_yellow;
 
+  &:hover {
+    color: @special_orange;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 28px;
     line-height: 32px;
@@ -117,31 +125,96 @@
 }
 
 .feedback__registration-form {
+  position: relative;/*если не получиться удалить*/
   margin-top: 28px;
   width: 270px;
   display: flex;
   background-color: @basic-white;
   border-radius: 10px;
 
+  &:hover {
+    & input::placeholder {
+      color: @special-grey-placeholder;
+    }
+  }
+
   & input {
-    margin: auto;
-    margin-left: 14px;
-    width: 175px;
+    .size(220px; 62px);
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    color: @special_background_light;
     border: none;
-    border-radius: 10px;
-    padding: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 21px 25px;
+
+    &:hover {
+      background-color: @basic_blue_light;
+    }
+
+    &:focus {
+      padding: 17px 21px;
+      color: @basic-white;
+      background-color: @special_background_light;
+      border: 4px solid @basic-white;
+
+      @media (min-width: @tablet-width) {
+        padding: 30px 35px;
+      }
+
+      &::placeholder {
+        color: transparent;
+      }
+    }
+
+    &:active {
+      background-color: @special_background_light;
+    }
 
     @media (min-width: @tablet-width) {
-      margin-left: 23px;
-      width: 501px;
+      .size(546px; 80px);
+      padding: 30px 35px;
+      font-size: 24px;
+      line-height: 24px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
     }
 
     @media (min-width: @desktop-width) {
-      width: 808px;
+      .size(858px; 80px);
+    }
+  }
+
+  /*использовать класс для вывода ошибки input*/
+  &--error {
+    &::before {
+      position: absolute;
+      top: 21px;
+      left: 26px;
+      content: "Введите ваш e-mail";
+      font-family: "Blogger Sans", "Arial", sans-serif;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 18px;
+      color: @basic_red;
+
+      @media (min-width: @tablet-width) {
+        top: 30px;
+        left: 36px;
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+
+    & input::placeholder {
+      opacity: 0;
     }
   }
 
   & input::placeholder {
+    font-family: "Blogger Sans", "Arial", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 18px;
@@ -169,13 +242,17 @@
 
 .feedback__registration-form-button {
   position: relative;
-  margin-left: 16px;
+  margin-left: -10px;
   padding: 24px 24px;
   .size(60px; 62px);
   background-color: @basic_yellow;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+
+  &:hover {
+    background-color: @special_yellow_dark;
+  }
 
   &::before {
     position: absolute;
@@ -190,6 +267,17 @@
       right: 30px;
     }
   }
+
+  &:active {
+    .feedback__invisible {
+      color: @basic_blue_light_30;
+    }
+
+    &::before {
+      opacity: 0.3;
+    }
+  }
+
 
   @media (min-width: @tablet-width) {
     .size(80px; 80px);

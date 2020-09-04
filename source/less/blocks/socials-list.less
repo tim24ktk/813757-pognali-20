@@ -10,10 +10,6 @@
   background-color: @basic_yellow;
   border-radius: 50%;
 
-  &--without-background {
-    background-color: transparent;
-  }
-
   @media (min-width: @tablet-width) {
     margin-left: 20px;
     .size(62px; 62px);
@@ -25,6 +21,18 @@
 
   &--footer {
     margin-left: 0;
+  }
+
+  &:hover {
+    background-color: @special_yellow_dark;
+  }
+
+  &--without-background {
+    background-color: transparent;
+
+    &:hover {
+      background-color: transparent;
+    }
   }
 }
 
@@ -38,6 +46,18 @@
     position: absolute;
     content: "";
     transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0.3;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.2;
+    }
   }
 
   &--facebook {

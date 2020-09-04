@@ -88,6 +88,7 @@
     position: absolute;
     top: 24px;
     left: 24px;
+    width: 12px;
     font-weight: 700;
     font-size: 16px;
     line-height: 16px;
@@ -234,8 +235,19 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 31px;
+    align-self: flex-end;
+    height: 35px;
+    margin-top: 0;
+    margin-bottom: 12px;
     margin-left: 127px;
     letter-spacing: 0.08em;
+  }
+
+  &:hover {
+    color: @basic_black_fade_60;
+  }
+
+  &:active {
+    color: @basick_black_fade_10;
   }
 }

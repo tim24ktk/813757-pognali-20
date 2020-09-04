@@ -42,11 +42,25 @@
         background-image: url("../img/triangle.svg");
         background-repeat: no-repeat;
       }
+
+      &:active {
+        &::before {
+          opacity: 0.3;
+        }
+      }
     }
 
     &--submit {
       padding-left: 33px;
       text-align: left;
     }
+  }
+
+  &:hover {
+    background-color: @special_yellow_dark;
+  }
+
+  &:active {
+    color: @basic_blue_special;
   }
 }
