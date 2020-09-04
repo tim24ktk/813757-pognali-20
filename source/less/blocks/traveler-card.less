@@ -137,11 +137,18 @@
 }
 
 .traveler-card__countrie-item {
+  position: relative;
   margin: auto;
   margin-right: 20px;
 
   &:last-child {
     margin-right: 0;
+  }
+
+  &:hover {
+    .traveler-card__tooltip {
+      display: block;
+    }
   }
 }
 
@@ -236,5 +243,31 @@
     margin-top: 64px;
     margin-bottom: 54px;
     margin-left: 71px;
+  }
+}
+
+.traveler-card__tooltip {
+  position: absolute;
+  width: max-content;
+  top: 32px;
+  left: 50%;
+  display: none;
+  padding: 18px 20px;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  background-color: @tooltip_background;
+  border-radius: 4px;
+  z-index: 100;
+  transform: translate(-50%);
+
+  &::before {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    content: "";
+    border: 9px solid transparent;
+    border-bottom: 10px solid @tooltip_background;
+    transform: translate(-50%);
   }
 }
