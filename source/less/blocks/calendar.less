@@ -188,6 +188,7 @@
   color: @special_grey_light;
   text-align: center;
   border: 1px solid @calendar_border_color;
+  cursor: pointer;
 
   &--selected {
     font-weight: 500;
@@ -216,6 +217,17 @@
 
     @media (min-width: @tablet-width) {
       box-shadow: inset 0 0 0 4px @holiday_color;
+    }
+  }
+
+
+  &--disabled {
+    cursor: inherit;
+
+    &:hover {
+      color: @special_grey_light;
+      background-color: @basic-white;
+      box-shadow: inherit;
     }
   }
 
