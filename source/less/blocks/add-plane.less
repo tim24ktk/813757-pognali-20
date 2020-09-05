@@ -490,6 +490,7 @@
 }
 
 .add-plane__button-wrapper {
+  position: relative;
   display: flex;
   margin-top: 8px;
   margin-left: 5px;
@@ -520,50 +521,41 @@
 }
 
 .add-plane__button-reduce {
-  position: relative;
-  margin-right: -26px;
+  position: absolute;
   padding: 13px;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  top: 9px;
+  left: 8px;
+  .size(14px; 2px);
+  content: "";
+  background-image: url("../img/qty-minus.svg");
+  background-repeat: no-repeat;
+  background-size: 14px 2px;
+  background-position: center;
+  opacity: 0.3;
 
-  &::before {
-    position: absolute;
-    top: 20px;
-    right: -1px;
-    .size(14px; 2px);
-    content: "";
-    background-image: url("../img/qty-minus.svg");
-    background-repeat: no-repeat;
-    background-size: 14px 2px;
-    opacity: 0.3;
+  @media (min-width: @tablet-width) {
+    top: 21px;
+    left: -2px;
+    .size(20px; 3px);
+    background-size: 20px 3px;
+  }
 
-    @media (min-width: @tablet-width) {
-      top: 33px;
-      right: 27px;
-      .size(20px; 3px);
-      background-size: 20px 3px;
-    }
-
-    @media (min-width: @desktop-width) {
-      right: -9px;
-    }
+  @media (min-width: @desktop-width) {
+    left: 14px;
   }
 
   &:hover {
-    &::before {
-      opacity: 0.6;
-    }
+    opacity: 0.6;
   }
 
   &:active {
-    &::before {
-      opacity: 1;
-    }
+    opacity: 1;
   }
 
   @media (min-width: @tablet-width) {
-    margin-right: -69px;
     width: 69px;
   }
 
@@ -573,51 +565,34 @@
 }
 
 .add-plane__button-add {
-  position: relative;
-  margin-left: -26px;
+  position: absolute;
   padding: 13px;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  top: 9px;
+  right: 8px;
+  .size(14px; 14px);
+  content: "";
+  background-image: url("../img/qty-plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px 14px;
+  opacity: 0.3;
 
-  &::before {
-    position: absolute;
-    top: 14px;
-    right: 12px;
-    .size(14px; 14px);
-    content: "";
-    background-image: url("../img/qty-plus.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.3;
-
-    @media (min-width: @tablet-width) {
-      top: 25px;
-      right: 18px;
-      .size(20px; 20px);
-      background-size: 20px 20px;
-    }
+  @media (min-width: @tablet-width) {
+    top: 21px;
+    right: 16px;
+    .size(20px; 20px);
+    background-size: 20px 20px;
   }
 
   &:hover {
-    &::before {
-      opacity: 0.6;
-    }
+    opacity: 0.6;
   }
 
   &:active {
-    &::before {
-      opacity: 1;
-    }
-  }
-
-  @media (min-width: @tablet-width) {
-    margin-left: -69px;
-    width: 69px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 30px;
+    opacity: 1;
   }
 }
 
@@ -681,6 +656,12 @@
       border: none;
       background-color: @transport_active;
     }
+  }
+}
+
+.add-plane__children-wrapper .add-plane__children {
+  &:focus + .add-plane__children-label {
+    opacity: 0.6;
   }
 }
 
@@ -1112,49 +1093,47 @@
 }
 
 .add-plane__open {
-  position: relative;
-  margin-top: 8px;
-  margin-left: -40px;
+  position: absolute;
   .size(38px; 32px);
   border: none;
   background-color: @basic-white;
   cursor: pointer;
+  top: 9px;
+  right: 64px;
+  content: "";
+  background-image: url("../img/arrow-back.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   box-shadow: -4px 0 5px 0 @basic-white;
 
-  &::before {
-    position: absolute;
-    top: 9px;
-    left: 13px;
-    content: "";
-    .size(12px; 16px);
-    background-image: url("../img/arrow-back.svg");
-    background-repeat: no-repeat;
-    opacity: 0.5;
+  @media (min-width: @tablet-width) {
+    top: 29px;
+    right: 218px;
+    .size(19px; 17px);
+    background-size: 19px 22px;
 
-    @media (min-width: @tablet-width) {
-      left: 9px;
-      .size(19px; 17px);
-      background-size: 19px 22px;
+    &--second {
+      top: 23px;
     }
+  }
 
-    @media (min-width: @desktop-width) {
-      top: 3px;
-      left: 7px;
-      .size(22px; 24px);
-      background-size: 22px 32px;
+  @media (min-width: @desktop-width) {
+    top: 24px;
+    right: 440px;
+    .size(22px; 24px);
+    background-size: 22px 32px;
+
+    &--second {
+      top: 17px;
     }
   }
 
   &:hover {
-    &::before {
-      opacity: 1;
-    }
+    opacity: 1;
   }
 
   &:active {
-    &::before {
-      opacity: 0.3;
-    }
+    opacity: 0.3;
   }
 
   &::after {
@@ -1168,28 +1147,20 @@
 
     @media (min-width: @tablet-width) {
       .size(14px; 14px);
-      top: 10px;
-      right: -50px;
+      top: 0;
+      right: -60px;
       z-index: 2;
     }
 
     @media (min-width: @desktop-width) {
-      right: -66px;
-    }
-  }
-
-  /*стилизует кнопку в активном состоянии input*/
-  @media (min-width: @tablet-width) {
-    &--active-input {
-      &::after {
-        display: block;
-      }
+      top: 5px;
+      right: -77px;
     }
   }
 
   &--not-selected {
-    margin-top: 3px;
-    margin-left: -40px;
+    top: 5px;
+    right: 12px;
 
     &::after {
       left: -17px;
@@ -1210,30 +1181,39 @@
     }
   }
 
+
+  /*стилизует кнопку в активном состоянии input*/
+  @media (min-width: @tablet-width) {
+    &--active-input {
+      &::after {
+        display: block;
+      }
+    }
+  }
+
   &--active-input {
-    position: relative;
-    margin-top: 5px;
-    margin-left: -39px;
+    position: absolute;
+    top: 13px;
+    right: 23px;
     background-color: transparent;
     box-shadow: none;
     z-index: 12;
-
-    &::before {
-      .size(9px; 10px);
-      background-image: url("../img/icon-close-white.svg");
-      background-size: 9px 10px;
-    }
+    .size(15px; 15px);
+    background-image: url("../img/icon-close-white.svg");
+    background-size: 9px 10px;
+    background-repeat: no-repeat;
+    opacity: 0.3;
 
     &::after {
       display: none;
     }
 
     @media (min-width: @tablet-width) {
-      &::before {
-        .size(22px; 21px);
-        background-size: 22px 21px;
-        opacity: 0.3;
-      }
+      top: 24px;
+      right: 441px;
+      .size(22px; 22px);
+      background-size: 22px 22px;
+      opacity: 0.3;
     }
 
     @media (min-width: @desktop-width) {
@@ -1243,29 +1223,11 @@
     }
 
     &:hover {
-      &::before {
-        opacity: 1;
-      }
+      opacity: 1;
     }
 
     &:active {
-      &::before {
-        opacity: 0.1;
-      }
-    }
-  }
-
-  @media (min-width: @tablet-width) {
-    margin-top: 19px;
-    margin-left: -53px;
-
-    &--second {
-      margin-top: 12px;
-    }
-
-    &--not-selected {
-      margin-top: 14px;
-      margin-left: -56px;
+      opacity: 0.1;
     }
   }
 }
@@ -1273,7 +1235,7 @@
 .add-plane__button-close {
   position: relative;
   margin-top: -6px;
-  margin-left: 43px;
+  margin-left: 41px;
   .size(21px; 21px);
   background-color: transparent;
   border: none;
@@ -1281,7 +1243,7 @@
 
   &--not-selected {
     margin-top: -10px;
-    margin-left: -9px;
+    margin-left: -11px;
   }
 
   &--active-input {
@@ -1315,7 +1277,7 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 25px;
-    margin-left: 163px;
+    margin-left: 145px;
 
     &--second {
       margin-top: 20px;
@@ -1323,7 +1285,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 260px;
+    margin-left: 243px;
   }
 
   &:hover {
