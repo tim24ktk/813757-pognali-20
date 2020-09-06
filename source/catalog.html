@@ -15,20 +15,20 @@
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@1x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
               <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
-              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x" alt="Сервис поиска попутчиков погнали">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x" alt="Сервис поиска попутчиков погнали">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
               <img class="main-nav__logo-image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Сервис поиска попутчиков погнали">
             </picture>
           </a>
           <ul class="main-nav__list buttons-list">
             <li class="buttons-list__item buttons-list__item--main-nav">
-              <a class="buttons-list__link href="index.html" data-hover="О сервисе" href="index.html">О сервисе</a>
+              <a class="buttons-list__link" href="index.html" data-hover="О сервисе">О сервисе</a>
             </li>
             <li class="buttons-list__item buttons-list__item--main-nav">
-              <a class="buttons-list__link" href="form.html" data-hover="Попутчики" href="form.html">Направления</a>
+              <a class="buttons-list__link" href="form.html" data-hover="Направления">Направления</a>
             </li>
             <li class="buttons-list__item buttons-list__item--main-nav">
-              <a class="buttons-list__link" href="catalog.html" data-hover="Попутчики" href="#">Попутчики</a>
+              <a class="buttons-list__link" href="#" data-hover="Попутчики">Попутчики</a>
             </li>
           </ul>
           <button class="main-nav__toggle main-nav__toggle--catalog-margin" type="button">
@@ -46,7 +46,7 @@
         </div>
         <div class="main-nav__wrapper--style main-nav__wrapper">
           <h1 class="main-nav__heading">Попутчики</h1>
-          <a class="main-nav__toggle-link" href="index.html" type="button">
+          <a class="main-nav__toggle-link" href="index.html">
             <span class="main-nav__toggle-value">На главную</span>
           </a>
         </div>
@@ -750,19 +750,19 @@
               <ul class="companion-selection__transport-list transport-list-form">
                 <li class="transport-list-form__transport-item">
                   <input class="transport-list-form__transport-checkbox visually-hidden" type="checkbox" name="plane" id="plane" checked>
-                  <label class="transport-list-form__tansport-checkbox-label transport-list-form__tansport-checkbox-label--margin transport-list-form__tansport-checkbox-label--plane" for="plane"><span class="visually-hidden">Самолет</span></label>
+                  <label class="transport-list-form__tansport-checkbox-label transport-list-form__tansport-checkbox-label--margin transport-list-form__tansport-checkbox-label--plane" for="plane"><span class="transport-list-form__tooltip">Авиаперелет</span></label>
                 </li>
                 <li class="transport-list-form__transport-item">
                   <input class="transport-list-form__transport-checkbox visually-hidden" type="checkbox" name="vehicles" id="vehicles" checked>
-                  <label class="transport-list-form__tansport-checkbox-label transport-list-form__tansport-checkbox-label--vehicles" for="vehicles"><span class="visually-hidden">Автотранспорт</span></label>
+                  <label class="transport-list-form__tansport-checkbox-label transport-list-form__tansport-checkbox-label--vehicles" for="vehicles"><span class="transport-list-form__tooltip">Автотранспорт</span></label>
                 </li>
                 <li class="transport-list-form__transport-item">
                   <input class="transport-list-form__transport-checkbox visually-hidden" type="checkbox" name="bicycle" id="bicycle">
-                  <label class="transport-list-form__tansport-checkbox-label transport-list-form__tansport-checkbox-label--bicycle" for="bicycle"><span class="visually-hidden">Велосипед</span></label>
+                  <label class="transport-list-form__tansport-checkbox-label transport-list-form__tansport-checkbox-label--bicycle" for="bicycle"><span class="transport-list-form__tooltip">Велосипед</span></label>
                 </li>
                 <li class="transport-list-form__transport-item">
                   <input class="transport-list-form__transport-checkbox visually-hidden" type="checkbox" name="on-foot" id="on-foot" checked>
-                  <label class="transport-list-form__tansport-checkbox-label transport-list-form__tansport-checkbox-label--on-foot" for="on-foot"><span class="visually-hidden">Пешком</span></label>
+                  <label class="transport-list-form__tansport-checkbox-label transport-list-form__tansport-checkbox-label--on-foot" for="on-foot"><span class="transport-list-form__tooltip">Пешком</span></label>
                 </li>
               </ul>
             </div>
@@ -779,15 +779,17 @@
                 <div class="level__scale">
                   <div class="level__bar"></div>
                 </div>
-                <div class="level__toggle-min"></div>
-                <div class="level__toggle-max"></div>
+                <div class="level__toggle-min" tabindex="0"></div>
+                <div class="level__toggle-max" tabindex="0"></div>
               </div>
             </div>
             <button class="level__submit-button" type="submit">Показать</button>
           </form>
         </section>
         <section class="travelers-catalog">
+          <h2 class="visually-hidden">Найдите себе попутчика</h2>
           <article class="catalog-traveler-card">
+            <h2 class="visually-hidden">Карточка попутчика</h2>
             <a class="catalog-traveler-card__image-link" href="">
               <picture class="catalog-traveler-card__image-wrapper">
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@1x.webp 2x">
@@ -816,23 +818,24 @@
             <p class="catalog-traveler-card__list-heading">транспорт:</p>
             <ul class="catalog-traveler-card__transport-list transport-list transport-list--catalog transport-list">
               <li class="transport-list__item transport-list__item--plane transport-list__item--plane-size transport-list__item--background">
-                <span class="visually-hidden">Самолет</span>
+                <span class="transport-list__tooltip">Авиаперелет</span>
               </li>
               <li class="transport-list__item transport-list__item--bus-inactive transport-list__item--bus-size transport-list__item--background">
-                <span class="visually-hidden">Автотранспорт</span>
+                <span class="transport-list__tooltip">Автотранспорт</span>
               </li>
               <li class="transport-list__item transport-list__item--bicycle-inactive transport-list__item--bicycle-size transport-list__item--background">
-                <span class="visually-hidden">Велосипед</span>
+                <span class="transport-list__tooltip">Велосипед</span>
               </li>
               <li class="transport-list__item transport-list__item--on-foot-inactive transport-list__item--on-foot-size transport-list__item--background">
-                <span class="visually-hidden">Пешком</span>
+                <span class="transport-list__tooltip">Пешком</span>
               </li>
             </ul>
             <p class="catalog-traveler-card__level-heading">левел:</p>
             <p class="catalog-traveler-card__level">99<span class="catalog-traveler-card__level-word">level</span></p>
             <a class="catalog-traveler-card__button card-button--catalog-article card-button" href="authorization.html">Позвать!</a>
           </article>
-          <article class="catalog-traveler-card">
+          <article class="catalog-traveler-card catalog-traveler-card--diff-margin">
+            <h2 class="visually-hidden">Карточка попутчика</h2>
             <a class="catalog-traveler-card__image-link" href="">
               <picture class="catalog-traveler-card__image-wrapper">
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
@@ -858,23 +861,24 @@
             <p class="catalog-traveler-card__list-heading catalog-traveler-card__list-heading--margin">транспорт:</p>
             <ul class="catalog-traveler-card__transport-list catalog-traveler-card__transport-list--margin transport-list--catalog transport-list">
               <li class="transport-list__item transport-list__item--plane transport-list__item--plane-size transport-list__item--background">
-                <span class="visually-hidden">Самолет</span>
+                <span class="transport-list__tooltip">Авиаперелет</span>
               </li>
               <li class="transport-list__item transport-list__item--bus transport-list__item--bus-size transport-list__item--background">
-                <span class="visually-hidden">Автотранспорт</span>
+                <span class="transport-list__tooltip">Автотранспорт</span>
               </li>
               <li class="transport-list__item transport-list__item--bicycle-inactive transport-list__item--bicycle-size transport-list__item--background">
-                <span class="visually-hidden">Велосипед</span>
+                <span class="transport-list__tooltip">Велосипед</span>
               </li>
               <li class="transport-list__item transport-list__item--on-foot transport-list__item--on-foot-size transport-list__item--background">
-                <span class="visually-hidden">Пешком</span>
+                <span class="transport-list__tooltip">Пешком</span>
               </li>
             </ul>
             <p class="catalog-traveler-card__level-heading catalog-traveler-card__level-heading--margin">левел:</p>
             <p class="catalog-traveler-card__level catalog-traveler-card__level--good">80<span class="catalog-traveler-card__level-word">level</span></p>
             <a class="catalog-traveler-card__button catalog-traveler-card__button--margin card-button--catalog-article card-button--catalog-article card-button" href="authorization.html">Позвать!</a>
           </article>
-          <article class="catalog-traveler-card">
+          <article class="catalog-traveler-card catalog-traveler-card--diff-margin">
+            <h2 class="visually-hidden">Карточка попутчика</h2>
             <a class="catalog-traveler-card__image-link" href="">
               <picture class="catalog-traveler-card__image-wrapper">
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x">
@@ -903,23 +907,24 @@
             <p class="catalog-traveler-card__list-heading">транспорт:</p>
             <ul class="catalog-traveler-card__transport-list transport-list transport-list--catalog transport-list">
               <li class="transport-list__item transport-list__item--plane transport-list__item--plane-size transport-list__item--background">
-                <span class="visually-hidden">Самолет</span>
+                <span class="transport-list__tooltip">Авиаперелет</span>
               </li>
               <li class="transport-list__item transport-list__item--bus-inactive transport-list__item--bus-size transport-list__item--background">
-                <span class="visually-hidden">Автотранспорт</span>
+                <span class="transport-list__tooltip">Автотранспорт</span>
               </li>
               <li class="transport-list__item transport-list__item--bicycle transport-list__item--bicycle-size transport-list__item--background">
-                <span class="visually-hidden">Велосипед</span>
+                <span class="transport-list__tooltip">Велосипед</span>
               </li>
               <li class="transport-list__item transport-list__item--on-foot-inactive transport-list__item--on-foot-size transport-list__item--background">
-                <span class="visually-hidden">Пешком</span>
+                <span class="transport-list__tooltip">Пешком</span>
               </li>
             </ul>
             <p class="catalog-traveler-card__level-heading">левел:</p>
             <p class="catalog-traveler-card__level catalog-traveler-card__level--fourth">25<span class="catalog-traveler-card__level-word">level</span></p>
             <a class="catalog-traveler-card__button card-button--catalog-article card-button" href="authorization.html">Позвать!</a>
           </article>
-          <article class="catalog-traveler-card catalog-traveler-card--diff-padding">
+          <article class="catalog-traveler-card catalog-traveler-card--diff-margin catalog-traveler-card--diff-padding">
+            <h2 class="visually-hidden">Карточка попутчика</h2>
             <a class="catalog-traveler-card__image-link" href="">
               <picture class="catalog-traveler-card__image-wrapper">
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x">
@@ -945,16 +950,16 @@
             <p class="catalog-traveler-card__list-heading catalog-traveler-card__list-heading--margin">транспорт:</p>
             <ul class="catalog-traveler-card__transport-list catalog-traveler-card__transport-list--margin transport-list transport-list--catalog transport-list">
               <li class="transport-list__item transport-list__item--plane transport-list__item--plane-size transport-list__item--background">
-                <span class="visually-hidden">Самолет</span>
+                <span class="transport-list__tooltip">Авиаперелет</span>
               </li>
               <li class="transport-list__item transport-list__item--bus transport-list__item--bus-size transport-list__item--background">
-                <span class="visually-hidden">Автотранспорт</span>
+                <span class="transport-list__tooltip">Автотранспорт</span>
               </li>
               <li class="transport-list__item transport-list__item--bicycle-inactive transport-list__item--bicycle-size transport-list__item--background">
-                <span class="visually-hidden">Велосипед</span>
+                <span class="transport-list__tooltip">Велосипед</span>
               </li>
               <li class="transport-list__item transport-list__item--on-foot-inactive transport-list__item--on-foot-size transport-list__item--background">
-                <span class="visually-hidden">Пешком</span>
+                <span class="transport-list__tooltip">Пешком</span>
               </li>
             </ul>
             <p class="catalog-traveler-card__level-heading catalog-traveler-card__level-heading--margin">левел:</p>
@@ -991,13 +996,13 @@
     </main>
     <footer class="footer footer--catalog">
       <div class="footer__wrapper">
-        <a class="footer__logo" href="#" aria-label="Логотип: Погнали">
+        <a class="footer__logo" href="index.html" aria-label="Логотип: Погнали">
           <picture class="footer__logo-picture">
             <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
             <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
-            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x" alt="Сервис поиска попутчиков погнали">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x" alt="Сервис поиска попутчиков погнали">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
             <img class="footer__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Сервис поиска попутчиков погнали">
           </picture>
         </a>

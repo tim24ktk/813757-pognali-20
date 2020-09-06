@@ -9,14 +9,15 @@
   <body class="page__body">
     <header class="header header--index-background">
       <section class="main-menu main-menu--no-js">
+        <h2 class="visually-hidden">Основное меню</h2>
         <div class="main-menu__wrapper">
           <a class="main-menu__logo-link" href="#">
             <picture class="main-menu__logo">
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
               <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
-              <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x" alt="Сервис поиска попутчиков погнали">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x" alt="Сервис поиска попутчиков погнали">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
               <img class="main-menu__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Сервис поиска попутчиков погнали">
             </picture>
           </a>
@@ -75,8 +76,8 @@
             <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@1x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
             <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
-            <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x" alt="Сервис поиска попутчиков погнали">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x" alt="Сервис поиска попутчиков погнали">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
             <img class="main-nav__logo-image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Сервис поиска попутчиков погнали">
           </picture>
           <ul class="main-nav__list buttons-list">
@@ -100,7 +101,7 @@
             <a class="header-feedback__write-us" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам">
               <span class="visually-hidden">Напишите нам</span>
             </a>
-            <a class="header-feedback__authorization" href="authorization.html">Авторизация</a>
+            <a class="header-feedback__authorization" href="authorization.html"  aria-label="авторизуйтесь">Авторизация</a>
           </div>
         </div>
       </nav>
@@ -223,15 +224,15 @@
               <div class="traveler-card__user-name-wrapper">
                 <ul class="traveler-card__countries-list">
                   <li class="traveler-card__countrie-item">
-                    <span class="visually-hidden">Шри ланка</span>
+                    <span class="traveler-card__tooltip">Шри ланка</span>
                     <img class="traveler-card__country" src="img/sri-lanka.svg" width="35" height="25" alt="Флаг Шри Ланка">
                   </li>
                   <li class="traveler-card__countrie-item">
-                    <span class="visually-hidden">Тайланд</span>
+                    <span class="traveler-card__tooltip">Тайланд</span>
                     <img class="traveler-card__country" src="img/thailand.svg" width="35" height="25" alt="Флаг Тайланда">
                   </li>
                   <li class="traveler-card__countrie-item">
-                    <span class="visually-hidden">Сейшелы</span>
+                    <span class="traveler-card__tooltip">Сейшелы</span>
                     <img class="traveler-card__country" src="img/seychelles.svg" width="35" height="25" alt="Флаг Тайланда">
                   </li>
                 </ul>
@@ -241,16 +242,16 @@
                 <p class="traveler-card__hobbies">&#35;ЗОЖ &#35;ПП &#35;Фитнес &#35;пляж &#35;авокадо &#35;смузи</p>
                 <ul class="traveler-card__transport-list transport-list transport-list--shrink">
                   <li class="transport-list__item transport-list__item--plane">
-                    <span class="visually-hidden">Самолет</span>
+                    <span class="transport-list__tooltip">Авиаперелет</span>
                   </li>
                   <li class="transport-list__item transport-list__item--bus-inactive">
-                    <span class="visually-hidden">Автотранспорт</span>
+                    <span class="transport-list__tooltip">Автотранспорт</span>
                   </li>
                   <li class="transport-list__item transport-list__item--bicycle-inactive">
-                    <span class="visually-hidden">Велосипед</span>
+                    <span class="transport-list__tooltip">Велосипед</span>
                   </li>
                   <li class="transport-list__item transport-list__item--on-foot-inactive">
-                    <span class="visually-hidden">Пешком</span>
+                    <span class="transport-list__tooltip">Пешком</span>
                   </li>
                 </ul>
               </div>
@@ -270,11 +271,11 @@
               <div class="traveler-card__user-name-wrapper">
                 <ul class="traveler-card__countries-list">
                   <li class="traveler-card__countrie-item">
-                    <span class="visually-hidden">Бельгия</span>
+                    <span class="traveler-card__tooltip">Бельгия</span>
                     <img class="traveler-card__country" src="img/belgium.svg" width="35" height="24" alt="Бельгия">
                   </li>
                   <li class="traveler-card__countrie-item">
-                    <span class="visually-hidden">Чехия</span>
+                    <span class="traveler-card__tooltip">Чехия</span>
                     <img class="traveler-card__country" src="img/czechia.svg" width="35" height="25" alt="Чехия">
                   </li>
                 </ul>
@@ -282,16 +283,16 @@
                 <p class="traveler-card__hobbies">&#35;бургер &#35;бар &#35;футбол &#35;концерт &#35;крафт</p>
                 <ul class="traveler-card__transport-list transport-list transport-list--shrink">
                   <li class="transport-list__item transport-list__item--plane">
-                    <span class="visually-hidden">Самолет</span>
+                    <span class="transport-list__tooltip">Авиаперелет</span>
                   </li>
                   <li class="transport-list__item transport-list__item--bus">
-                    <span class="visually-hidden">Автотранспорт</span>
+                    <span class="transport-list__tooltip">Автотранспорт</span>
                   </li>
                   <li class="transport-list__item transport-list__item--bicycle-inactive">
-                    <span class="visually-hidden">Велосипед</span>
+                    <span class="transport-list__tooltip">Велосипед</span>
                   </li>
                   <li class="transport-list__item transport-list__item--on-foot">
-                    <span class="visually-hidden">Пешком</span>
+                    <span class="transport-list__tooltip">Пешком</span>
                   </li>
                 </ul>
               </div>
@@ -367,6 +368,7 @@
         </div>
       </section>
       <section class="address">
+        <h2 class="visually-hidden">Наш адрес и контакты</h2>
         <div class="address__background address__background--color">
           <div class="address__wrapper">
             <p class="address__text">ул. Большая Конюшенная, 19/8</p>
@@ -378,12 +380,12 @@
             <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
-            <source media="(min-width: 1440px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x" alt="Карта с маркером нашего местонахождения">
-            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x" alt="Карта с маркером нашего местонахождения">
+            <source media="(min-width: 1440px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
             <img class="address__map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="424" alt="Карта с маркером нашего местонахождения">
           </picture>
         </div>
-        <iframe class="address__interactive-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.82520986996252!2d30.323018726450396!3d59.93875146337571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1599121477172!5m2!1sru!2sru" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe class="address__interactive-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.82520986996252!2d30.323018726450396!3d59.93875146337571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1599121477172!5m2!1sru!2sru" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </section>
     </main>
     <footer class="footer footer--index-margin">
@@ -393,8 +395,8 @@
             <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
             <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
-            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x" alt="Сервис поиска попутчиков погнали">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x" alt="Сервис поиска попутчиков погнали">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
             <img class="footer__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Сервис поиска попутчиков погнали">
           </picture>
         </a>

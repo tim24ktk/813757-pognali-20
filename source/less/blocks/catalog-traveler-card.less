@@ -14,27 +14,20 @@
     padding-bottom: 27px;
   }
 
-  &:not(:first-child) {
-    margin-top: 11px;
-
-    @media (min-width: @tablet-width) {
-      margin-top: 40px;
-    }
-
-    @media (min-width: @desktop-width) {
-      margin-top: 31px;
-    }
-  }
-
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 263px 147px;
     grid-auto-rows: auto;
-    margin-top: 41px;
+    margin-top: 40px;
+    margin-bottom: 6px;
     padding-top: 33px;
     padding-right: 32px;
     padding-left: 32px;
     padding-bottom: 25px;
     width: 688px;
+
+    &--diff-margin {
+      margin-top: 34px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -44,6 +37,10 @@
     margin-left: 4px;
     padding: 0;
     width: 949px;
+
+    &--diff-margin {
+      margin-top: 25px;
+    }
   }
 
   &:hover {
@@ -189,6 +186,7 @@
   line-height: 16px;
   text-transform: uppercase;
   color: @basic_blue;
+  cursor: pointer;
 
 
   &::before {
@@ -493,7 +491,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      left: -2px;
+      left: -5px;
     }
   }
 

@@ -22,8 +22,8 @@
   display: flex;
   flex-wrap: wrap;
   .reset_for_list();
-  margin-top: 11px;
-  margin-left: 15px;
+  margin-top: 25px;
+  margin-left: 29px;
 
   @media (max-width: @mobile-width-only) {
     display: none;
@@ -64,7 +64,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-top: 45px;
+    margin-top: 39px;
     margin-right: 46px;
     align-self: center;
     font-size: 20px;
@@ -72,7 +72,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 61px;
+    margin-top: 56px;
     margin-right: 105px;
   }
 
@@ -94,7 +94,6 @@
   flex-wrap: wrap;
   margin-top: 12px;
   margin-bottom: 165px;
-  padding: 14px;
   background-color: @basic-white;
   border-radius: 20px;
 
@@ -106,7 +105,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 69px;
+    margin-top: 67px;
+    margin-bottom: 184px;
     margin-left: 3px;
     width: 948px;
   }
@@ -143,65 +143,56 @@
 }
 
 .travelers-catalog__slider-button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
   @media (max-width: @mobile-width-only) {
     margin-top: 0;
   }
 
   @media (min-width: @tablet-width) {
-    margin-top: 18px;
+    margin-top: 31px;
+    margin-right: 19px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 7px;
+    margin-right: 25px;
   }
 }
 
 .travelers-catalog__slider-button-left,
 .travelers-catalog__slider-button-right {
-  padding: 8px;
-  .size(118px; 15px);
+  padding: 25px;
+  width: 134px;
   background-color: transparent;
   border: none;
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
-    .size(46px; 23px);
+    padding: 19px;
+    .size(43px; 23px);
   }
 
   &:hover {
-    &::before {
-      opacity: 0.6;
-    }
+    opacity: 0.6;
   }
 
   &:active {
-    &::before {
-      opacity: 0.3;
-    }
+    opacity: 0.3;
   }
 }
 
 .travelers-catalog__slider-button-left {
   position: relative;
-
-  &::before {
-    position: absolute;
-    top: -3px;
-    right: 59px;
-    content: "";
-    .size(10px; 18px);
-    background-image: url("../img/arrow-left.svg");
-
-    @media (min-width: @tablet-width) {
-      top: 7px;
-      right: 13px;
-    }
-  }
+  background-image: url("../img/arrow-left.svg");
+  background-repeat: no-repeat;
+  background-size: 10px 18px;
+  background-position: center;
 
   &::after {
     position: absolute;
-    top: -22px;
-    left: 121px;
+    top: 0;
+    left: 135px;
     content: "";
     width: 1px;
     height: 51px;
@@ -214,19 +205,8 @@
 }
 
 .travelers-catalog__slider-button-right {
-  position: relative;
-
-  &::before {
-    position: absolute;
-    top: -5px;
-    right: 48px;
-    content: "";
-    .size(10px; 18px);
-    background-image: url("../img/arrow-right.svg");
-
-    @media (min-width: @tablet-width) {
-      top: 7px;
-      right: 21px;
-    }
-  }
+  background-image: url("../img/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-size: 10px 18px;
+  background-position: center;
 }
