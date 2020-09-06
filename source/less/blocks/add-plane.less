@@ -1170,18 +1170,28 @@
       border: 1px solid @profile_border_color;
 
       @media (min-width: @tablet-width) {
-        top: 11px;
-        right: -51px;
+        top: 0;
+        right: -60px;
         left: auto;
-        .size(14px; 14px);
+        .size(13px; 13px);
       }
 
       @media (min-width: @desktop-width) {
-        right: -68px;
+        top: 4px;
+        right: -77px;
       }
     }
-  }
 
+    @media (min-width: @tablet-width) {
+      top: 26px;
+      right: 217px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 23px;
+      right: 440px;
+    }
+  }
 
   /*стилизует кнопку в активном состоянии input*/
   @media (min-width: @tablet-width) {
