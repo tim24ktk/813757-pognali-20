@@ -203,22 +203,55 @@
   }
 
   &--current-day {
+    position: relative;
 
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      .size(33px; 32px);
+      box-shadow: inset 0 0 0 2px @holiday_color;
+      z-index: 50;
 
-    box-shadow: inset 0 0 0 2px @holiday_color;
+      @media (min-width: @tablet-width) {
+        .size(79px; 72px);
+        box-shadow: inset 0 0 0 4px @holiday_color;
+      }
 
-    @media (min-width: @tablet-width) {
-      box-shadow: inset 0 0 0 4px @holiday_color;
+      @media (min-width: @desktop-width) {
+        top: -3px;
+        left: -2px;
+        .size(148px; 76px);
+      }
     }
   }
 
   &:hover {
+    position: relative;
     color: @basic-white;
     background-color: @basic_blue_light_color;
-    box-shadow: inset 0 0 0 2px @holiday_color;
 
-    @media (min-width: @tablet-width) {
-      box-shadow: inset 0 0 0 4px @holiday_color;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      .size(33px; 32px);
+      box-shadow: inset 0 0 0 2px @holiday_color;
+      z-index: 50;
+
+      @media (min-width: @tablet-width) {
+        .size(79px; 72px);
+        box-shadow: inset 0 0 0 4px @holiday_color;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: -3px;
+        left: -2px;
+        .size(148px; 76px);
+        box-shadow: inset 0 0 0 4px @holiday_color;
+      }
     }
   }
 
@@ -228,8 +261,12 @@
 
     &:hover {
       color: @special_grey_light;
-      background-color: @basic-white;
+      background-color: inherit;
       box-shadow: inherit;
+
+      &::before {
+        display: none;
+      }
     }
   }
 
