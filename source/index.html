@@ -7,6 +7,9 @@
     <link href="css/styles.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
+    <div class="visually-hidden">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="header header--index-background">
       <section class="main-menu main-menu--no-js">
         <h2 class="visually-hidden">Основное меню</h2>
@@ -32,22 +35,31 @@
             <a class="header-feedback__authorization" href="authorization.html">Авторизация</a>
           </div>
           <ul class="main-menu__buttons-list buttons-list">
-            <li class="buttons-list__item">
+            <li class="buttons-list__item buttons-list__item--main-menu">
               <a class="buttons-list__link buttons-list__link--main-menu" href="#" data-hover="О сервисе">О сервисе</a>
             </li>
-            <li class="buttons-list__item">
+            <li class="buttons-list__item buttons-list__item--main-menu">
               <a class="buttons-list__link buttons-list__link--main-menu" href="form.html" data-hover="Направления">Направления</a>
             </li>
-            <li class="buttons-list__item">
+            <li class="buttons-list__item buttons-list__item--main-menu">
               <a class="buttons-list__link buttons-list__link--main-menu" href="catalog.html" data-hover="Попутчики">Попутчики</a>
             </li>
           </ul>
           <div class="main-menu__contacts main-menu-feedback main-menu-feedback--top-display">
             <a class="main-menu-feedback__phone main-menu-feedback__phone--tablet-size" href="tel:88005558628" aria-label="Позвоните нам">
+              <div class="main-menu-feedback__phone-image-wrapper">
+                <svg class="main-menu-feedback__phone-image" role="img" aria-label="Позвоните нам" width="17" height="15">
+                  <use xlink:href="#contacts-phone"></use>
+                </svg>
+              </div>
               <span class="main-menu-feedback__phone-number">8 800 555-86-28</span>
             </a>
             <a class="main-menu-feedback__write-us main-menu-feedback__write-us--tablet-margin main-menu-feedback__write-us--mobile-margin main-menu-feedback__write-us--tablet-size" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам">
-              <span class="visually-hidden">Напишите нам</span>
+              <div class="main-menu-feedback__mail-image-wrapper">
+                <svg class="main-menu-feedback__mail-image" role="img" aria-label="Напишите нам" width="19" height="13">
+                  <use xlink:href="#contacts-mail"></use>
+                </svg>
+              </div>
               <p class="main-menu-feedback__write-us-mail">mail@htmlacademy.ru</p>
             </a>
           </div>
@@ -148,7 +160,12 @@
             <p class="search-companion-service__about-service">Любое путешествие<br> веселее с попутчиками,<br> которые на одной волне<br> с тобой! Делитесь своими<br> идеями путешествий<br> и черпайте вдохновение<br> в чужих.</p>
             <p class="search-companion-service__call-for">А если найдете кого-то близкого по духу &horbar; скорее зовите в совместный трип!</p>
           </div>
-          <a class="rectangular-button rectangular-button--details rectangular-button--search-companion search-companion__details" href="details.html">Подробнее</a>
+          <a class="rectangular-button rectangular-button--details rectangular-button--search-companion search-companion__details" href="details.html">
+            Подробнее
+            <svg class="rectangular-button__border-image" role="img" aria-label="Напишите нам" width="11" height="14">
+              <use xlink:href="#triangle"></use>
+            </svg>
+          </a>
         </div>
       </section>
     </header>
@@ -198,7 +215,12 @@
               </div>
             </li>
           </ul>
-          <a class="rectangular-button rectangular-button--tablet-style rectangular-button--directions-style directions__show-all" href="all-countryes.html">Показать все</a>
+          <a class="rectangular-button rectangular-button--tablet-style rectangular-button--directions-style directions__show-all" href="all-countryes.html">
+            Показать все
+            <svg class="rectangular-button__border-image" role="img" aria-label="Напишите нам" width="11" height="14">
+              <use xlink:href="#triangle"></use>
+            </svg>
+          </a>
         </div>
       </section>
       <section class="fellow-travelers">
@@ -298,7 +320,12 @@
               </div>
             </article>
           </div>
-          <a class="fellow-travelers__button rectangular-button rectangular-button--tablet-style rectangular-button--tablet-all traveler-card__shaw-all" href="catalog.html">Показать всех</a>
+          <a class="fellow-travelers__button fellow-travelers__button--shaw-all rectangular-button rectangular-button--tablet-style rectangular-button--tablet-all" href="catalog.html">
+            Показать всех
+            <svg class="rectangular-button__border-image" role="img" aria-label="Напишите нам" width="11" height="14">
+              <use xlink:href="#triangle"></use>
+            </svg>
+          </a>
         </div>
       </section>
       <section class="add-profile">
@@ -353,15 +380,29 @@
           <form class="feedback__registration-form" action="https://echo.htmlacademy.ru" method="get">
             <input type="text" name="register" id="register" placeholder="E-mail">
             <label class="visually-hidden" for="register">Зарегистрируйтесь</label>
-            <button class="feedback__registration-form-button feedback__registration-form-button--desktop" type="submit" aria-label="Кнопка регистрации"><span class="feedback__invisible">Регистрация</span></button>
+            <button class="feedback__registration-form-button feedback__registration-form-button--desktop" type="submit" aria-label="Кнопка регистрации">
+              <span class="feedback__invisible">Регистрация</span>
+              <svg class="feedback__registration-form-button-image" role="img" aria-label="Напишите нам" width="11" height="14">
+                <use xlink:href="#triangle"></use>
+              </svg>
+            </button>
           </form>
           <p class="feedback__question">Остались вопросы?<br> Мы с радостью на них ответим!</p>
           <div class="feedback__contacts main-menu-feedback">
             <a class="main-menu-feedback__phone main-menu-feedback__phone--tablet-size main-menu-feedback__phone--desktop-size" href="tel:88005558628" aria-label="Позвоните нам">
+              <div class="main-menu-feedback__phone-image-wrapper">
+                <svg class="main-menu-feedback__phone-image" role="img" aria-label="Позвоните нам" width="17" height="15">
+                  <use xlink:href="#contacts-phone"></use>
+                </svg>
+              </div>
               <span class="main-menu-feedback__phone-number main-menu-feedback__phone-number--color">8 800 555-86-28</span>
             </a>
             <a class="main-menu-feedback__write-us main-menu-feedback__write-us--tablet-size main-menu-feedback__write-us--desktop-size" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам">
-              <span class="visually-hidden">Напишите нам</span>
+              <div class="main-menu-feedback__mail-image-wrapper">
+                <svg class="main-menu-feedback__mail-image" role="img" aria-label="Напишите нам" width="19" height="13">
+                  <use xlink:href="#contacts-mail"></use>
+                </svg>
+              </div>
               <p class="main-menu-feedback__write-us-mail main-menu-feedback__write-us-mail--color">mail@htmlacademy.ru</p>
             </a>
           </div>
@@ -372,7 +413,12 @@
         <div class="address__background address__background--color">
           <div class="address__wrapper">
             <p class="address__text">ул. Большая Конюшенная, 19/8</p>
-            <button class="address__button rectangular-button rectangular-button--tablet-style rectangular-button--desktop-style rectangular-button--border" type="button">Проложить маршрут</button>
+            <button class="address__button rectangular-button rectangular-button--tablet-style rectangular-button--desktop-style rectangular-button--border" type="button">
+              <span class="rectangular-button__border-description">Проложить маршрут</span>
+              <svg class="rectangular-button__border-image" role="img" aria-label="Напишите нам" width="11" height="14">
+                <use xlink:href="#triangle"></use>
+              </svg>
+          </button>
           </div>
         </div>
         <div class="adress__img-wrapper">

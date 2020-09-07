@@ -15,6 +15,7 @@
   border: none;
   cursor: pointer;
   text-align: left;
+  fill: currentColor;
 
   &::before {
     position: absolute;
@@ -38,17 +39,25 @@
 
   &--directions-style {
     height: 62px;
+
+    &::before {
+      display: none;
+    }
   }
 
   &--details {
     display: none;
 
     @media (min-width: @tablet-width) {
-      display: block;
+      display: flex;
+
+      &::before {
+        display: none;
+      }
     }
 
     @media (min-width: @desktop-width) {
-      display: block;
+      display: flex;
     }
   }
 
@@ -109,30 +118,19 @@
     border-radius: 10px;
 
     &::before {
-      top: 21px;
-      right: 20px;
+      display: none;
     }
 
     @media (min-width: @tablet-width) {
       height: 80px;
       border-radius: 20px;
-
-      &::before {
-        top: 32px;
-        right: 33px;
-      }
-    }
-
-    @media (min-width: @desktop-width) {
-      &::before {
-        top: 30px;
-      }
     }
 
     &:hover {
       color: @basic-white;
       background-color: @special_background_light;
       border-color: transparent;
+      fill: currentColor;
     }
 
     &:active {
