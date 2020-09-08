@@ -17,32 +17,8 @@
   text-align: left;
   fill: currentColor;
 
-  &::before {
-    position: absolute;
-    top: 25px;
-    right: 23px;
-    content: "";
-    width: 11px;
-    height: 14px;
-    background-image: url("../img/triangle.svg");
-    background-repeat: no-repeat;
-
-    @media (min-width: @tablet-width) {
-      top: 36px;
-      right: 33px;
-    }
-
-    @media (min-width: @desktop-width) {
-      top: 34px;
-    }
-  }
-
   &--directions-style {
     height: 62px;
-
-    &::before {
-      display: none;
-    }
   }
 
   &--details {
@@ -50,10 +26,6 @@
 
     @media (min-width: @tablet-width) {
       display: flex;
-
-      &::before {
-        display: none;
-      }
     }
 
     @media (min-width: @desktop-width) {
@@ -116,10 +88,6 @@
     height: 62px;
     border: 3px solid @special_background_light;
     border-radius: 10px;
-
-    &::before {
-      display: none;
-    }
 
     @media (min-width: @tablet-width) {
       height: 80px;
