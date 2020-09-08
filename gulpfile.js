@@ -54,7 +54,7 @@ const createWebp  = () => {
 exports.webp = createWebp;
 
 const sprite = () => {
-  return gulp.src("source/img/**/*.svg")
+  return gulp.src("source/img/**/sprite-*.svg")
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"))
