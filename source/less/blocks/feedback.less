@@ -241,45 +241,39 @@
 }
 
 .feedback__registration-form-button {
-  position: relative;
   margin-left: -10px;
   padding: 24px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
   .size(60px; 62px);
+  color: @basic_blue_light_color;
   background-color: @basic_yellow;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  fill: currentColor;
 
   &:hover {
     background-color: @special_yellow_dark;
-  }
-
-  &::before {
-    position: absolute;
-    content: "";
-    .size(11px; 14px);
-    background-image: url("../img/triangle.svg");
-    background-repeat: no-repeat;
-    transform: translate(-50%, -50%);
-
-    @media (min-width: @desktop-width) {
-      top: 40px;
-      right: 30px;
-    }
+    fill: currentColor;
   }
 
   &:active {
+    color: @basic_blue_light_30;
+    fill: currentColor;
+
     .feedback__invisible {
       color: @basic_blue_light_30;
-    }
-
-    &::before {
-      opacity: 0.3;
+      fill: currentColor;
     }
   }
 
 
   @media (min-width: @tablet-width) {
+    justify-content: center;
     .size(80px; 80px);
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -289,9 +283,16 @@
 
   @media (min-width: @desktop-width) {
     &--desktop {
+      justify-content: space-between;
       width: 324px;
       text-align: left;
     }
+  }
+}
+
+.feedback__registration-form-button-image {
+  @media (min-width: @desktop-width) {
+    margin-right: 11px;
   }
 }
 
@@ -344,8 +345,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 45px;
+    margin-top: 29px;
     margin-left: 224px;
-    width: 531px;
+    width: 1320px;
   }
 }

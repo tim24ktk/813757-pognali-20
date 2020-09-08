@@ -1,5 +1,5 @@
 .main-menu-feedback {
-  padding-bottom: 29px;
+  padding-bottom: 30px;
   width: 270px;
   font-weight: bold;
   font-size: 16px;
@@ -7,63 +7,90 @@
   text-transform: uppercase;
   text-align: center;
 
+  @media (min-width: @tablet-width) {
+    width: 390px;
+  }
+
   @media (min-width: @desktop-width) {
     &--top-display {
       display: none;
     }
 
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    padding-bottom: 29px;
   }
 }
 
 .main-menu-feedback__phone {
   position: relative;
-  display: block;
-  .size(45px; 45px);
-  padding: 15px;
-  background-color: @phone_background;
-  border-radius: 50%;
+  display: flex;
+  flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
-    &--tablet-size {
-      padding: 20px;
-      .size(68px; 68px);
+    margin-top: 16px;
+  }
+
+  &:hover {
+    .main-menu-feedback__phone-image {
+      fill: @special_yellow_dark;
+    }
+
+    .main-menu-feedback__phone-number {
+      opacity: 0.7;
+
+      &--color {
+        opacity: 1;
+        color: @special_yellow_dark;
+      }
     }
   }
 
-  @media (min-width: @desktop-width) {
-    &--desktop-size {
-      padding: 27px;
-      .size(90px; 90px);
-    }
-  }
+  &:active {
+    opacity: 0.3;
 
-  &::before {
-    position: absolute;
-    content: "";
-    .size(17px; 15px);
-    background-image: url("../img/contacts-phone.svg");
-    background-repeat: no-repeat;
-    transform: translate(-50%);
-
-    @media (min-width: @tablet-width) {
-      .size(27px; 26px);
-      background-size: 27px 26px;
-    }
-
-    @media (min-width: @desktop-width) {
-      .size(36px; 34px);
-      background-size: 36px 34px;
+    &--color {
+      opacity: 0.3;
     }
   }
 }
 
+.main-menu-feedback__phone-image-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  .size(45px; 45px);
+  background-color: @phone_background;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    .size(68px; 68px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .size(90px; 90px);
+  }
+}
+
+.main-menu-feedback__phone-image {
+  fill: @basic_yellow;
+
+  @media (min-width: @tablet-width) {
+    .size(27px; 26px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .size(36px; 34px);
+  }
+}
+
 .main-menu-feedback__phone-number {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 16px;
   width: 180px;
-  padding-left: 32px;
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
@@ -74,7 +101,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-top: 5px;
+    margin-top: 9px;
     margin-left: 23px;
     width: 270px;
     font-size: 28px;
@@ -82,57 +109,85 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 46px;
+    margin-top: 3px;
+    margin-left: 30px;
   }
 }
 
+
 .main-menu-feedback__write-us {
   position: relative;
-  display: block;
-  .size(45px; 45px);
-  padding: 15px;
-  background-color: @phone_background;
-  border-radius: 50%;
+  display: flex;
+  flex-wrap: wrap;
 
-  @media (min-width: @tablet-width) {
-    &--tablet-size {
-      padding: 25px 22px;
-      .size(68px; 68px);
+  &:hover {
+    .main-menu-feedback__mail-image {
+      fill: @special_yellow_dark;
+    }
+
+    .main-menu-feedback__write-us-mail {
+      opacity: 0.7;
+
+      &--color {
+        opacity: 1;
+        color: @special_yellow_dark;
+      }
+    }
+  }
+
+
+  &:active {
+    opacity: 0.3;
+
+    &--color {
+      opacity: 0.3;
     }
   }
 
   @media (min-width: @desktop-width) {
-    &--desktop-size {
-      padding: 33px;
-      .size(90px; 90px);
-    }
+    margin-top: 15px;
+    margin-left: 49px;
+  }
+}
+
+.main-menu-feedback__mail-image-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  .size(45px; 45px);
+  background-color: @phone_background;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    .size(68px; 68px);
   }
 
-  &::before {
-    position: absolute;
-    content: "";
-    .size(19px; 13px);
-    background-image: url("../img/contacts-mail.svg");
-    background-repeat: no-repeat;
-    transform: translate(-50%);
+  @media (min-width: @desktop-width) {
+    .size(90px; 90px);
+  }
+}
 
-    @media (min-width: @tablet-width) {
-      .size(27px; 19px);
-      background-size: 27px 19px;
-    }
+.main-menu-feedback__mail-image {
+  fill: @basic_yellow;
 
-    @media (min-width: @desktop-width) {
-      .size(36px; 25px);
-      background-size: 36px 25px;
-    }
+  @media (min-width: @tablet-width) {
+    .size(28px; 19px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .size(37px; 25px);
   }
 }
 
 .main-menu-feedback__write-us-mail {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   .reset();
-  padding-left: 46px;
-  font-weight: bold;
+  margin-left: 16px;
+  width: 180px;
+  font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   color: @special_background_light;
@@ -148,6 +203,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 40px;
+    margin-left: 31px;
   }
 }

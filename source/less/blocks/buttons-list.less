@@ -30,8 +30,17 @@
   overflow: hidden;
   padding: 0 4px;
   height: 1em;
+  font-weight: 500;
   font-size: 30px;
   line-height: 35px;
+
+  &--main-menu {
+    margin-top: 6px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 9px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
@@ -79,7 +88,7 @@
 
   @media (max-width: @mobile-width-only) {
     &::before {
-      font-weight: 400;
+      font-weight: 500;
     }
   }
 

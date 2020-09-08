@@ -15,26 +15,7 @@
   border: none;
   cursor: pointer;
   text-align: left;
-
-  &::before {
-    position: absolute;
-    top: 25px;
-    right: 23px;
-    content: "";
-    width: 11px;
-    height: 14px;
-    background-image: url("../img/triangle.svg");
-    background-repeat: no-repeat;
-
-    @media (min-width: @tablet-width) {
-      top: 36px;
-      right: 33px;
-    }
-
-    @media (min-width: @desktop-width) {
-      top: 34px;
-    }
-  }
+  fill: currentColor;
 
   &--directions-style {
     height: 62px;
@@ -44,11 +25,11 @@
     display: none;
 
     @media (min-width: @tablet-width) {
-      display: block;
+      display: flex;
     }
 
     @media (min-width: @desktop-width) {
-      display: block;
+      display: flex;
     }
   }
 
@@ -108,31 +89,16 @@
     border: 3px solid @special_background_light;
     border-radius: 10px;
 
-    &::before {
-      top: 21px;
-      right: 20px;
-    }
-
     @media (min-width: @tablet-width) {
       height: 80px;
       border-radius: 20px;
-
-      &::before {
-        top: 32px;
-        right: 33px;
-      }
-    }
-
-    @media (min-width: @desktop-width) {
-      &::before {
-        top: 30px;
-      }
     }
 
     &:hover {
       color: @basic-white;
       background-color: @special_background_light;
       border-color: transparent;
+      fill: currentColor;
     }
 
     &:active {

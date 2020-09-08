@@ -4,10 +4,84 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Погнали</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
+    <div class="visually-hidden">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="header header--catalog-background header--form-radius">
+      <section class="main-menu main-menu--no-js">
+        <h2 class="visually-hidden">Основное меню</h2>
+        <div class="main-menu__wrapper">
+          <a class="main-menu__logo-link" href="#">
+            <picture class="main-menu__logo">
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
+              <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+              <img class="main-menu__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Сервис поиска попутчиков погнали">
+            </picture>
+          </a>
+          <button class="main-menu__button main-menu__button--no-js" type="button"><span class="visually-hidden">Закрыть меню</span></button>
+          <div class="main-menu__feedback main-menu__feedback--display header-feedback">
+            <a class="header-feedback__phone header-feedback__phone--main-menu-block" href="tel:88005558628" aria-label="Позвоните нам">
+              <span class="visually-hidden">88005558628</span>
+            </a>
+            <a class="header-feedback__write-us header-feedback__write-us--main-menu-block" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам">
+              <span class="visually-hidden">Напишите нам</span>
+            </a>
+            <a class="header-feedback__authorization" href="authorization.html">Авторизация</a>
+          </div>
+          <ul class="main-menu__buttons-list buttons-list">
+            <li class="buttons-list__item buttons-list__item--main-menu">
+              <a class="buttons-list__link buttons-list__link--main-menu" href="index.html" data-hover="О сервисе">О сервисе</a>
+            </li>
+            <li class="buttons-list__item buttons-list__item--main-menu">
+              <a class="buttons-list__link buttons-list__link--main-menu" href="#" data-hover="Направления">Направления</a>
+            </li>
+            <li class="buttons-list__item buttons-list__item--main-menu">
+              <a class="buttons-list__link buttons-list__link--main-menu" href="catalog.html" data-hover="Попутчики">Попутчики</a>
+            </li>
+          </ul>
+          <div class="main-menu__contacts main-menu-feedback main-menu-feedback--top-display">
+            <a class="main-menu-feedback__phone main-menu-feedback__phone--tablet-size" href="tel:88005558628" aria-label="Позвоните нам">
+              <div class="main-menu-feedback__phone-image-wrapper">
+                <svg class="main-menu-feedback__phone-image" role="img" aria-label="Позвоните нам" width="17" height="15">
+                  <use xlink:href="#contacts-phone"></use>
+                </svg>
+              </div>
+              <span class="main-menu-feedback__phone-number">8 800 555-86-28</span>
+            </a>
+            <a class="main-menu-feedback__write-us main-menu-feedback__write-us--tablet-margin main-menu-feedback__write-us--mobile-margin main-menu-feedback__write-us--tablet-size" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам">
+              <div class="main-menu-feedback__mail-image-wrapper">
+                <svg class="main-menu-feedback__mail-image" role="img" aria-label="Напишите нам" width="19" height="13">
+                  <use xlink:href="#contacts-mail"></use>
+                </svg>
+              </div>
+              <p class="main-menu-feedback__write-us-mail">mail@htmlacademy.ru</p>
+            </a>
+          </div>
+          <ul class="main-menu__social socials-list">
+            <li class="socials-list__item socials-list__item--without-background">
+              <a class="socials-list__link socials-list__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank" aria-label="Социальная сеть Фейсбук">
+                <span class="visually-hidden">Фейсбук</span>
+              </a>
+            </li>
+            <li class="socials-list__item socials-list__item--without-background">
+              <a class="socials-list__link socials-list__link--vk" href="https://vk.com/htmlacademy" target="_blank" aria-label="Социальная сеть ВКонтакте">
+                <span class="visually-hidden">ВКонтакте</span>
+              </a>
+            </li>
+            <li class="socials-list__item socials-list__item--without-background">
+              <a class="socials-list__link socials-list__link--instagram" href="https://www.instagram.com/htmlacademy" target="_blank" aria-label="Социальная сеть Инстаграм">
+                <span class="visually-hidden">Инстаграм</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
       <nav class="main-nav main-nav--column main-nav--form-radius">
         <div class="main-nav__wrapper">
           <a class="main-nav__logo-link" href="index.html">
