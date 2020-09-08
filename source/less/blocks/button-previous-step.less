@@ -1,5 +1,8 @@
 .button-previous-step {
-  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 17px;
@@ -10,28 +13,15 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  fill: currentColor;
 
   @media (min-width: @tablet-width) {
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-left: 45px;
-    height: 56px;
+    justify-content: space-between;
+    padding: 10px;
+    .size(205px; 52px);
     font-size: 24px;
     line-height: 22px;
     text-transform: inherit;
-
-    &::before {
-      position: absolute;
-      content: "";
-      top: 17px;
-      left: 9px;
-      .size(16px; 16px);
-      background-image: url("../img/triangle.svg");
-      background-size: 16px 16px;
-      background-repeat: no-repeat;
-      transform: rotate(180deg);
-    }
   }
 
   &:hover {
@@ -40,5 +30,14 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+.button-previous-step__image {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    transform: rotate(180deg);
   }
 }

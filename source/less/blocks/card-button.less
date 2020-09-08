@@ -15,6 +15,7 @@
   border-radius: 25px;
   border: none;
   cursor: pointer;
+  fill: currentColor;
 
   @media (min-width: @tablet-width) {
     &--catalog-article {
@@ -26,28 +27,16 @@
     }
 
     &--next-step {
-      padding-right: 56px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 38px;
       .size(284px; 80px);
       font-size: 24px;
       line-height: 24px;
       text-transform: inherit;
       border-radius: 20px;
-
-      &::before {
-        position: absolute;
-        top: 32px;
-        right: 34px;
-        content: "";
-        .size(14px; 14px);
-        background-image: url("../img/triangle.svg");
-        background-repeat: no-repeat;
-      }
-
-      &:active {
-        &::before {
-          opacity: 0.3;
-        }
-      }
     }
 
     &--submit {
@@ -58,9 +47,19 @@
 
   &:hover {
     background-color: @special_yellow_dark;
+    fill: currentColor;
   }
 
   &:active {
     color: @basic_blue_special;
+    fill: currentColor;
+  }
+}
+
+.card-button__image {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
   }
 }
