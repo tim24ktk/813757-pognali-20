@@ -94,11 +94,6 @@
     }
   }
 
-  &--colon {
-    display: none;
-  }
-
-
   @media (min-width: @tablet-width) {
     display: none;
   }
@@ -116,10 +111,14 @@
       margin-bottom: 6px;
       padding-left: 0;
     }
+  }
+}
 
-    &--colon {
-      display: block;
-    }
+.filtering-by-country__heading-colon {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }
 
