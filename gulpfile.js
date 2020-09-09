@@ -13,6 +13,8 @@ const svgstore = require("gulp-svgstore");
 const del = require("del");
 const posthml = require("gulp-posthtml");
 const include = require("posthtml-include");
+const uglify = require("gulp-uglify");
+const pipeline = require("readable-stream").pipeline;
 
 // Styles
 
@@ -87,6 +89,18 @@ const html = () => {
 
 exports.html = html;
 
+// js
+
+const minjs  = () => {
+  return pipeline(
+    gulp.src("source/**/*.js"),
+    uglify(),
+    gulp.dest("build")
+  )
+}
+
+exports.minjs = minjs;
+
 const build = gulp.series(
   clean,
   copy,
@@ -94,6 +108,7 @@ const build = gulp.series(
   createWebp,
   images,
   sprite,
+  minjs,
   html
 );
 
